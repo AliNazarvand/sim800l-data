@@ -1,0 +1,491 @@
+page	table_idx	row_text
+10	1	Date | Version | Description of change | Author
+10	1	2013-08-20 | 1.00 | Origin | Jialin.song; Ya.li
+11	1	Feature | Implementation
+11	1	Power supply | 3.4V ~4.4V
+11	1	Power saving | typical power consumption in sleep mode is 0.7mA (AT+CFUN=0 )
+11	1	Frequency bands | Frequency bands | (cid:122) Quad-band: GSM 850, EGSM 900, DCS 1800, PCS 1900. SIM800L can
+11	1	Transmitting power | (cid:122) Class 4 (2W) at GSM 850 and EGSM 900
+11	1	GPRS connectivity | (cid:122) GPRS multi-slot class 12（default）
+11	1	Temperature range | (cid:122) Normal operation: -40°C ~ +85°C
+12	1	Data GPRS | (cid:122) GPRS data downlink transfer: max. 85.6 kbps
+12	1	CSD | (cid:122) Support CSD transmission
+12	1	USSD | (cid:122) Unstructured Supplementary Services Data (USSD) support
+12	1	SMS | (cid:122) MT, MO, CB, Text and PDU mode
+12	1	SIM interface | Support SIM card: 1.8V, 3V
+12	1	External antenna | Antenna pad
+12	1	Audio features | Speech codec modes:
+12	1	Serial port and debug port | Serial port:
+12	1	Phonebook management | Support phonebook types: SM, FD, LD, RC, ON, MC.
+12	1	SIM application toolkit | GSM 11.14 Release 99
+12	1	Real time clock | Support RTC
+12	1	Timing functions | Use AT command set
+12	1	Physical characteristics | Size:15.8*17.8*2.4mm
+12	1	Firmware upgrade | Main serial port or USB port.
+13	1	Coding scheme | 1 timeslot | 2 timeslot | 4 timeslot
+13	1	CS-1 | 9.05kbps | 18.1kbps | 36.2kbps
+13	1	CS-2 | 13.4kbps | 26.8kbps | 53.6kbps
+13	1	CS-3 | 15.6kbps | 31.2kbps | 62.4kbps
+13	1	CS-4 | 21.4kbps | 42.8kbps | 85.6kbps
+13	2	Mode | Function
+13	2	Normal operation | GSM/GPRS SLEEP | Module will automatically go into sleep mode if the conditions of sleep
+13	2	GSM | Software is active. Module is registered to the GSM network, and the
+13	2	IDLE | module is ready to communicate.
+13	2	GSM TALK | Connection between two subscribers is in progress. In this case, the power
+13	2	GPRS STANDBY | Module is ready for GPRS data transfer, but no data is currently sent or
+13	2	GPRS DATA | There is GPRS data transfer (PPP or TCP or UDP) in progress. In this case,
+13	2	Power down | Normal power down by sending AT command “AT+CPOWD=1” or using the PWRKEY.
+13	2	Minimum functionality mode | AT command “AT+CFUN” can be used to set the module to a minimum functionality mode
+16	1	Pin name | Pin number | I/O | Description | Comment
+16	1	VBAT | 1,42 | I | Power supply
+16	1	VRTC | 56 | I/O | Power supply for RTC | It is recommended to
+16	1	VEXT | 18 | O | 2.8V power output | If these pins are unused,
+16	1	GND | 2,6,8,35,37,38,39, | Ground | GND for VBAT recommend to use 2,43,44,45pin
+16	1	PWRKEY | 48 | I | PWRKEY should be pulled low at | Internally pulled up to VBAT.
+16	1	MIC1P | 52 | I | Differential audio input | If these pins are unused, keep open.
+16	1	MIC1N | 12
+16	1	SPK1P | 53 | O | Differential audio output
+16	1	SPK1N | 13
+16	1	MIC2P | 9 | I | Differential audio input
+16	1	MIC2N | 10
+16	1	SPK2P | 51 | O | Differential audio output
+16	1	SPK2N | 11
+16	1	PCMCLK | 29 | O | PCM interface for audio | If these pins are unused, keep open.
+16	1	PCMOUT | 30 | O
+16	1	PCMSYNC | 65 | O
+16	1	PCMIN | 66 | I
+16	1	COL4 | 24 | I | Support up to 50 buttons (5*5*2) | If these pins are unused, keep open.（Pin number 20 external cannot be pulled down） | If these pins are unused,
+16	1	COL3 | 21 | I | keep open.（Pin number 20
+16	1	COL2 | 22 | I | external cannot be pulled
+16	1	COL1 | 25 | I
+16	1	COL0 | 20 | I
+16	1	ROW4 | 63 | O
+16	1	ROW3 | 23 | O
+17	1	ROW2 | 61 | O
+17	1	ROW1 | 60 | O
+17	1	ROW0 | 62 | O
+17	1	GPIO1 | 3 | I/O | Programmable general purpose input and output
+17	1	GPIO2 | 27 | I/O
+17	1	GPIO3 | 28 | I/O
+17	1	NETLIGHT | 64 | O | Network status
+17	1	STATUS | 4 | O | Power on status
+17	1	UART_DTR | 69 | I | Data terminal ready | If these pins are unused, keep open.
+17	1	UART_RI | 68 | O | Ring indicator
+17	1	UART_DCD | 70 | O | Data carrier detect
+17	1	CTS | 34 | O | Request to send
+17	1	RTS | 33 | I | Clear to send
+17	1	TXD | 32 | O | Transmit data
+17	1	RXD | 31 | I | Receive data
+17	1	VBUS | 7 | I | Debug and download | If these pins are unused, keep open.
+17	1	USB_DP | 59 | I/O
+17	1	USB_DM | 19 | I/O
+17	1	ADC | 50 | I | 10bit general analog to digital | If these pins are unused,
+17	1	converter | keep open.
+17	1	PWM | 26 | O | Pulse-width modulation | If these pins are unused,
+17	1	SDA | 75 | I/O | I2C serial bus data | Need external pulled up
+17	1	SCL | 74 | O | I2C serial bus clock
+17	1	VSIM | 16 | O | Voltage supply for SIM card. | All signals of SIM interface should be protected against ESD with a TVS diode array.
+17	1	SIM_DATA | 14 | I/O | SIM data input/output
+17	1	SIM_CLK | 55 | O | SIM clock
+17	1	SIM_RST | 15 | O | SIM reset
+17	1	SIMPRE | 54 | I | SIM card detection | Reservation function
+17	1	ANT | 40 | I/O | Connect GSM antenna
+17	1	FM_ANT_P | 17 | I | Differential antenna for FM
+17	1	FM_ANT_N | 57 | I
+18	1	BPI_BUS1 | 5 | O | Synchronizing signal of RF
+18	1	RESET | 49 | I | Reset input(Active low)
+18	1	ISINK1 | 46 | I | Drive keypad backlight
+18	1	ISINK0 | 47 | I | Drive LCD backlight
+18	1	NC | 36
+21	2	Vendor | Part number | Power(watts) | Packages
+21	2	1 | On semi | MMSZ5231BT1G | 500mW | SOD123
+21	2	2 | Prisemi | PZ3D4V2H | 500mW | SOD323
+21	2	3 | Prisemi | PZ5D4V2H | 500mW | SOD523
+21	2	4 | Vishay | MMSZ4689-V | 500mW | SOD123
+21	2	5 | Crownpo | CDZ55C5V1SM | 500mW | 0805
+27	1	Pin name | Symbol | Min | Typ | Max | Unit
+27	1	RESET | V IH | 2.7 | 2.8 | 2.9 | V
+27	1	V IL | - | - | 0.6 | V
+27	1	Low power time | 105 | - | ms
+27	2	<fun> | Current consumption(mA) (sleep mode)
+29	1	Pin name | Pin number | Function
+29	1	Serial port | UART_DTR | 69 | Data terminal ready
+29	1	UART_RI | 68 | Ring indicator
+29	1	UART_DCD | 70 | Data carrier detect
+29	1	CTS | 34 | Request to send
+29	1	RTS | 33 | Clear to send
+29	1	TXD | 32 | Transmit data
+29	1	RXD | 31 | Receive data
+29	1	Debug port | VBUS | 7 | USB power supply
+29	1	USB_DP | 59
+29	1	USB_DM | 19
+2	1	Document Title | SIM800L Hardware Design
+2	1	Version | 1.00
+2	1	Date | 2013-08-20
+2	1	Status | Release
+2	1	Document Control ID | SIM800L_Hardware_Design_V1.00
+30	1	Symbol | Min | Max | Unit
+30	1	V IL | 0 | 0.3 | V
+30	1	V IH | 2.5 | 2.8 | V
+30	1	V OL | 0 | 0.1 | V
+30	1	V OH | 2.7 | 2.8 | V
+33	1	Pin | Min | Typ | Max | Unit
+33	1	VBUS | 4.3 | 5 | 7 | V
+34	2	Pin name | Pin number | Mode 0(default) | Mode 1
+34	2	UART_DTR | 69 | UART_DTR | GPIO22
+34	2	UART_RI | 68 | UART_RI | GPIO23
+34	2	UART_DCD | 70 | UART_DCD | GPIO24
+34	2	CTS | 34 | CTS | URXD2(IN)
+34	2	RTS | 33 | RTS | UTXD2(OUT)
+34	2	TXD | 32 | TXD | UTXD1(OUT)
+34	2	RXD | 31 | RXD | URXD1(IN)
+35	1	State | RI response
+35	1	Standby | High
+35	1	Voice call | The pin is changed to low. When any of the following events occur, the pin will be changed to high: （1）Establish the call （2）Hang up the call | The pin is changed to low. When any of the following events occur, the pin will be changed
+35	1	Data call | The pin is changed to low. When any of the following events occur, the pin will be changed
+35	1	SMS | The pin is changed to low, and kept low for 120ms when a SMS is received. Then it is
+35	1	URC | The pin is changed to low, and kept low for 120ms when some URCs are reported. Then it is
+36	2	Pin Name | Pin number | Function
+36	2	Main | MIC1P | 52 | Main Audio input positive
+36	2	MIC1N | 12 | Main Audio input negative
+36	2	SPK1P | 53 | Main Audio output positive
+36	2	SPK1N | 13 | Main Audio output negative
+36	2	Secondary | MIC2P | 9 | Secondary Audio input positive
+36	2	MIC2N | 10 | Secondary Audio input negative
+36	2	SPK2P | 51 | Secondary Audio output positive
+36	2	SPK2N | 11 | Secondary Audio output negative
+36	3	Conditions | Class-AB AMP
+36	3	4.2V 8Ohm THD+N=1% | 0.87W
+36	3	3.4V 8Ohm THD+N=1% | 0.53W
+36	3	4.2V 8Ohm THD+N=10% | 1.08W
+36	3	3.4V 8Ohm THD+N=10% | 0.65W
+38	1	Parameter | Min | Typ | Max | Unit
+38	1	Microphone biasing voltage | 1.9 | 2.2 | V
+38	1	Working current | 2 | mA
+38	1	Input impedance(differential) | 13 | 20 | 27 | KΩ
+38	1	Idle channel noise | -67 | dBm0
+38	1	SINAD | Input level:-40dBm0 | 29 | dB
+38	1	Input level:0dBm0 | 69 | dB
+38	2	Parameter | Conditions | Min | Typ | Max | Unit
+38	2	Normal output | R =32 Ohm receiver L | - | 90 | - | mW
+38	2	R =8 Ohm speaker L | - | - | 1080 | mW
+39	1	Pin name | Pin number | Function
+39	1	VSIM | 16 | Voltage supply for SIM card. Support 1.8V or 3V SIM card
+39	1	SIM_DATA | 14 | SIM data input/output
+39	1	SIM_CLK | 55 | SIM clock
+39	1	SIM_RST | 15 | SIM reset
+39	1	SIM_PRE | 54 | SIM card detection
+41	1	Pin name | Signal | Description
+41	1	C1 | VSIM | SIM card power supply
+41	1	C2 | SIM_RST | SIM card reset
+41	1	C3 | SIM_CLK | SIM card clock
+41	1	C3 | GND | Connect to GND
+41	1	C5 | GND | Connect to GND
+41	1	C6 | VPP | Not connect
+41	1	C7 | SIM_DATA | SIM card data I/O
+41	1	C8 | SIM_PRE | Detect SIM card presence
+42	1	Pin name | Signal | Description
+42	1	C1 | VSIM | SIM card power supply
+42	1	C2 | SIM_RST | SIM card reset
+42	1	C3 | SIM_CLK | SIM card clock
+42	1	C5 | GND | Connect to GND
+42	1	C6 | VPP | Not connect
+42	1	C7 | SIM_DATA | SIM card data I/O
+43	1	Pin name | Pin number | Description
+43	1	PCMCLK | 29 | PCM clock
+43	1	PCMOUT | 30 | PCM data output
+43	1	PCMSYNC | 65 | PCM synchrony
+43	1	PCMIN | 66 | PCM data input
+43	2	Parameter | Specification
+43	2	Line Interface Format | Linear(Fixed)
+43	2	Data length | 16bits(Fixed)
+43	2	PCM Clock/Sync Source | Master Mode(Fixed)
+43	2	PCM Clock Rate | 256Khz(Fixed)
+43	2	PCM Sync Format | Short sync/Long sync both support
+43	2	Zero Padding/Sign extension | Zero Padding(Fixed)
+43	2	Data Ordering | MSB/LSB both support
+43	3	Pin name | Pin number | Mode 0(default) | Mode 1 | Mode 2 | Mode 3
+43	3	PCMCLK | 29 | PCMCLK | DISP_RSTB | MC3CM0 | GPIO18
+43	3	PCMOUT | 30 | PCMOUT | DISP_DI | MC3DA3 | GPIO19
+43	3	PCMSYNC | 65 | PCMSYNC | DISP_CEB | MC3CK | GPIO20
+43	3	PCMIN | 66 | PCMIN | DISP_DA | MC3DA2 | GPIO21
+43	3	GPIO2 | 27 | GPIO2 | DISP_A0DA | MC3DA0 | -
+43	3	GPIO3 | 28 | GPIO3 | DISP_CLK | MC3DA1 | -
+47	1	Pin name | Pin number | Function | Default state
+47	1	COL0 | 20 | Keypad matrix column | Pull up
+47	1	COL1 | 25 | Pull down
+47	1	COL2 | 22 | Pull down
+47	1	COL3 | 21 | Pull down
+47	1	COL4 | 24 | Pull down
+47	1	ROW0 | 62 | Keypad matrix row | Pull down
+47	1	ROW1 | 60 | Pull down
+47	1	ROW2 | 61 | Pull down
+47	1	ROW3 | 23 | Pull down
+47	1	ROW4 | 63 | Pull down
+47	2	Pin name | Pin number | Mode 0(default) | Mode 1
+47	2	COL0 | 20 | COL0 | GPIO6
+47	2	COL1 | 25 | COL1 | GPIO7
+47	2	COL2 | 22 | COL2 | GPIO8
+47	2	COL3 | 21 | COL3 | GPIO9
+47	2	COL4 | 24 | COL4 | GPIO10
+47	2	ROW0 | 62 | ROW0 | GPIO11
+47	2	ROW1 | 60 | ROW1 | GPIO12
+47	2	ROW2 | 61 | ROW2 | GPIO13
+47	2	ROW3 | 23 | ROW3 | GPIO14
+47	2	ROW4 | 63 | ROW4 | GPIO15
+47	3	Pin name | Pin number | Description
+47	3	SCL | 74 | I2C serial bus clock
+47	3	SDA | 75 | I2C serial bus data
+48	1	Pin name | Pin number | Mode 0(default) | Mode 1
+48	1	SCL | 74 | SCL | GPIO25
+48	1	SDA | 75 | SDA | GPIO26
+48	2	Pin name | Pin number | Reret state
+48	2	GPIO2 | 27 | Pull down
+48	2	GPIO3 | 28 | Pull down
+48	3	Pin name | Pin number | Description
+48	3	ADC | 50 | Analog voltage input
+48	4	Parameter | Min | Typ | Max | Unit
+48	4	Voltage range | 0 | - | 2.8 | V
+48	4	ADC Resolution | - | 10 | - | bits
+48	4	Sampling rate | - | - | 1.0833 | MHz
+48	4	ADC precision | 10 | 20 | mV
+49	2	Parameter | Min | Typ | Max | Unit
+49	2	Working voltage | 2.5 | 2.8 | 2.9 | V
+49	2	Working current | 16 | mA
+49	3	Pin name | Pin number | Mode 0(default) | Mode 1
+49	3	PWM | 26 | PWM | GPIO16
+49	4	Pin name | Pin number | Description
+49	4	NETLIGHT | 64 | Network Status Indication
+50	1	Status | SIM800L behavior
+50	1	Off | SIM800L is not running
+50	1	64ms On/ 800ms Off | SIM800L not registered the network
+50	1	64ms On/ 3000ms Off | SIM800L registered to the network
+50	1	64ms On/ 300ms Off | GPRS communication is established
+50	2	Pin name | Pin number | Mode 0(default) | Mode 1
+50	2	NETLIGHT | 64 | NETLIGHT | GPIO17
+50	3	Pin name | Pin number | Description
+50	3	STATUS | 4 | operating Status Indication
+51	1	Pin name | Pin number | Mode 0(default) | Mode 1
+51	1	STATUS | 4 | STATUS | GPIO4
+51	2	Pin name | Pin number | Description
+51	2	ISINK0 | 47 | Sink current for LCM module
+51	2	ISINK1 | 46 | Sink current for keypad LED
+51	3	Pin name | Min | Typ | Max | Unit
+51	3	ISINK0 | - | 24 | mA
+51	3	ISINK1 | 60 | - | 100 | mA
+52	1	Pin name | Pin number | Description
+52	1	BPI_BUS1 | 5 | Transmit synchronization signal
+58	1	Symbol | Min | Typ | Max | Unit
+58	1	VBAT | - | - | 4.5 | V
+58	1	Current | 0 | - | 2.0 | A
+58	1	VBUS | - | - | 30 | V
+58	1	I* I | - | - | 8 | mA
+58	1	I * O | - | - | 8 | mA
+58	2	Symbol | Parameter | Min | Typ | Max | Unit
+58	2	VBAT | Power supply voltage | 3.4 | 4.0 | 4.4 | V
+58	2	T OPER | Operating temperature | -40 | +25 | +85 | ℃
+58	2	T STG | Storage temperature | -45 | +90 | ℃
+58	3	Symbol | Parameter | Min | Typ | Max | Unit
+58	3	V IH | High-level input current | 2.1 | - | 3.1 | V
+58	3	V IL | Low-level input current | -0.3 | - | 0.7 | V
+58	3	V OH | High-level output voltage | 2.4 | - | - | V
+58	3	V OL | Low-level output voltage | - | - | 0.4 | V
+59	1	Symbol | Parameter | Min | Typ | Max | Unit
+59	1	I IH | High-level input current | -1 | - | 1 | uA
+59	1	I IL | Low-level input current | -1 | - | 1 | uA
+59	1	V IH | High-level input voltage | 1.4 | - | - | V
+59	1	V IL | Low-level input voltage | - | - | 0.27 | V
+59	1	V OH | High-level output voltage | 1.62 | - | - | V
+59	1	V OL | Low-level output voltage | - | - | 0.36 | V
+59	2	Symbol | Parameter | Min | Typ | Max | Unit
+59	2	V O | Output voltage | Output voltage | - | 3 | - | V
+59	2	I O | Output voltage | - | - | 10 | mA
+59	3	Symbol | Parameter | Min | Typ | Max | Unit
+59	3	V O | Output voltage | 2.70 | 2.80 | 2.90 | V
+59	3	I O | Output current | - | - | 50 | mA
+59	4	Symbol | Description | Min | Typ | Max | Unit
+59	4	V RTC-IN | VRTC input voltage | 2.8 | V
+59	4	I RTC-IN | VRTC input current | - | 3 | - | uA
+59	4	V RTC-OUT | VRTC output voltage | - | 2.8 | - | V
+59	4	I RTC-OUT | VRTC output current | - | 2 | mA
+60	1	Symbol | Parameter | Conditions | Min | Typ | Max | Unit
+60	1	VBAT | VBAT | Voltage | 3.4 | 4.0 | 4.4 | V
+60	1	Power drop | PCL=5 | 350 | mV
+60	1	Voltage ripple | PCL=5
+60	1	@ f<200kHz | 50 | mV
+60	1	@ f>200kHz | 2 | mV
+60	1	I VBAT | I VBAT | Average currnet | Power down mode | 50 | 60 | uA
+60	1	( BS-PA-MFRMS=9 ) | 1.02 | mA
+60	1	( BS-PA-MFRMS=5) | 1.11 | mA
+60	1	( BS-PA-MFRMS=2) | 1.88 | mA
+60	1	Idle mode (at+cfun=1)： | mA
+60	1	GSM850 | 18.7 | mA
+60	1	EGSM900 | 18.7
+60	1	DCS1800 | 18.7
+60	1	PCS1900 | 18.7
+60	1	Voice call (PCL=5)： | mA mA
+60	1	GSM850 | 199.48
+60	1	EGSM900 | 216.12
+60	1	DCS1800 | 146.48
+60	1	PCS1900 | 131.77
+60	1	Data mode GPRS (1Rx,4Tx)： | mA mA
+60	1	GSM850 | 453.57
+60	1	EGSM900 | 344.74
+60	1	DCS1800 | 216.20
+60	1	PCS1900 | 274.04
+60	1	Data mode GPRS (3Rx,2Tx)： | mA mA
+60	1	GSM850 | 386.09
+60	1	EGSM900 | 345.02
+60	1	DCS1800 | 216.79
+60	1	PCS1900 | 239.12
+60	1	Data mode GPRS (4Rx,1Tx)： | mA mA
+60	1	GSM850 | 212.69
+60	1	EGSM900 | 227.95
+60	1	DCS1800 | 158.19
+60	1	PCS1900 | 148.49
+60	1	I MAX | Peak current | During Tx burst | 2.0 | A
+61	1	Pin name | Contact discharge | Air discharge
+61	1	VBAT | ±6KV | ±12KV
+61	1	GND | ±6KV | ±12KV
+61	1	RXD, TXD | ±2KV | ±8KV
+61	1	Antenna port | ±5KV | ±10KV
+61	1	SPK_P/SPK_N/MIC_P/MIC_N | ±2KV | ±5KV
+61	1	PWRKEY | ±2KV | ±8KV
+61	2	PCL | Nominal output power (dBm) | Tolerance (dB) for conditions
+61	2	Normal | Extreme
+61	2	5 | 33 | ±2 | ±2.5
+61	2	6 | 31 | ±3 | ±4
+61	2	7 | 29 | ±3 | ±4
+61	2	8 | 27 | ±3 | ±4
+61	2	9 | 25 | ±3 | ±4
+61	2	10 | 23 | ±3 | ±4
+61	2	11 | 21 | ±3 | ±4
+61	2	12 | 19 | ±3 | ±4
+61	2	13 | 17 | ±3 | ±4
+61	2	14 | 15 | ±3 | ±4
+61	2	15 | 13 | ±3 | ±4
+61	2	16 | 11 | ±5 | ±6
+61	2	17 | 9 | ±5 | ±6
+61	2	18 | 7 | ±5 | ±6
+61	2	19-31 | 5 | ±5 | ±6
+62	1	PCL | Nominal output power (dBm) | Tolerance (dB) for conditions
+62	1	Normal | Extreme
+62	1	0 | 30 | ±2 | ±2.5
+62	1	1 | 28 | ±3 | ±4
+62	1	2 | 26 | ±3 | ±4
+62	1	3 | 24 | ±3 | ±4
+62	1	4 | 22 | ±3 | ±4
+62	1	5 | 20 | ±3 | ±4
+62	1	6 | 18 | ±3 | ±4
+62	1	7 | 16 | ±3 | ±4
+62	1	8 | 14 | ±3 | ±4
+62	1	9 | 12 | ±4 | ±5
+62	1	10 | 10 | ±4 | ±5
+62	1	11 | 8 | ±4 | ±5
+62	1	12 | 6 | ±4 | ±5
+62	1	13 | 4 | ±4 | ±5
+62	1	14 | 2 | ±5 | ±6
+62	1	15 | 0 | ±5 | ±6
+62	2	Frequency | Receive sensitivity（Typical） | Receive sensitivity(Max)
+62	2	GSM850,EGSM900 | < -108dBm | < -106dBm
+62	2	DCS1800,PCS1900 | < -108dBm | < -106dBm
+62	3	Frequency | Receive | Transmit
+62	3	GSM850 | 869 ～ 894MHz | 824 ～ 849MHz
+62	3	EGSM900 | 925 ～ 960MHz | 880 ～ 915MHz
+62	3	DCS1800 | 1805 ～ 1880MHz | 1710 ～ 1785MHz
+62	3	PCS1900 | 1930 ～ 1990MHz | 1850 ～ 1910MHz
+64	1	Moisture Sensitivity Level | Floor Life (out of bag) at factory ambient≤30°C/60% RH or as stated
+64	1	2a | 4 weeks
+64	1	5a | 24 hours
+64	2	Baking temperature | Moisture | Time
+64	2	40℃±5℃ | <5% | 192 hours
+64	2	120℃±5℃ | <5% | 6 hours
+65	1	SN | Document name | Remark
+65	1	[1] | SIM800 Series_AT Command Manual
+65	1	[2] | ITU-T Draft new recommendation V.25ter： | Serial asynchronous automatic dialing and control
+65	1	[3] | GSM 07.07： | Digital cellular telecommunications (Phase 2+); AT command set for
+65	1	[4] | GSM 07.10： | Support GSM 07.10 multiplexing protocol
+65	1	[5] | GSM 07.05： | Digital cellular telecommunications (Phase 2+); Use of Data
+65	1	[6] | GSM 11.14： | Digital cellular telecommunications system (Phase 2+);
+65	1	[7] | GSM 11.11： | Digital cellular telecommunications system (Phase 2+);
+65	1	[8] | GSM 03.38： | Digital cellular telecommunications system (Phase 2+); Alphabets
+65	1	[9] | GSM 11.10 | Digital cellular telecommunications system (Phase 2)； Mobile
+65	1	[10] | AN_Serial Port | AN_Serial Port
+66	1	Pin name | Pin number | Mode 0(default) | Mode 1 | Mode 2 | Mode 3
+66	1	STATUS | 4 | STATUS | GPIO4
+66	1	SIMPRE | 54 | SIMPRE | GPIO5 | EINT7
+66	1	COL0 | 20 | COL0 | GPIO6 | - | -
+66	1	COL1 | 25 | COL1 | GPIO7 | - | -
+66	1	COL2 | 22 | COL2 | GPIO8 | - | -
+66	1	COL3 | 21 | COL3 | GPIO9 | - | -
+66	1	COL4 | 24 | COL4 | GPIO10 | EINT1 | -
+66	1	ROW0 | 62 | ROW0 | GPIO11 | - | -
+66	1	ROW1 | 60 | ROW1 | GPIO12 | - | -
+66	1	ROW2 | 61 | ROW2 | GPIO13 | - | -
+66	1	ROW3 | 23 | ROW3 | GPIO14 | - | -
+66	1	ROW4 | 63 | ROW4 | GPIO15 | EINT3 | -
+66	1	PWM | 26 | PWM | GPIO16 | EINT0 | -
+66	1	NETLIGHT | 64 | NETLIGHT | GPIO17 | - | -
+66	1	PCMCLK | 29 | PCMCLK | DISP_RSTB | MC3CM0 | GPIO18
+66	1	PCMOUT | 30 | PCMOUT | DISP_DI | MC3DA3 | GPIO19
+66	1	PCMSYNC | 65 | PCMSYNC | DISP_CEB | MC3CK | GPIO20
+66	1	PCMIN | 66 | PCMIN | DISP_DA | MC3DA2 | GPIO21
+66	1	GPIO2 | 27 | GPIO2 | DISP_A0DA | MC3DA0 | -
+66	1	GPIO3 | 28 | GPIO3 | DISP_CLK | MC3DA1 | -
+66	1	UART_DTR | 69 | UART_DTR | GPIO22 | EINT8 | -
+66	1	UART_RI | 68 | UART_RI | GPIO23 | - | -
+66	1	UART_DCD | 70 | UART_DCD | GPIO24 | - | -
+66	1	CTS | 34 | CTS | URXD2(IN) | - | -
+66	1	RTS | 33 | RTS | UTXD2(OUT) | - | -
+66	1	TXD | 32 | TXD | UTXD1(OUT) | - | -
+66	1	RXD | 31 | RXD | URXD1(IN) | EINT4 | -
+66	1	SCL | 74 | SCL | GPIO25 | - | -
+66	1	SDA | 75 | SDA | GPIO26 | - | -
+67	1	Abbreviation | Description
+67	1	ADC | Analog-to-Digital Converter
+67	1	AMR | Adaptive Multi-Rate
+67	1	CS | Coding Scheme
+67	1	CSD | Circuit Switched Data
+67	1	CTS | Clear to Send
+67	1	DTE | Data Terminal Equipment (typically computer, terminal, printer)
+67	1	DTR | Data Terminal Ready
+67	1	DTX | Discontinuous Transmission
+67	1	EFR | Enhanced Full Rate
+67	1	EGSM | Enhanced GSM
+67	1	ESD | Electrostatic Discharge
+67	1	ETS | European Telecommunication Standard
+67	1	FR | Full Rate
+67	1	GPRS | General Packet Radio Service
+67	1	GSM | Global Standard for Mobile Communications
+67	1	HR | Half Rate
+67	1	IMEI | International Mobile Equipment Identity
+67	1	Li-ion | Lithium-Ion
+67	1	MO | Mobile Originated
+67	1	MS | Mobile Station (GSM engine), also referred to as TE
+67	1	MT | Mobile Terminated
+67	1	PAP | Password Authentication Protocol
+67	1	PBCCH | Packet Broadcast Control Channel
+67	1	PCB | Printed Circuit Board
+67	1	PCL | Power Control Level
+67	1	PCS | Personal Communication System, also referred to as GSM 1900
+67	1	PDU | Protocol Data Unit
+67	1	PPP | Point-to-point protocol
+67	1	RF | Radio Frequency
+67	1	RMS | Root Mean Square (value)
+67	1	RTC | Real Time Clock
+67	1	RX | Receive Direction
+67	1	SIM | Subscriber Identification Module
+67	1	SMS | Short Message Service
+67	1	TE | Terminal Equipment, also referred to as DTE
+67	1	TX | Transmit Direction
+67	1	UART | Universal Asynchronous Receiver & Transmitter
+67	1	URC | Unsolicited Result Code
+68	1	USSD | Unstructured Supplementary Service Data
+68	1	FD | SIM fix dialing phonebook
+68	1	LD | SIM last dialing phonebook (list of numbers most recently dialed)
+68	1	MC | Mobile Equipment list of unanswered MT calls (missed calls)
+68	1	ON | SIM (or ME) own numbers (MSISDNs) list
+68	1	RC | Mobile Equipment list of received calls
+68	1	SM | SIM phonebook
+68	1	NC | Not connect
+69	1	Marks | Requirements

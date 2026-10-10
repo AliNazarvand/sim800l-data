@@ -1,0 +1,198 @@
+- id: dat_17_0001
+  category: SSL
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+SSLCFG
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_17_0002
+  category: SSL
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+SSLCONF
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_17_0003
+  category: SSL
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+SSLOPEN
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_17_0004
+  category: SSL
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+SSLSEND
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_17_0005
+  category: SSL
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+SSLRECV
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_17_0006
+  category: SSL
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+SSLCLOSE
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_17_0007
+  category: SSL
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+SSLSETCERT
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_17_0008
+  category: SSL
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+SSLSETKEY
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_17_0009
+  category: SSL
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+SSLSETCA
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high

@@ -1,0 +1,528 @@
+- id: dat_10_0001
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CGDCONT
+  syntax: AT+CGDCONT
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0002
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CGATT
+  syntax: AT+CGATT
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0003
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CGACT
+  syntax: AT+CGACT
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0004
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CGCONTRDP
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0005
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CGPADDR
+  syntax: AT+CGPADDR
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0006
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CSTT
+  syntax: AT+CSTT
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0007
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIICR
+  syntax: AT+CIICR
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0008
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIFSR
+  syntax: AT+CIFSR
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0009
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPSTART
+  syntax: AT+CIPSTART
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0010
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPSEND
+  syntax: AT+CIPSEND
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0011
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPCLOSE
+  syntax: AT+CIPCLOSE
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0012
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPSHUT
+  syntax: AT+CIPSHUT
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0013
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPSTATUS
+  syntax: AT+CIPSTATUS
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0014
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPRXGET
+  syntax: AT+CIPRXGET
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0015
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPMUX
+  syntax: AT+CIPMUX
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0016
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPQSEND
+  syntax: AT+CIPQSEND
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0017
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPDDREM
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0018
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPMODE
+  syntax: AT+CIPMODE
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0019
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIPCCFG
+  syntax: AT+CIPCCFG
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0020
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CSQ
+  syntax: AT+CSQ
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0021
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CREG
+  syntax: AT+CREG
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0022
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CGREG
+  syntax: AT+CGREG
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0023
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CEREG
+  syntax: ''
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_10_0024
+  category: GPRS
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CDNSGIP
+  syntax: AT+CDNSGIP
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high

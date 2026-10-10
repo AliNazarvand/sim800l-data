@@ -1,0 +1,250 @@
+- id: dat_06_0001
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 1
+  command: AT
+  expected_response: OK
+  timeout_ms: 1000
+  retry_count: 3
+  failure_action: Restart module
+  dependency_step: null
+  related_state: POWER_ON
+  coverage_estimate: medium
+- id: dat_06_0002
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 2
+  command: ATE0
+  expected_response: OK
+  timeout_ms: 1000
+  retry_count: 2
+  failure_action: Continue anyway
+  dependency_step: dat_06_0001
+  related_state: POWER_ON
+  coverage_estimate: medium
+- id: dat_06_0003
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 3
+  command: AT+CPIN?
+  expected_response: '+CPIN: READY'
+  timeout_ms: 2000
+  retry_count: 3
+  failure_action: Check SIM
+  dependency_step: dat_06_0002
+  related_state: POWER_ON
+  coverage_estimate: medium
+- id: dat_06_0004
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 4
+  command: AT+CSQ
+  expected_response: '+CSQ:'
+  timeout_ms: 2000
+  retry_count: 2
+  failure_action: Check antenna
+  dependency_step: dat_06_0003
+  related_state: SIM_READY
+  coverage_estimate: medium
+- id: dat_06_0005
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 5
+  command: AT+CREG?
+  expected_response: '+CREG: 0,1'
+  timeout_ms: 5000
+  retry_count: 3
+  failure_action: Wait for reg
+  dependency_step: dat_06_0004
+  related_state: NETWORK_SEARCH
+  coverage_estimate: medium
+- id: dat_06_0006
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 6
+  command: AT+CGATT=1
+  expected_response: OK
+  timeout_ms: 10000
+  retry_count: 3
+  failure_action: Retry attach
+  dependency_step: dat_06_0005
+  related_state: REGISTERED
+  coverage_estimate: medium
+- id: dat_06_0007
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 7
+  command: AT+CSTT="apn"
+  expected_response: OK
+  timeout_ms: 5000
+  retry_count: 2
+  failure_action: Set APN
+  dependency_step: dat_06_0006
+  related_state: REGISTERED
+  coverage_estimate: medium
+- id: dat_06_0008
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 8
+  command: AT+CIICR
+  expected_response: OK
+  timeout_ms: 10000
+  retry_count: 3
+  failure_action: Bring up GPRS
+  dependency_step: dat_06_0007
+  related_state: PDP_ACTIVE
+  coverage_estimate: medium
+- id: dat_06_0009
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 9
+  command: AT+CIFSR
+  expected_response: IP
+  timeout_ms: 5000
+  retry_count: 2
+  failure_action: Get IP
+  dependency_step: dat_06_0008
+  related_state: PDP_ACTIVE
+  coverage_estimate: medium
+- id: dat_06_0010
+  category: Init
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from standard SIM800 init flow.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  step_order: 10
+  command: AT+CIPSTART="TCP","host",port
+  expected_response: CONNECT OK
+  timeout_ms: 30000
+  retry_count: 2
+  failure_action: Retry
+  dependency_step: dat_06_0009
+  related_state: PDP_ACTIVE
+  coverage_estimate: medium

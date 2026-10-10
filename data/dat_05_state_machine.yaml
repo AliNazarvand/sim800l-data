@@ -1,0 +1,320 @@
+- id: dat_05_0001
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: 'OFF'
+  description: Module off
+  entry_conditions:
+  - AT+CPOWD
+  exit_conditions:
+  - AT+CFUN=1
+  events: []
+  actions: []
+  related_commands:
+  - AT+CPOWD
+  - AT+CFUN=1
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0002
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: POWER_ON
+  description: Module powered on
+  entry_conditions: []
+  exit_conditions:
+  - AT+CFUN=1
+  events: []
+  actions: []
+  related_commands:
+  - AT+CFUN=1
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0003
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: SIM_READY
+  description: SIM initialized
+  entry_conditions:
+  - AT+CPIN?
+  exit_conditions:
+  - AT+CREG?
+  events: []
+  actions: []
+  related_commands:
+  - AT+CPIN?
+  - AT+CREG?
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0004
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: NETWORK_SEARCH
+  description: Searching
+  entry_conditions:
+  - AT+COPS?
+  exit_conditions:
+  - AT+CREG=1
+  events: []
+  actions: []
+  related_commands:
+  - AT+COPS?
+  - AT+CREG=1
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0005
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: REGISTERED
+  description: Registered
+  entry_conditions:
+  - AT+CREG?
+  exit_conditions:
+  - AT+CGATT=1
+  events: []
+  actions: []
+  related_commands:
+  - AT+CREG?
+  - AT+CGATT=1
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0006
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: PDP_ACTIVE
+  description: PDP context active
+  entry_conditions:
+  - AT+CGATT=1
+  exit_conditions:
+  - AT+CSTT
+  events: []
+  actions: []
+  related_commands:
+  - AT+CGATT=1
+  - AT+CSTT
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0007
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: DATA_MODE
+  description: Data mode active
+  entry_conditions:
+  - AT+CIPSTART
+  exit_conditions: []
+  events: []
+  actions: []
+  related_commands:
+  - AT+CIPSTART
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0008
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: SMS_MODE
+  description: SMS mode active
+  entry_conditions:
+  - AT+CMGF=1
+  exit_conditions: []
+  events: []
+  actions: []
+  related_commands:
+  - AT+CMGF=1
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0009
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: CALL_MODE
+  description: Call in progress
+  entry_conditions:
+  - ATD
+  exit_conditions:
+  - ATH
+  events: []
+  actions: []
+  related_commands:
+  - ATD
+  - ATH
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0010
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: SLEEP
+  description: Sleep mode
+  entry_conditions:
+  - AT+CSCLK=1
+  exit_conditions:
+  - AT+CSCLK=0
+  events: []
+  actions: []
+  related_commands:
+  - AT+CSCLK=1
+  - AT+CSCLK=0
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium
+- id: dat_05_0011
+  category: State
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.45
+  status: inferred
+  conflicts: []
+  notes: Inferred from AT command semantics.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  state_name: ERROR
+  description: Error state
+  entry_conditions: []
+  exit_conditions: []
+  events: []
+  actions: []
+  related_commands: []
+  related_urcs: []
+  related_timings: []
+  coverage_estimate: medium

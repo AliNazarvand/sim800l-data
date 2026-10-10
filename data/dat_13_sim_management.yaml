@@ -1,0 +1,220 @@
+- id: dat_13_0001
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CPIN
+  syntax: AT+CPIN
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_13_0002
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CLCK
+  syntax: AT+CLCK
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_13_0003
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CPWD
+  syntax: AT+CPWD
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_13_0004
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CSIM
+  syntax: AT+CSIM
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_13_0005
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CRSM
+  syntax: AT+CRSM
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_13_0006
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CIMI
+  syntax: AT+CIMI
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_13_0007
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CCID
+  syntax: AT+CCID
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_13_0008
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CSMINS
+  syntax: AT+CSMINS
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_13_0009
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CSPN
+  syntax: AT+CSPN
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high
+- id: dat_13_0010
+  category: SIM
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.85
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  command: AT+CUSD
+  syntax: AT+CUSD
+  parameters: []
+  response: OK
+  examples: []
+  coverage_estimate: high

@@ -1,0 +1,2221 @@
+page	table_idx	row_text
+100	1	Re | ference | Note
+101	1	Command | Description
+101	1	AT+CMGD | DELETE SMS MESSAGE
+101	1	AT+CMGF | SELECT SMS MESSAGE FORMAT
+101	1	AT+CMGL | LIST SMS MESSAGES FROM PREFERRED STORE
+101	1	AT+CMGR | READ SMS MESSAGE
+101	1	AT+CMGS | SEND SMS MESSAGE
+101	1	AT+CMGW | WRITE SMS MESSAGE TO MEMORY
+101	1	AT+CMSS | SEND SMS MESSAGE FROM STORAGE
+101	1	AT+CNMI | NEW SMS MESSAGE INDICATIONS
+101	1	AT+CPMS | PREFERRED SMS MESSAGE STORAGE
+101	1	AT+CRES | RESTORE SMS SETTINGS
+101	1	AT+CSAS | SAVE SMS SETTINGS
+101	1	AT+CSCA | SMS SERVICE CENTER ADDRESS
+101	1	AT+CSCB | SELECT CELL BROADCAST SMS MESSAGES
+101	1	AT+CSDH | SHOW SMS TEXT MODE PARAMETERS
+101	1	AT+CSMP | SET SMS TEXT MODE PARAMETERS
+101	1	AT+CSMS | SELECT MESSAGE SERVICE
+101	2	Test Command AT+CMGD=? | Response
+101	2	Write Command AT+CMGD=<in dex>[,<delflag>] | Response
+102	1	Max Response Time | 5s（delete 1 message）
+102	1	Reference 3GPP TS 27.005 | Note
+102	2	Test Command AT+CMGF=? | Response
+102	2	Read Command AT+CMGF? | Response
+102	2	Write Command AT+CMGF=[<m ode>] | Response
+103	1	Parameter Saving Mode | AT&W_SAVE
+103	1	Reference 3GPP TS 27.005 | Note
+103	2	Test Command AT+CMGL=? | Response
+103	2	Write Command AT+CMGL=<sta >[,<mode>] | Parameters
+106	1	Execution Command AT+CMGL | 1) If text mode:
+106	1	Max Response Time | 20s(list 50 messages)
+106	1	Reference 3GPP TS 27.005 | Note
+106	2	Test Command AT+CMGR=? | Response
+106	2	Write Command AT+CMGR=<in dex>[,<mode>] | Parameters
+108	1	ax Response | 5s
+109	2	Test Command AT+CMGS=? | Response OK
+109	2	Write Command 1) If text mode (+CMGF=1): +CMGS=<da>[, <toda>] <CR>text is entered <ctrl-Z/ESC> ESC quits without sending 2) If PDU mode (+CMGF=0): +CMGS=<length | Parameters <da> GSM 03.40 TP-Destination-Address Address-Value field in string format(string should be included in quotation marks); BCD numbers (or GSM default alphabet characters) are converted to characters of the currently selected TE character set (specified by +CSCS in 3GPP TS 27.007); type of address given by <toda> <toda> GSM 04.11 TP-Destination-Address Type-of-Address octet in integer format (when first character of <da> is + (IRA 43) default is 145, otherwise default is 129) <length> Integer type value (not exceed 160 bytes) indicating in the text mode (+CMGF=1) the length of the message body <data> (or <cdata>) in characters; or in PDU mode (+CMGF=0), the length of the actual TP data unit in octets (i.e. the RP layer SMSC address octets are not counted in the length)
+109	2	> <CR>PDU is given <ctrl-Z/ESC> | Response TA sends message from a TE to the network (SMS-SUBMIT). Message reference value <mr> is returned to the TE on successful message delivery. Optionally (when +CSMS <service> value is 1 and network supports) <scts> is returned. Values can be used to identify message upon unsolicited delivery status report result code. 1) If text mode(+CMGF=1) and sending successful: +CMGS: <mr> OK 2) If PDU mode(+CMGF=0) and sending successful: +CMGS: <mr> OK 3)If error is related to ME functionality: +CMS ERROR: <err>
+109	2	Max Response Time | 60s
+109	2	Reference | Note
+110	2	est Command AT+CMGW=? | Response
+110	2	Write Command ) If text mode +CMGF=1): AT+CMGW=<o /da>[,<tooa/tod >][,<stat>] CR> text is ntered ctrl-Z/ESC> ESC> quits without sending | Response
+110	2	) If PDU mode +CMGF=0): AT+CMGW=<le gth>[,<stat>] CR>PDU is iven ctrl-Z/ESC> | Parameters
+111	1	Execution Command AT+CMGW | Response
+111	1	Max Response Time | 5s
+111	1	Reference 3GPP TS 27.005 | Note
+111	2	Test Command AT+CMSS=? | Response
+111	2	Write Command AT+CMSS=<ind x>[,<da>,<toda >] | Response
+112	1	Max Response Time | 60s
+112	1	Reference 3GPP TS 27.005 | Note
+112	2	Test Command AT+CNMI=? | Response
+112	2	Read Command AT+CNMI? | Response
+113	1	rite Command T+CNMI=<mo e>[,<mt>[,<bm [,<ds>[,<bfr>]]] | Response
+114	1	arameter Saving ode | AT&W_SAVE
+114	1	eference GPP TS 27.005 | Note
+115	1	est Command AT+CPMS=? | Response
+115	1	Read Command AT+CPMS? | Response
+115	1	Write Command AT+CPMS= mem1>[,<mem >[,<mem3>]] | Response
+116	2	Test Command AT+CRES=? | Response +CRES: (list of supported <profile>s) OK
+116	2	Write Command AT+CRES=<pro file> | Response Execution command restores message service settings from non-volatile memory to active memory. A TA can contain several profiles of settings. Settings specified in commands Service Centre Address +CSCA and Set Message Parameters +CSMP are restored. Certain settings may not be supported by the storage (e.g. (U)SIM SMS parameters) and therefore can not be restored. OK ERROR
+116	2	Execution Command AT+CRES | Response Same as AT+CRES=0. OK If error is related to ME functionality: +CMS ERROR <err>
+116	2	Max Response Time | 5s
+116	2	Reference 3GPP TS 27.005 | Note
+117	1	Write Command AT+CSAS=<prof ile> | Response
+117	1	Execution Command AT+CSAS | Response
+117	1	Max Response Time | 5s
+117	1	Reference 3GPP TS 27.005 | Note
+117	2	Test Command AT+CSCA=? | Response
+117	2	Read Command AT+CSCA? | Response
+117	2	Write Command AT+CSCA= <sca>[,<tosca>] | Response
+118	1	Max Response Time | 5s
+118	1	Reference 3GPP TS 27.005 | Note
+118	2	Test Command AT+CSCB=? | Response
+118	2	Read Command AT+CSCB? | Response
+118	2	Write Command AT+CSCB=<mo de>[,<mids>[,<d css>]] | Response
+119	1	Reference 3GPP TS 27.005 | Note
+119	2	Test Command AT+CSDH=? | Response
+119	2	Read Command AT+CSDH? | Response
+119	2	Write Command AT+CSDH=[<sh | Response
+120	1	ow>] | result codes.
+120	1	Reference 3GPP TS 27.005 | Note
+120	2	Test Command AT+CSMP=? | Response
+120	2	Read Command AT+CSMP? | Response
+120	2	Write Command AT+CSMP=[<fo >[,<vp>,<pid>,< dcs>]] | Response
+121	1	Reference 3GPP TS 27.005 | Note
+121	2	Test Command AT+CSMS=? | Response
+121	2	Read Command AT+CSMS? | Response
+121	2	Write Command AT+CSMS= <service> | Response
+123	1	Command | Description
+123	1	AT+STKTRS | This command is used to send STK Terminal Response
+123	1	AT+STKENVS | This command is used to send STK Envelope command
+123	1	AT+STKCALL | Trigger STK Call
+123	1	AT+STKSMS | Trigger STK SMS
+123	1	AT+STKSS | Trigger STK SS
+123	1	AT+STKUSSD | Trigger STK USSD
+123	1	AT+STKDTMF | Trigger STK DTMF
+123	1	+STKPCI | This unsolicited result code is used to indicate Proactive Command Indication.
+123	1	AT+STKMENU | Show STK main menu
+123	1	AT+STKPCIS | Switch STK URC string
+123	2	Test Command AT+STKTRS=? | Response +STKTRS: <result_length>,<text_length> OK
+123	2	Read Command AT+STKTRS? | Response OK
+123	2	Write Command AT+STKTRS =<result>[,<text>] | Response OK ERROR
+124	1	Reference | Note
+124	2	Test Command AT+STKENVS=? | Response
+124	2	Read Command AT+STKENVS? | Response
+124	2	Write Command AT+STKENVS =<command>[,<d | Response
+124	2	ata>] | Parameter
+125	2	Test Command AT+STKCALL =? | Response
+125	2	Write Command AT+STKCALL =< ommand> | Response
+125	2	Reference | Note
+125	3	Test Command AT+STKSMS =? | Response
+125	3	Write Command AT+STKSMS =< ommand> | Response
+126	1	Reference | Note
+126	2	Test Command AT+STKSS =? | Response
+126	2	Write Command AT+STKSS =< command> | Response
+126	2	Reference | Note
+126	3	Test Command AT+STKUSSD =? | Response
+126	3	Write Command AT+STKUSSD =< command> | Response
+127	2	est Command AT+STKDTMF =? | Response OK
+127	2	Write Command AT+STKDTMF < command> | Response OK ERROR Parameter <command > stk DTMF command 0 (Trigger modem to send STK DTMF) 4 (Trigger modem to send STK DTMF but icon cannot be displayed) 32 (ME currently unable to process command)
+127	2	eference | Note Above are the possible terminal response value needed to be responded by application.It’s modem’s responsibility to response for other terminal response value.
+128	1	Reference | Note
+128	2	Test Command AT+STKMENU | Response
+128	2	Read Command AT+STKMENU ? | Response
+128	2	Reference | Note
+129	2	Test Command AT+STKPCIS=? | Response +STKPCIS: (0-1) OK
+129	2	Read Command AT+STKPCIS? | Response +STKPCIS: <switch> OK
+129	2	Write Command AT+STKPCIS =<switch> | Response OK ERROR
+129	2	Parameter Saving Mode | AT&W_SAVE
+129	2	Reference | Note
+130	1	C | ommand | Description
+130	1	A | T+SIDET | CHANGE THE SIDE TONE GAIN LEVEL
+130	1	A | T+CPOWD | POWER OFF
+130	1	A | T+SPIC | TIMES REMAINED TO INPUT SIM PIN/PUK
+130	1	A | T+CMIC | CHANGE THE MICROPHONE GAIN LEVEL
+130	1	A | T+CALA | SET ALARM TIME
+130	1	A | T+CALD | DELETE ALARM
+130	1	A | T+CADC | READ ADC
+130	1	A | T+CSNS | SINGLE NUMBERING SCHEME
+130	1	A | T+CDSCB | RESET CELL BROADCAST
+130	1	A | T+CMOD | CONFIGURE ALTERNATING MODE CALLS
+130	1	A | T+CFGRI | INDICATE RI WHEN USING URC
+130	1	A | T+CLTS | GET LOCAL TIMESTAMP
+130	1	A | T+CEXTHS | EXTERNAL HEADSET JACK CONTROL
+130	1	A | T+CEXTBUT | HEADSET BUTTON STATUS REPORTING
+130	1	A | T+CLDTMF | LOCAL DTMF TONE GENERATION
+130	1	A | T+CDRIND | CS VOICE/DATA CALL TERMINATION INDICATION
+130	1	A | T+CSPN | GET SERVICE PROVIDER NAME FROM SIM
+130	1	A | T+CCVM | GET AND SET THE VOICE MAIL NUMBER ON THE SIM
+130	1	A | T+CBAND | GET AND SET MOBILE OPERATION BAND
+130	1	A | T+CHF | CONFIGURE HANDS FREE OPERATION
+130	1	A | T+CHFA | SWAP THE AUDIO CHANNELS
+130	1	A | T+CSCLK | CONFIGURE SLOW CLOCK
+130	1	A | T+CENG | SWITCH ON OR OFF ENGINEERING MODE
+130	1	AT+SCLASS0 | T+SCLASS0 | STORE CLASS 0 SMS TO SIM WHEN RECEIVED CLASS 0
+130	1	A | T+CCID | SHOW ICCID
+130	1	AT+CMTE | T+CMTE | SET CRITICAL TEMPERATURE OPERATING MODE OR
+130	1	A | T+CMGDA | DELETE ALL SMS
+130	1	A | T+STTONE | PLAY SIM TOOLKIT TONE
+130	1	A | T+SIMTONE | GENERATE SPECIFIC TONE
+130	1	A | T+CCPD | ENABLE OR DISABLE ALPHA STRING
+130	1	A | T+CGID | GET SIM CARD GROUP IDENTIFIER
+131	1	AT+MORING | SHOW STATE OF MOBILE ORIGINATED CALL
+131	1	AT+CMGHEX | ENABLE OR DISABLE SENDING NON-ASCII CHARACTER SMS
+131	1	AT+CCODE | CONFIGURE SMS CODE MODE
+131	1	AT+CIURC | ENABLE OR DISABLE INITIAL URC PRESENTATION
+131	1	AT+CPSPWD | CHANGE PS SUPER PASSWORD
+131	1	AT+EXUNSOL | ENABLE OR DISABLE PROPRIETARY UNSOLICITED INDICATIONS
+131	1	AT+CGMSCLASS | CHANGE GPRS MULTISLOT CLASS
+131	1	AT+CDEVICE | VIEW CURRENT FLASH DEVICE TYPE
+131	1	AT+CCALR | CALL READY QUERY
+131	1	AT+GSV | DISPLAY PRODUCT IDENTIFICATION INFORMATION
+131	1	AT+SGPIO | CONTROL THE GPIO
+131	1	AT+SPWM | GENERATE THE PULSE-WIDTH-MODULATION
+131	1	AT+ECHO | ECHO CANCELLATION CONTROL
+131	1	AT+CAAS | CONTROL AUTO AUDIO SWITCH
+131	1	AT+SVR | CONFIGURE VOICE CODING TYPE FOR VOICE CALLS
+131	1	AT+GSMBUSY | REJECT INCOMING CALL
+131	1	AT+CEMNL | SET THE LIST OF EMERGENCY NUMBER
+131	1	AT*CELLLOCK | SET THE LIST OF ARFCN WHICH NEEDS TO BE LOCKED
+131	1	AT+SLEDS | SET THE TIMER PERIOD OF NET LIGHT
+131	1	AT+CBUZZERRING | USE THE BUZZER SOUND AS THE INCOMING CALL RING
+131	1	AT+CEXTERNTONE | CLOSE OR OPEN THE MICROPHONE
+131	1	AT+CNETLIGHT | CLOSE THE NET LIGHT OR OPEN IT TO SHINING
+131	1	AT+CWHITELIST | SET THE WHITE LIST
+131	1	AT+CSGS | Netlight Indication of GPRS Status
+131	1	AT+CMICBIAS | CLOSE OR OPEN THE MICBIAS
+131	2	Test Command AT+SIDET=? | Response
+132	1	Read Command AT+SIDET? | Response
+132	1	Write Command AT+SIDET=<ch annel>,<gainleve | Response
+132	1	l> | Parameters
+132	1	Parameter Saving Mode | AUTO_SAVE
+132	1	Reference | Note
+132	2	Write Command AT+CPOWD= | Response
+132	2	<n> | Parameter
+132	2	Reference | Note
+132	3	Execution Command AT+SPIC | Response
+133	2	Test Command AT+CMIC=? | Response
+133	2	Read Command AT+CMIC? | Response
+133	2	Write Command AT+CMIC= <channel>,<gainl | Response
+133	2	evel> | Parameters
+133	2	Parameter Saving Mode | AUTO_SAVE
+134	2	Test Command AT+CALA=? | Response
+134	2	Read Command AT+CALA? | Response
+134	2	Write Command AT+CALA= <time>[,<n> ,<recurr>]] | Response
+135	1	Parameter Saving Mode | AUTO_SAVE
+135	1	Reference | Note
+135	2	Test Command AT+CALD=? | Response +CALD: (list of supported <n>s) OK
+135	2	Write Command AT+CALD=<n> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+135	2	Reference | Note
+135	3	Test Command AT+CADC=? | Response +CADC: (list of supported <status>s),(list of supported <value>s) OK
+135	3	Read Command AT+CADC? | Response +CADC: <status>,<value> OK
+136	1	Max Response Time | 2s
+136	1	Reference | Note
+136	2	Test Command AT+CSNS=? | Response +CSNS: (list of supported <mode>s) OK
+136	2	Read Command AT+CSNS? | Response +CSNS: <mode> OK
+136	2	Write Command AT+CSNS=<mo de> | Response OK ERROR
+136	2	Reference | Note
+136	3	Execution Command AT+CDSCB | Response OK
+136	3	Reference | Note Please also refer to AT+CSCB.
+137	1	Test Command AT+CMOD=? | Response
+137	1	Read Command AT+CMOD? | Response
+137	1	Write Command AT+CMOD=[<m ode>] | Response
+137	1	Reference | Note
+137	2	Test Command AT+CFGRI=? | Response
+137	2	Read Command AT+CFGRI? | Response
+137	2	Write Command AT+CFGRI=<st atus> | Response
+138	2	"Test Command AT+CLTS=? | Response +CLTS: ""yy/MM/dd,hh:mm:ss+/-zz"" OK"
+138	2	Read Command AT+CLTS? | Response +CLTS: <mode> OK
+138	2	Write Command AT+CLTS= <mode> | Response OK ERROR
+139	1	Reference | Note
+139	3	Test Command AT+CLDTMF=? | Response
+139	3	W A n> | rite Command | Response
+139	3	T+CLDTMF=< | OK
+139	3	,<DTMF | ERROR
+13	1	Ve | rsion | Date | Chapter | What is new
+13	1	V1.00 | New version
+13	1	V1.01 | 2013-07-23 | All | Modify GSM 07.05 to 3GPP TS 27.005,modify GSM 07.07 to 3GPP TS 27.007
+13	1	1.1 Scope of the document | Add SIM800
+13	1	2.2.8 ATH | Delete ATH parameter [n]
+13	1	"2.2.12 +++ | Change ""0.5 second"" to ""1 second"""
+13	1	"2.2.13 ATO | Change ""NO CARRIER"" to ""ERROR"""
+13	1	2.2.26 ATX | Change default value from 0 to 4
+13	1	2.2.32 AT&W | Add AT+CFGRI,AT+CSGS
+13	1	2.2.41.1 Auto-bauding | Disable DTR auto-bauding
+13	1	3.2.14 AT+CHLD | Delete parameter of CHLD
+13	1	3.2.18 AT+CLIP | Change URC parameter
+13	1	3.2.51 AT+CRSL | Delete reference Note
+13	1	3.2.7 AT+CEER | Change description of 34 (emergency call not possible)
+13	1	4.2.10 AT+CRES | Delete description of CSCB
+13	1	4.2.11 AT+CSAS | Delete description of CSCB
+13	1	6.2.4 AT+CMIC | Add reference Note
+13	1	6.2.11 AT+CFGRI | Add default value
+13	1	6.2.16 AT+CCVM | Modify Test Command response information and parameter description
+13	1	6.2.18 AT+CHF | Add URC
+13	1	6.2.26 AT+STTONE | Change <duration> supported range;delete reference note
+13	1	6.2.27 AT+SIMTONE | Modify last parameter of Test Command to 10-500000
+13	1	6.2.48 AT+SLEDS | Modify default value
+13	1	6.2.55 AT+CSGS | Add ATC
+13	1	6.2.56 AT+CMICBIAS | Add ATC
+13	1	8.2.2 AT+CIPSTART | Modify parameter
+13	1	8.2.15 AT+CIPHEAD | Modify parameter
+13	1	8.2.20 AT+CIPSRIP | Modify parameter
+13	1	8.2.23 AT+CIPCCFG | Modify write cmd parameters
+13	1	"8.2.26 AT+CIPRXGET | Add ""single IP & multi IP connection"""
+140	1	string> | Parameters
+140	1	Execution Command AT+CLDTMF | Response
+140	1	R | eference | Note
+140	3	Test Command AT+CDRIND=? | Response
+140	3	Read Command AT+CDRIND? | Response
+140	3	Write Command AT+CDRIND=< n> | Response
+141	2	Read Command AT+CSPN? | Response
+141	2	Reference | Note
+141	3	Test Command | Response +CCVM: maximum length of field <vm number>, maximum length of field <alpha string> OK
+141	3	Read Command | Response If voice mail number is not set: OK If voice mail number is set: +CCVM: <vm number>[,<alpha string>] OK
+141	3	Write Command | Response OK
+142	1	number>[,<alpha | ERROR If error is related to ME functionality: +CME ERROR: <err>
+142	1	Parameter Saving | AUTO_SAVE
+142	1	Reference | Note
+142	2	Test Command AT+CBAND=? | Response
+142	2	Read Command AT+CBAND? | Response
+142	2	Write Command AT+CBAND=<o p_band> | Response
+143	1	Reference | Note
+143	2	Test Command AT+CHF=? | Response
+143	2	Read Command AT+CHF? | Response
+143	2	Write Command AT+CHF=<ind> [,<state>] | Response
+143	2	Parameter Saving Mode | AT&W_SAVE
+143	2	Reference | Note
+144	1	Test Command AT+CHFA=? | Response
+144	1	Read Command AT+CHFA? | Response
+144	1	Write Command AT+CHFA=<n> | Response
+144	1	Reference | Note
+144	2	Test Command AT+CSCLK=? | Response
+144	2	Read Command AT+CSCLK? | Response
+144	2	Write Command AT+CSCLK=<n > | Response
+145	2	est Command AT+CENG=? | Response
+145	2	Read Command AT+CENG? | Response
+146	1	Write Command AT+CENG=<mo de>[,<Ncell>] | Response
+146	1	Reference | Note
+146	2	Test Command AT+SCLASS0=? | Response
+146	2	Read Command AT+SCLASS0? | Response
+147	1	Write Command AT+SCLASS0=< mode> | Response OK ERROR
+147	1	Reference | Note
+147	2	Test Command AT+CCID =? | Response OK
+147	2	Execution Command AT+CCID | Response Ccid data [ex. 898600810906F8048812] OK
+147	2	Max Response Time | 2s
+147	2	Reference | Note
+147	3	Read Command AT+CMTE? | Response +CMTE: <mode>,<Temperature> OK
+147	3	Write Command AT+CMTE=<mo de> | Response OK ERROR
+148	1	Reference | Note
+148	2	Test Command AT+CMGDA=? | Response
+148	2	Write Command AT+CMGDA=<t ype> | Response
+148	2	Max Response Time | 5s（delete 1 message）
+149	2	Test Command AT+STTONE=? | Response
+149	2	Write Command AT+STTONE=< mode>,<tone>,< duration> | Response
+14	1	9.2.1 AT+SAPBR | Modify parameter
+14	1	"12.2.23 AT+FTPLIST | 12.2.23 AT+FTPLIST | Change ""Execution Command"" to ""Write"
+14	1	"14.2.8 AT+SMTPBODY | Change ""Execution Command"" to ""Write"
+14	1	14.2.10 AT+SMTPSEND | Modify parameter
+14	1	"14.2.11 AT+SMTPFT | 14.2.11 AT+SMTPFT | Change ""Execution Command"" to ""Write"
+14	1	15.2.15 AT+CMMSRECV | Change reference note
+14	1	"15.2.21 | Change ""milliseconds"" to ""seconds"" | Change ""milliseconds"" to ""seconds"""
+14	1	15.2.25 | Modify parameter of Execution
+14	1	AT+CMMSSCONT | Command
+14	1	17.2.1 AT+CREC | Add note
+14	1	18.2.2 AT+CTTSPARAM | Modify parameter;add note
+14	1	20.8 GPRS Commands | Modify the CGQREQ example
+14	1	20.17 RECORD | Add example | Add example
+14	1	3.2.17 AT+CLCK | Add Max Response Time
+14	1	3.2.22 AT+COPS | Add Max Response Time
+14	1	3.2.29 AT+CPWD | Add Max Response Time
+14	1	3.2.28 AT+CPIN | Add Max Response Time
+14	1	3.2.41 AT+VTS | Add Max Response Time
+14	1	3.2.44 AT+CPOL | Add Max Response Time
+14	1	3.2.45 AT+COPN | Add Max Response Time
+14	1	3.2.54 AT+CPUC | Add Max Response Time
+14	1	6.2.7 AT+CADC | Add Max Response Time
+14	1	6.2.23 AT+CCID | Add Max Response Time
+14	1	7.2.1 AT+CGATT | Add Max Response Time
+14	1	7.2.5 AT+CGACT | Add Max Response Time
+14	1	3.2.24 AT+CPBF | 3.2.24 AT+CPBF | Modify description of max response
+14	1	3.2.25 AT+CPBR | Modify description of max response
+14	1	4.2.1 CMGD | Modify description of max response
+14	1	4.2.3 CMGL | Modify description of max response
+150	2	Test Command AT+SIMTONE= ? | Response
+150	2	Write Command AT+SIMTONE =<mode>,<frequ ency>,<periodO | Response
+150	2	n>,<periodOff>[, <duration>] | Unsolicited Result Code
+150	2	Reference | Note
+150	3	Test Command AT+CCPD=? | Response
+150	3	Read Command AT+CCPD? | Response
+151	1	Write Command AT+CCPD=<mo de> | Response
+151	1	Parameter Saving Mode | AT&W_SAVE
+151	1	Reference | Note
+151	2	Execution Command AT+CGID | Response
+151	2	Reference | Note
+151	3	Test Command AT+MORING=? | Response
+151	3	Read Command AT+MORING? | Response
+152	1	Write Command AT+MORING=< mode> | Response
+152	1	Parameter Saving Mode | AT&W_SAVE
+152	1	Reference | Note
+152	2	Test Command AT+CMGHEX= ? | Response
+152	2	Read Command AT+CMGHEX? | Response
+152	2	Write Command AT+CMGHEX= <mode> | Response
+153	1	Reference | Note
+153	2	Test Command AT+CCODE=? | Response
+153	2	Read Command AT+CCODE? | Response
+153	2	Write Command AT+CCODE=< mode> | Response
+153	2	Reference | Note
+153	3	Test Command AT+CIURC=? | Response
+153	3	Read Command AT+CIURC? | Response
+154	1	Write Command AT+CIURC=<m ode> | Response
+154	1	Parameter Saving Mode | AT&W_SAVE
+154	1	Reference | Note
+154	2	Write Command AT+CPSPWD=< oldpwd>,<newp wd> | Response
+154	2	Reference | Note
+154	3	Test Command | Response +EXUNSOL: (list of supported <exunsol>s) OK
+155	1	Write Command | Response OK If error is related to ME functionality: +CME ERROR: <err>
+155	1	Reference | Note
+155	2	Test Command AT+CGMSCLA SS=? | Response
+155	2	Read Command AT+CGMSCLA SS? | Response
+155	2	Write Command AT+CGMSCLA SS=<class> | Response
+155	2	Reference | Note
+156	1	Read Command AT+CDEVICE? | Response
+156	1	Reference V.25ter | Note
+156	2	Test Command AT+CCALR=? | Response +CCALR: (list of supported <mode>s) OK
+156	2	Read Command AT+CCALR? | Response ME returns the status of result code presentation and an integer <n> which shows whether the module is currently ready for phone call. +CCALR: <mode> OK
+156	2	Reference | Note
+156	3	Execution Command AT+GSV | Response
+157	2	Test Command AT+SGPIO=? | Response
+157	2	Write Command AT+SGPIO=<ope ration>,<GPIO>, | Response
+157	2	<function>,<level > | Parameters
+157	2	Reference | Note
+157	3	Test Command AT+SPWM=? | Response +SPWM: (list of supported <index>s),(list of supported <period>s),(list o supported <level>s) OK | f
+157	3	Write Command AT+SPWM=<in | Response OK
+158	1	dex>,<period>,<l | If error is related to ME functionality:
+158	1	evel> | +CME ERROR: <err>
+158	1	Reference | Note
+158	2	Test Command AT+ECHO=? | Response
+158	2	Read Command AT+ECHO? | Response
+158	2	Write Command AT+ECHO=<mi c>,<nlp>,<aec>,< nr>,<ns>[,<state | Response
+158	2	>] | Parameters
+159	1	Parameter Saving Mode | AUTO_SAVE
+159	1	Reference | Note
+159	2	Test Command AT+CAAS=? | Response
+159	2	Read Command AT+CAAS? | Response
+159	2	Write Command AT+CAAS=<mo de> | Response
+15	1	6.2.25 CMGDA | Modify description of max response
+15	1	15.2.8 AT+CMMSSEND | Modify description of max response
+15	1	15.2.15 AT+CMMSRECV | Modify description of max response
+15	1	2.2.16 ATS0 | Add parameter saving mode
+15	1	2.2.20 ATS6 | Add parameter saving mode
+15	1	2.2.21 ATS7 | Add parameter saving mode
+15	1	2.2.22 ATS8 | Add parameter saving mode
+15	1	2.2.26 ATX | Add parameter saving mode
+15	1	3.2.4 AT+CBST | Add parameter saving mode
+15	1	3.2.16 AT+CLCC | Add parameter saving mode
+15	1	3.2.12 AT+CSCS | Add parameter saving mode
+15	1	3.2.51 AT+CRSL | Add parameter saving mode
+15	1	3.2.52 AT+CLVL | Add parameter saving mode
+15	1	6.2.33 AT+CIURC | Add parameter saving mode
+15	1	6.2.53 AT_CSDT | Add parameter saving mode
+15	1	6.2.54 AT+CSMINS | Add parameter saving mode
+15	1	3.2.32 AT+CREG | Modify parameter save mode
+15	1	6.2.44 AT+SVR | Modify parameter save mode
+15	1	7.2.10 AT+CGREG | Modify parameter save mode
+15	1	3.2.24 AT+CPBS | Delete parameter save mode
+15	1	3.2.25 AT+CPBW | Delete parameter save mode
+160	1	Parameter Saving Mode | AT&W_SAVE
+160	1	Reference | Note
+160	2	Test Command AT+SVR=? | Response
+160	2	Read Command AT+SVR? | Response
+160	2	Write Command AT+SVR=<voice _rate_coding> | Response
+161	1	Parameter Saving Mode | AT&W_SAVE
+161	1	Reference | Note
+161	2	Test Command AT+GSMBUSY= ? | Response
+161	2	Read Command AT+GSMBUSY? | Response
+161	2	Write Command AT+GSMBUSY= <mode> | Response
+161	2	Reference | Note
+162	1	Test Command AT+CEMNL=? | Response
+162	1	Read Command AT+CEMNL? | Response
+162	1	Write Command AT+CEMNL=< mode>[,<amount | Response
+162	1	>,<emergency numbers>] | Parameter
+162	1	Parameter Saving Mode | AUTO_SAVE
+162	1	Reference | Note
+162	2	Test Command AT*CELLLOC K=? | Response
+162	2	Read Command AT*CELLLOC K? | Response
+163	1	Write Command AT*CELLLOC K=<mode>[,<am | Response OK ERROR
+163	1	ount>,<locked arfcn ist>[,<locked arfcn list>…]] | Parameter <mode> 0 Disable 1 Enable <amout> Amount of arfcn to be set. Up to 3 arfcn supported. <locked arfcn list> Arfcn needs to be locked by user. Scope: (0-124), (128-251), (512-885) or (975-1023).
+163	1	Reference | Note
+163	2	Test Command AT+SLEDS=? | Response +SLEDS: (1-3),(0,40-65535),(0,40-65535) OK
+163	2	Read Command AT+SLEDS? | Response +SLEDS: <mode>,<timer_on>,<timer_off> OK
+163	2	Write Command AT+SLEDS=<m ode>,<timer_on> | Response OK ERROR
+164	1	<timer_off> | Parameters
+164	1	Parameter Saving Mode | AT&W_SAVE
+164	1	Reference | Note
+164	2	Read Command AT+CBUZZER RING? | Response
+164	2	Write Command AT+CBUZZER RING=<mode> | Response
+164	2	Parameter Saving Mode | AT&W_SAVE
+164	2	Reference | Note
+165	1	Test Command AT+CEXTERN TONE=? | Response +CEXTERNTONE: (0,1) OK
+165	1	Read Command AT+CEXTERN TONE? | Response +CEXTERNTONE: <mode> OK
+165	1	Write Command AT+CEXTERNT ONE=<mode> | Response OK ERROR
+165	1	Reference | Note
+165	2	Write Command AT+CNETLIGH T=<mode> | Response OK ERROR
+165	2	Parameter Saving Mode | AT&W_SAVE
+165	2	Reference | Note
+166	1	Test Command AT+CWHITELI ST=? | Response +CWHITELIST: (0,1) OK
+166	1	Read Command AT+CWHITELI ST? | Response +CWHITELIST: <mode>[,<phone number1>,<phone number2>,…< phone number30>] OK
+166	1	Write Command AT+CWHITELI ST=<mode>[,<in | Response OK ERROR
+166	1	dex>,<phone number>] | Parameters <mode> 0 disable 1 enable <index> The index of phone number, scope: 1-30 <phone number> Phone number to be set
+166	1	Parameter Saving Mode | AUTO_SAVE
+166	1	Reference | Note
+166	2	Test Command AT+CSDT=? | Response +CSDT: (0-1) OK
+166	2	Read Command AT+CSDT? | Response +CSDT: <mode>
+167	1	Write Command AT+CSDT=<mo de> | Response
+167	1	Parameter Saving Mode | AT&W_SAVE
+167	1	Reference | Note
+167	2	Test Command | Response +CSMINS: (list of supported <n>s) OK
+167	2	Read Command | Response +CSMINS: <n>,<SIM inserted> OK
+167	2	Write Command | Response OK ERROR If error is related to ME functionality: +CME ERROR: <err>
+168	1	Parameter Saving | AT&W_SAVE
+168	1	Reference | Note
+168	2	Test Command AT+CSGS=? | Response
+168	2	Read Command AT+CSGS? | Response
+168	2	Write Command AT+CSGS=<mo de> | Response
+168	2	Parameter Saving Mode | AT&W_SAVE
+168	2	Reference | Note
+168	3	Test Command AT+ CMICBIAS =? | Response
+169	1	ead Command AT+CMICBIAS | Response +CMICBIAS: <mode> OK
+169	1	Write Command AT+CMICBIAS <mode> | Response OK ERROR
+169	1	eference | Note
+170	1	Command | Description
+170	1	AT+CGATT | ATTACH OR DETACH FROM GPRS SERVICE
+170	1	AT+CGDCONT | DEFINE PDP CONTEXT
+170	1	AT+CGQMIN | QUALITY OF SERVICE PROFILE (MINIMUM ACCEPTABLE)
+170	1	AT+CGQREQ | QUALITY OF SERVICE PROFILE (REQUESTED)
+170	1	AT+CGACT | PDP CONTEXT ACTIVATE OR DEACTIVATE
+170	1	AT+CGDATA | ENTER DATA STATE
+170	1	AT+CGPADDR | SHOW PDP ADDRESS
+170	1	AT+CGCLASS | GPRS MOBILE STATION CLASS
+170	1	AT+CGEREP | CONTROL UNSOLICITED GPRS EVENT REPORTING
+170	1	AT+CGREG | NETWORK REGISTRATION STATUS
+170	1	AT+CGSMS | SELECT SERVICE FOR MO SMS MESSAGES
+170	2	Test Command AT+CGATT=? | Response
+170	2	Read Command AT+CGATT? | Response
+170	2	Write Command AT+CGATT=<st ate> | Response
+171	1	Max Response Time | 10 seconds
+171	1	Reference | Note
+171	2	Test Command AT+CGDCONT =? | Response
+171	2	Read Command AT+CGDCONT ? | Response
+171	2	Write Command AT+CGDCONT =<cid>[,<PDP_ty | Response
+171	2	pe>[,APN>[,<PD P_addr>[,<d_co mp>[,<h_comp>] ]]] | Parameters
+172	1	arameter Saving Mode | AUTO_SAVE
+172	1	Reference | Note
+172	2	est Command AT+CGQMIN=? | Response
+173	1	Read Command AT+CGQMIN? | Response
+173	1	Write Command AT+CGQMIN=< id>[,<precedenc >[,<delay>[,<rel | Response
+173	1	ability>[,<peak> ,<mean>]]]]] | Parameters
+173	1	Parameter Saving Mode | AUTO_SAVE
+173	1	Reference | Note
+173	2	Test Command AT+CGQREQ=? | Response
+174	1	ead Command T+CGQREQ? | Response
+174	1	Write Command T+CGQREQ=c d>[,<precedence [,<delay>[,<reli bility>[,<peak>[ | Response
+174	1	<mean>]]]]] | Parameters
+175	1	Parameter Saving Mode | AUTO_SAVE
+175	1	Reference | Note
+175	2	Test Command AT+CGACT=? | Response
+175	2	Read Command AT+CGACT? | Response
+175	2	Write Command AT+CGACT=<st ate> [,<cid>] | Response
+175	2	Max Response Time | 150 seconds
+175	2	Reference | Note
+176	1	Test Command AT+CGDATA=? | Response
+176	1	Write Command AT+CGDATA=< L2P> [,<cid>] | Response
+176	1	Reference | Note
+176	2	Test Command AT+CGPADDR= ? | Response
+176	2	Write Command AT+CGPADDR= <cid> | Response
+177	1	Reference | Note
+177	2	Test Command AT+CGCLASS= ? | Response
+177	2	Read Command AT+CGCLASS? | Response
+177	2	Write Command AT+CGCLASS= <class> | Response
+177	2	Parameter Saving Mode | AUTO_SAVE
+177	2	Reference | Note
+178	1	Test Command AT+CGEREP=? | Response
+178	1	Read Command AT+CGEREP? | Response
+178	1	Write Command AT+CGEREP=< mode> | Response
+178	1	Reference | Note
+178	2	Test Command AT+CGREG=? | Response
+178	2	Read Command AT+CGREG? | Response
+179	1	Write Command AT+CGREG=[< n>] | Response
+179	1	Parameter Saving Mode | AT&W_SAVE
+179	1	Reference | Note
+179	2	Test Command AT+CGSMS=? | Response
+179	2	Read Command AT+CGSMS? | Response
+17	1	Test Command | AT+<x>=? | The mobile equipment returns the list of parameters
+17	1	Read Command | AT+<x>? | This command returns the currently set value of the
+17	1	Write Command | AT+<x>=<…> | This command sets the user-definable parameter
+17	1	Execution Command | AT+<x> | The execution command reads non-variable
+180	1	Write Command AT+CGSMS=<se vice> | Response
+180	1	arameter Saving Mode | AUTO_SAVE
+180	1	eference | Note
+181	1	C | ommand | Description
+181	1	A | T+CIPMUX | START UP MULTI-IP CONNECTION
+181	1	A | T+CIPSTART | START UP TCP OR UDP CONNECTION
+181	1	A | T+CIPSEND | SEND DATA THROUGH TCP OR UDP CONNECTION
+181	1	A | T+CIPQSEND | SELECT DATA TRANSMITTING MODE
+181	1	A | T+CIPACK | QUERY PREVIOUS CONNECTION DATA TRANSMITTING STATE
+181	1	A | T+CIPCLOSE | CLOSE TCP OR UDP CONNECTION
+181	1	A | T+CIPSHUT | DEACTIVATE GPRS PDP CONTEXT
+181	1	A | T+CLPORT | SET LOCAL PORT
+181	1	A | T+CSTT | START TASK AND Set APN, USER NAME, PASSWORD
+181	1	A | T+CIICR | BRING UP WIRELESS CONNECTION WITH GPRS OR CSD
+181	1	A | T+CIFSR | GET LOCAL IP ADDRESS
+181	1	A | T+CIPSTATUS | QUERY CURRENT CONNECTION STATUS
+181	1	A | T+CDNSCFG | CONFIGURE DOMAIN NAME SERVER
+181	1	A | T+CDNSGIP | QUERY THE IP ADDRESS OF GIVEN DOMAIN NAME
+181	1	AT+CIPHEAD | T+CIPHEAD | ADD AN IP HEAD AT THE BEGINNING OF A PACKAGE
+181	1	A | T+CIPATS | SET AUTO SENDING TIMER
+181	1	A | T+CIPSPRT | SET PROMPT OF ‘>’ WHEN MODULE SENDS DATA
+181	1	A | T+CIPSERVER | CONFIGURE MODULE AS SERVER
+181	1	A | T+CIPCSGP | SET CSD OR GPRS FOR CONNECTION MODE
+181	1	AT+CIPSRIP | T+CIPSRIP | SHOW REMOTE IP ADDRESS AND PORT WHEN RECEIVED
+181	1	A | T+CIPDPDP | SET WHETHER TO CHECK STATE OF GPRS NETWORK TIMING
+181	1	A | T+CIPMODE | SELECT TCPIP APPLICATION MODE
+181	1	A | T+CIPCCFG | CONFIGURE TRANSPARENT TRANSFER MODE
+181	1	AT+CIPSHOWTP | T+CIPSHOWTP | DISPLAY TRANSFER PROTOCOL IN IP HEAD WHEN RECEIVED
+181	1	A | T+CIPUDPMODE | UDP EXTENDED MODE
+181	1	A | T+CIPRXGET | GET DATA FROM NETWORK MANUALLY
+181	1	A | T+CIPSCONT | SAVE TCPIP APPLICATION CONTEXT
+182	1	AT+CIPRDTIMER | SET REMODE DELAY TIMER
+182	1	AT+CIPSGTXT | SELECT GPRS PDP CONTEXT
+182	2	Test Command AT+CIPMUX=? | Response
+182	2	Read Command AT+CIPMUX? | Response
+182	2	Write Command AT+CIPMUX=< | Response
+182	2	n> | Parameter
+182	2	Reference | Note
+182	3	Test Command AT+CIPSTART= ? | Response
+183	1	Write Command )If single IP onnection +CIPMUX=0) T+CIPSTART= mode>,<IP ddress>,<port> r T+CIPSTART= mode>,<domai name>,<port> )If multi-IP onnection +CIPMUX=1) T+CIPSTART= n>,<mode>,<ad ress>,<port> T+CIPSTART= n>,<mode>,<do main name>, port> | Response
+184	1	Reference | Note
+184	2	est Command AT+CIPSEND=? | Response
+184	2	Read Command AT+CIPSEND? | Response
+185	1	Write Command ) If single IP onnection +CIPMUX=0) T+CIPSEND=< ength> ) If multi IP onnection +CIPMUX=1) T+CIPSEND=< >[,<length>] | Response
+185	1	xecution ommand | Response
+186	1	"AT+CIPSEND esponse"">"", then ype data for send, ap CTRL+Z to end, tap ESC to cancel the operation | If single IP connection is established (+CIPMUX=0)"
+186	1	Reference | Note
+186	2	Test Command AT+CIPQSEND =? | Response
+186	2	Read Command AT+CIPQSEND ? | Response
+186	2	Write Command AT+CIPQSEND | Response
+186	2	=<n> | Parameter
+187	2	Test Command AT+CIPACK=? | Response OK
+187	2	Write Command If in multi IP connection (+CIPMUX=1) | Response +CIPACK: <txlen>, <acklen>, <nacklen> OK
+187	2	AT+CIPACK=< n> | Parameters <n> A numeric parameter which indicates the connection number <txlen> The data amount which has been sent <acklen> The data amount confirmed successfully by the server <nacklen> The data amount without confirmation by the server
+187	2	Execution Command If in single IP connection | Response +CIPACK: <txlen>, <acklen>, <nacklen> OK
+187	2	(+CIPMUX=0) AT+CIPACK | Parameters See Write Command
+187	2	Reference | Note
+187	3	Test Command AT+CIPCLOSE =? | Response OK
+187	3	Write Command 1) If single IP connection (+CIPMUX=0) | Response: 1) For single IP connection (+CIPMUX=0) CLOSE OK 2) For multi IP connection (+CIPMUX=1) <n>, CLOSE OK
+187	3	AT+CIPCLOSE =<n> 2) If multi IP connection (+CIPMUX=1) | Parameters <n> 0 Slow close 1 Quick close <id> A numeric parameter which indicates the connection number
+188	1	Execution Command AT+CIPCLOSE | Response If close is successfully: CLOSE OK If close fails: ERROR
+188	1	Reference | Note AT+CIPCLOSE only closes connection at the status of TCP/UDP which returns CONNECTING or CONNECT OK, otherwise it will return ERROR, after the connection is closed, the status is IP CLOSE in single IP mode
+188	2	Test Command AT+CIPSHUT=? | Response OK
+188	2	Execution Command AT+CIPSHUT | Response If close is successful: SHUT OK If close fails: ERROR
+188	2	"Reference | Note If this command is executed in multi-connection mode, all of the IP connection will be shut. User can close gprs pdp context by AT+CIPSHUT. After it is closed, the status is IP INITIAL. If ""+PDP: DEACT"" urc is reported which means the gprs is released by the network, then user still needs to execute ""AT+CIPSHUT"" command to make PDP context come back to original state."
+189	1	Read Command AT+CLPORT? | Response
+189	1	Write Command 1) For single IP connection | Response
+189	1	(+CIPMUX=0) AT+CLPORT=< mode>,<port> 2) For multi IP connection (+CIPMUX=1) AT+CLPORT=< n>,<mode>,<por t> | Parameters
+189	1	Reference | Note
+189	2	Test Command AT+CSTT=? | Response
+189	2	Read Command AT+CSTT? | Response
+190	1	Write Command AT+CSTT=<apn >,<user | Response OK ERROR
+190	1	name>,<passwor d> | Parameters <apn> A string parameter which indicates the GPRS access point name <user name> A string parameter which indicates the GPRS user name <password> A string parameter which indicates the GPRS password
+190	1	Execution Command AT+CSTT | Response OK ERROR
+190	1	Reference | Note The write command and execution command of this command is valid only at the state of IP INITIAL. After this command is executed, the state will be changed to IP START.
+190	2	Test Command AT+CIICR=? | Response OK
+190	2	Execution Command AT+CIICR | Response OK ERROR
+190	2	Reference | Note AT+CIICR only activates moving scene at the status of IP START, after operating this Command is executed, the state will be changed to IP CONFIG. After module accepts the activated operation, if it is activated successfully, module state will be changed to IP GPRSACT, and it responds OK, otherwise it will respond ERROR.
+190	3	Test Command AT+CIFSR=? | Response OK
+190	3	Execution Command AT+CIFSR | Response <IP address> ERROR
+191	1	Reference | Note
+191	2	Test Command AT+CIPSTATUS =? | Response
+191	2	Write Command f multi IP onnection mode +CIPMUX=1) AT+CIPSTATU | Response
+191	2	S=<n> | Parameters
+191	2	Execution Command AT+CIPSTATUS | Response
+192	1	Reference | Note
+192	2	Test Command AT+CDNSCFG= ? | Response
+192	2	Read Command AT+CDNSCFG? | Response
+192	2	Write Command AT+CDNSCFG= | Response
+193	1	<pri_dns> | ERROR
+193	1	[,<sec_dns>] | Parameters
+193	1	Reference | Note
+193	2	Test Command AT+CDNSGIP= ? | Response
+193	2	Write Command AT+CDNSGIP= <domain name> | Response
+193	2	Reference | Note
+193	3	Test Command AT+CIPHEAD= ? | Response
+193	3	Read Command | Response
+194	1	AT+CIPHEAD? | +CIPHEAD: <mode>
+194	1	Write Command AT+CIPHEAD= <mode> | Response
+194	1	Reference | Note
+194	2	Test Command AT+CIPATS=? | Response
+194	2	Read Command AT+CIPATS? | Response
+194	2	Write Command AT+CIPATS=<m ode>[,<time>] | Response
+195	1	Reference | Note
+195	2	Test Command AT+CIPSPRT=? | Response
+195	2	Read Command AT+CIPSPRT? | Response
+195	2	Write Command AT+CIPSPRT=< send prompt> | Response
+195	2	Reference | Note
+195	3	Test Command AT+CIPSERVE R=? | Response
+196	1	Read Command AT+CIPSERVE R? | Response
+196	1	Write Command AT+CIPSERVE R=<mode>[,<por | Response
+196	1	t>] | Parameters
+196	1	Reference | Note
+196	2	Test Command AT+CIPCSGP=? | Response
+196	2	Read Command AT+CIPCSGP? | Response
+196	2	Write Command AT+CIPCSGP=< mode>[, | Response
+196	2	(<apn>,<user name>, <password>),(<d | Parameters
+197	1	al number>,<user name>,<passwor d>,<rate>)] | 0 set CSD as wireless connection mode
+197	1	Reference | Note
+197	2	Test Command AT+CIPSRIP=? | Response
+197	2	Read Command AT+CIPSRIP? | Response
+197	2	Write Command AT+CIPSRIP=< mode> | Response
+198	2	Test Command AT+CIPDPDP=? | Response
+198	2	Read Command AT+CIPDPDP? | Response
+198	2	Write Command AT+CIPDPDP=< mode>[,<interval | Response
+198	2	>,<timer>] | Parameters
+198	2	Reference | Note
+198	3	Test Command AT+CIPMODE= ? | Response
+199	1	Read Command AT+CIPMODE? | Response
+199	1	Write Command AT+CIPMODE= <mode> | Response
+199	1	Reference | Note
+199	2	Test Command AT+CIPCCFG= ? | Response
+199	2	Read Command AT+CIPCCFG? | Response
+199	2	Write Command AT+CIPCCFG= <NmRetry>,<Wa | Response
+199	2	itTm>,<SendSz>, <esc>[,<Rxmode >,<RxSize>,<Rxt | Parameters
+200	1	imer>] | sending the packet. <SendSz> Size in bytes of data block to be received from serial port before sending. <esc> Whether turn on the escape sequence, default is TRUE. 0 Turn off the escape sequence 1 Turn on the escape sequence <Rxmode> Whether to set time interval during output data from serial port. 0 output data to serial port without interval 1 output data to serial port within <Rxtimer> interval. <RxSize> Output data length for each time, default value is 1460. <Rxtimer> Time interval (ms) to wait for serial port to output data again. Default value: 50ms
+200	1	Reference | Note This command will be effective only in single connection mode (+CIPMUX=0)
+200	2	est Command | Response +CIPSHOWTP: (list of supported <mode>s) OK
+200	2	ead Command | Response +CIPSHOWTP: <mode> OK
+200	2	"Write Command | Response OK ERROR Parameter <mode> A numeric parameter which indicates whether to display transfer protocol in IP header to received data or not 0 Not display transfer protocol 1 Display transfer protocol, the format is ""+IPD, <data size>,<TCP/UDP>:<data>"""
+200	2	eference | Note This command will be effective only in single connection mode (+CIPMUX=0)
+201	2	Test Command AT+CIPUDPMOD E=? | Response
+201	2	Read Command AT+CIPUDPMOD E? | Response
+201	2	Write Command 1) For single IP connection | Response
+201	2	(+CIPMUX=0) AT+CIPUDPMOD E=<mode>[,<IP address>,<Port>] 2) For multi IP connection (+CIPMUX=1) AT+CIPUDPMOD | <n> 0-5 A numeric parameter which indicates the connection
+202	1	eference | Note
+202	2	Test Command AT+CIPRXGET =? | Response
+202	2	Read Command AT+CIPRXGET ? | Response
+202	2	Write Command 1) If single IP connection (+CIPMUX=0) AT+CIPRXGET =<mode>[,<reqle ngth >] 2) If multi IP connection (+CIPMUX=1) AT+CIPRXGET =<mode>,<id>[,< reqlength >] | Response
+203	1	eference | Note
+204	1	Read Command | Response
+204	1	AT+CIPSCONT | TA returns TCPIP Application Context, which consists of the following
+204	1	Response Module saves current TCPIP Application Contexts to NVRAM. When system is rebooted, the parameters will be loaded automatically. OK | Response
+204	1	Note | Note
+205	1	Test Command AT+CIPRDTIM ER=? | Response
+205	1	Read Command AT+CIPRDTIM ER? | Response
+205	1	Write Command AT+CIPRDTIM ER=<rdsigtimer >,<rdmuxtimer> | Response
+205	1	Reference | Note
+205	2	Test Command AT+CIPSGTXT =? | Response
+205	2	Write Command AT+CIPSGTXT =<mode> | Response
+205	2	Reference | Note
+206	1	Command | Description
+206	1	AT+SAPBR | BEARER SETTINGS FOR APPLICATIONS BASED ON IP
+206	2	Test Command AT+SAPBR=? | Response
+206	2	Write Command AT+SAPBR=<c md_type>,<cid>[ <ConParamTag >,<ConParamVa ue>] | Response
+207	1	eference | Note
+208	1	Command | Description
+208	1	AT+CIPPING | PING Request
+208	1	AT+CIPCTL | Set the Mode When Receiving an IP Packet
+208	1	AT+CIPFLT | Set the Rules of IP Filter
+208	2	Test Command | Response +CIPPING: (list of supported <retryNum>s),(list of supported <dataLen>s),(list of supported <timeout>s),(list of supported <ttl>s) OK
+208	2	Read Command | Response +CIPPING: <retryNum>,<dataLen>,<timeout>,<ttl> OK
+208	2	Write Command | Response +CIPPING: <replyId>,<Ip Address>,<replyTime>,<ttl>[<CR><LF> +CIPPING <replyId>,<Ip Address>,<replyTime>,<ttl> : [...]] OK or ERROR or +CME ERROR: <err>
+209	2	Test Command AT+CIPCTL=? | Response +CIPCTL: (list of supported <mode>s) OK
+209	2	Read Command AT+CIPCTL? | Response +CIPCTL: <mode> OK
+210	1	Write Command AT+CIPCTL=<mod e> | Response
+210	1	Reference | Note
+210	2	Test Command AT+CIPFLT=? | Response
+210	2	Read Command AT+CIPFLT? | Response
+210	2	Write Command AT+CIPFLT=<actio >[,<item>][, ipAddr>,<mask>] | Response
+211	1	eference | Note
+212	1	Command | Description
+212	1	AT+HTTPINIT | INITIALIZE HTTP SERVICE
+212	1	AT+HTTPTERM | TERMINATE HTTP SERVICE
+212	1	AT+HTTPPARA | SET HTTP PARAMETERS VALUE
+212	1	AT+HTTPDATA | INPUT HTTP DATA
+212	1	AT+HTTPACTION | HTTP METHOD ACTION
+212	1	AT+HTTPREAD | READ THE HTTP SERVER RESPONSE
+212	1	AT+HTTPSCONT | SAVE HTTP APPLICATION CONTEXT
+212	1	AT+HTTPSTATUS | READ HTTP STATUS
+212	2	Test Command AT+HTTPINIT= ? | Response OK
+212	2	Execution Command AT+HTTPINIT | Response OK If error is related to ME functionality: +CME ERROR: <err>
+212	2	Reference | Note HTTPINIT should first be executed to initialize the HTTP service.
+213	1	Execution command AT+HTTPTER M | Response OK If error is related to ME functionality: +CME ERROR: <err>
+213	1	Reference | Note
+213	2	"Test Command AT+HTTPPARA =? | Response +HTTPPARA: ""HTTPParamTag"",""HTTPParmValue"" OK"
+213	2	Read Command AT+HTTPPARA ? | Response +HTTPPARA: <HTTPParamTag>,<HTTPParamValue> OK
+213	2	Write Command AT+HTTPPARA =<HTTPParamT ag>,<HTTPPara | Response OK If error is related to ME functionality: +CME ERROR: <err>
+213	2	"mValue> | Parameters <HTTPParamTag> ""CID"" ""URL"" ""UA"""
+214	1	"PROIP | Default value is ""SIMCom_MODULE"". The IP address of HTTP proxy server The port of HTTP proxy server This flag controls the redirection mechanism of the SIM800 when it is acting as HTTP client (numeric). If the server sends a redirect code (range 30x), the client will automatically send a new HTTP request when the flag is set to (1). Default value is 0 (no redirection). Parameter for HTTP method ""GET"", used for resuming broken transfer. Parameter for HTTP method ""GET"", used for resuming broken transfer. which is used together with ""BREAK"", If the value of ""BREAKEND"" is bigger than ""BREAK"", the transfer scope is from ""BREAK"" to ""BREAKEND"". If the value of ""BREAKEND"" is smaller than ""BREAK"", the transfer scope is from ""BREAK"" to the end of the file. If both ""BREAKEND"" and ""BREAK"" are 0, the resume broken transfer function is disabled. HTTP session timeout value, scope: 30-1000 second. Default value is 120 seconds. HTTP Parameter value. Type and supported content depend on related <HTTPParamTag>. Used to set the “Content-Type” field in HTTP header. HTTP Parameter value.Type and supported content depend on related <HTTPParamTag>. | Default value is ""SIMCom_MODULE""."
+214	1	PROPORT | The port of HTTP proxy server
+214	1	REDIR | This flag controls the redirection mechanism of the
+214	1	"BREAK | Parameter for HTTP method ""GET"", used for"
+214	1	BREAKEND | resuming broken transfer.
+214	1	TIMEOUT | resuming broken transfer. which is used together
+214	1	CONTENT | resume broken transfer function is disabled.
+214	1	<HTTPParamValue> | header.
+214	1	eference | Note
+214	2	est Command T+HTTPDATA ? | Response
+215	1	Write Command AT+HTTPDATA =<size>,<time> | Response
+215	1	Reference | Note
+215	2	Test Command AT+HTTPACTI ON=? | Response
+215	2	Write Command AT+HTTPACTI ON=<Method> | Response
+217	1	Max Response Time | About 5 seconds in test, dependence on network status and the size of
+217	1	Reference | Note
+217	2	Test Command AT+HTTPREA D=? | Response
+217	2	Write Command AT+HTTPREA D=<start_addres >,<byte_size> | Response
+217	2	Execution Command AT+HTTPREA D | Response
+218	1	Reference | Note
+218	2	Read Command AT+HTTPSCON T? | Response TA returns HTTP Application Context, which consists of the following AT Command parameters. +HTTPSCONT:<mode> CID:<value> URL: <value> UA: <value> PROIP: <value> PROPORT: <value> REDIR: <value> BREAK: <value> BREAKEND: <value> OK
+218	2	Execution Command AT+HTTPSCON T | Response TA saves HTTP Application Context which consists of following AT Command parameters, and when system is rebooted, the parameters will be loaded automatically. OK If error is related to ME functionality: +CME ERROR: <err>
+218	2	Parameter Saving Mode | AUTO_SAVE
+218	2	Reference | Note
+219	1	est Command | Response OK | Response
+219	1	AT+HTTPSTAT | OK
+219	1	Read Command | Response
+219	1	AT+HTTPSTAT | +HTTPSTATUS: <mode>,<status>,<finish>,<remain>
+21	1	C | ommand | Description
+21	1	A | / | RE-ISSUES THE LAST COMMAND GIVEN | RE-ISSUES THE LAST COMMAND GIVEN
+21	1	A | TA | ANSWER AN INCOMING CALL
+21	1	A | TD | MOBILE ORIGINATED CALL TO DIAL A NUMBER
+21	1	A | TD><N> | ORIGINATE CALL TO PHONE NUMBER IN CURRENT MEMORY
+21	1	ATD><STR> | TD><STR> | ORIGINATE CALL TO PHONE NUMBER IN MEMORY WHICH
+21	1	A | TDL | REDIAL LAST TELEPHONE NUMBER USED
+21	1	A | TE | SET COMMAND ECHO MODE
+21	1	A | TH | DISCONNECT EXISTING CONNECTION
+21	1	A | TI | DISPLAY PRODUCT IDENTIFICATION INFORMATION
+21	1	A | TL | SET MONITOR SPEAKER LOUDNESS
+21	1	A | TM | SET MONITOR SPEAKER MODE
+21	1	+++ | ++ | SWITCH FROM DATA MODE OR PPP ONLINE MODE TO
+21	1	A | TO | SWITCH FROM COMMAND MODE TO DATA MODE
+21	1	A | TP | SELECT PULSE DIALLING
+21	1	A | TQ | SET RESULT CODE PRESENTATION MODE
+21	1	ATS0 | TS0 | SET NUMBER OF RINGS BEFORE AUTOMATICALLY
+21	1	A | TS3 | SET COMMAND LINE TERMINATION CHARACTER
+21	1	A | TS4 | SET RESPONSE FORMATTING CHARACTER
+21	1	A | TS5 | SET COMMAND LINE EDITING CHARACTER
+21	1	A | TS6 | PAUSE BEFORE BLIND DIALLING
+21	1	ATS7 | TS7 | SET NUMBER OF SECONDS TO WAIT FOR CONNECTION
+21	1	ATS8 | SET NUMBER OF SECONDS TO WAIT FOR COMMA DIAL
+21	1	ATS10 | SET DISCONNECT DELAY AFTER INDICATING THE ABSENCE OF
+21	1	A | TT | SELECT TONE DIALING
+21	1	A | TV | TA RESPONSE FORMAT
+21	1	A | TX | SET CONNECT RESULT CODE FORMAT AND MONITOR CALL
+220	1	Command | Description
+220	1	AT+FTPPORT | SET FTP CONTROL PORT
+220	1	AT+FTPMODE | SET ACTIVE OR PASSIVE FTP MODE
+220	1	AT+FTPTYPE | SET THE TYPE OF DATA TO BE TRANSFERRED
+220	1	AT+FTPPUTOPT | SET FTP PUT TYPE
+220	1	AT+FTPCID | SET FTP BEARER PROFILE IDENTIFIER
+220	1	AT+FTPREST | SET RESUME BROKEN DOWNLOAD
+220	1	AT+FTPSERV | SET FTP SERVER ADDRESS
+220	1	AT+FTPUN | SET FTP USER NAME
+220	1	AT+FTPPW | SET FTP PASSWORD
+220	1	AT+FTPGETNAME | SET DOWNLOAD FILE NAME
+220	1	AT+FTPGETPATH | SET DOWNLOAD FILE PATH
+220	1	AT+FTPPUTNAME | SET UPLOAD FILE NAME
+220	1	AT+FTPPUTPATH | SET UPLOAD FILE PATH
+220	1	AT+FTPGET | DOWNLOAD FILE
+220	1	AT+FTPPUT | SET UPLOAD FILE
+220	1	AT+FTPSCONT | SAVE FTP APPLICATION CONTEXT
+220	1	AT+FTPDELE | DELETE SPECIFIED FILE IN FTP SERVER
+220	1	AT+FTPSIZE | GET THE SIZE OF SPECIFIED FILE IN FTP SERVER
+220	1	AT+FTPSTATE | GET THE FTP STATE
+220	1	AT+FTPEXTPUT | EXTEND UPLOAD FILE
+220	1	AT+FTPMKD | MAKE DIRECTORY ON THE REMOTE MACHINE
+220	1	AT+FTPRMD | REMOVE DIRECTORY ON THE REMOTE MACHINE
+220	1	AT+FTPLIST | LIST CONTENTS OF DIRECTORY ON THE REMOTE MACHINE
+221	1	Test Command AT+FTPPORT= ? | Response OK
+221	1	Read Command AT+FTPPORT? | Response +FTPPORT: <value> OK
+221	1	Write Command AT+FTPPORT= <value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+221	1	Reference | Note Numbers above 65535 are illegal as the port identification fields are 16 bits long in the TCP header.
+221	2	Test Command AT+FTPMOD=? | Response OK
+221	2	Read Command AT+FTPMODE? | Response +FTPMODE: <value> OK
+221	2	Write Command AT+FTPMOD=< value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+221	2	Reference | Note
+222	1	Test Command AT+FTPTYPE= ? | Response OK
+222	1	Read Command AT+FTPTYPE? | Response +FTPTYPE: <value> OK
+222	1	Write Command AT+FTPTYPE= <value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+222	1	Reference | Note When this value is set to A, all the data sent by the stackto the FTP server is made of 7 bits characters (NVT-ASCII: the MSB is set to 0). As a consequence binary data containing 8 bits characters will be corrupted during the transfer if the FTPTYPE is set to A.
+222	2	Test Command AT+FTPPUTOP T =? | Response OK
+222	2	Read Command AT+FTPPUTOP T? | Response +FTPPUTOPT: <value> OK
+222	2	Write Command AT+FTPPUTOP T =<value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+223	2	Test Command AT+FTPCID=? | Response OK
+223	2	Read Command AT+FTPCID? | Response +FTPCID: <value> OK
+223	2	Write Command AT+FTPCID=<v alue> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+223	2	Reference | Note
+223	3	Test Command AT+FTPREST= ? | Response OK
+223	3	Read Command AT+FTPREST? | Response +FTPREST: <value> OK
+224	1	Write Command AT+FTPREST= <value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+224	1	Reference | Note
+224	2	Test Command AT+FTPSERV= ? | Response OK
+224	2	Read Command AT+FTPSERV? | Response +FTPSERV: <value> OK
+224	2	Write Command AT+FTPSERV= <value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+224	2	Reference | Note
+224	3	Test Command AT+FTPUN=? | Response OK
+224	3	Read Command AT+FTPUN? | Response +FTPUN: <value>
+225	1	Write Command AT+FTPUN=<va lue> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+225	1	Reference | Note
+225	2	Test Command AT+FTPPW=? | Response OK
+225	2	Read Command AT+FTPPW? | Response +FTPPW: <value> OK
+225	2	Write Command AT+FTPPW=<v alue> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+225	2	Reference | Note
+226	1	Test Command AT+FTPGETNA ME=? | Response OK
+226	1	Read Command AT+FTPGETNA ME? | Response +FTPGETNAME: <value> OK
+226	1	Write Command AT+FTPGETNA ME =<value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+226	1	Reference | Note
+226	2	Test Command AT+FTPGETPA TH=? | Response OK
+226	2	Read Command AT+FTPGETPA TH? | Response +FTPGETPATH: <value> OK
+226	2	Write Command AT+FTPGETPA TH=<value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+226	2	Reference | Note
+227	1	Test Command AT+FTPPUTNA ME=? | Response OK
+227	1	Read Command AT+FTPPUTNA ME? | Response +FTPPUTNAME: <value> OK
+227	1	Write Command AT+FTPPUTNA ME=<value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+227	1	Reference | Note
+227	2	Test Command AT+FTPPUTPA TH=? | Response OK
+227	2	Read Command AT+FTPPUTPA TH? | Response +FTPPUTPATH: <value> OK
+227	2	Write Command AT+FTPPUTPA TH=<value> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+228	2	est Command T+FTPGET=? | Response
+228	2	Write Command T+FTPGET=< mode>[,<reqleng h>] | Response
+229	1	Max Response Time | 60 seconds(In case no response is received from server)
+229	1	Reference | Note
+229	2	Test Command AT+FTPPUT=? | Response
+229	2	Write Command AT+FTPPUT=< mode>[,<reqleng h>] | Response
+22	1	ATZ | RESET DEFAULT CONFIGURATION
+22	1	AT&C | SET DCD FUNCTION MODE
+22	1	AT&D | SET DTR FUNCTION MODE
+22	1	AT&F | FACTORY DEFINED CONFIGURATION
+22	1	AT&V | DISPLAY CURRENT CONFIGURATION
+22	1	AT&W | STORE ACTIVE PROFILE
+22	1	AT+GCAP | REQUEST COMPLETE TA CAPABILITIES LIST
+22	1	AT+GMI | REQUEST MANUFACTURER IDENTIFICATION
+22	1	AT+GMM | REQUEST TA MODEL IDENTIFICATION
+22	1	AT+GMR | REQUEST TA REVISION IDENTIFICATION OF SOFTWARE RELEASE
+22	1	AT+GOI | REQUEST GLOBAL OBJECT IDENTIFICATION
+22	1	AT+GSN | REQUEST TA SERIAL NUMBER IDENTIFICATION (IMEI)
+22	1	AT+ICF | SET TE-TA CONTROL CHARACTER FRAMING
+22	1	AT+IFC | SET TE-TA LOCAL DATA FLOW CONTROL
+22	1	AT+IPR | SET TE-TA FIXED LOCAL RATE
+22	1	AT+HVOIC | DISCONNECT VOICE CALL ONLY
+22	2	Execution Command A/ | Response
+22	2	Reference V.25ter | Note
+22	3	Execution Command ATA | Response
+230	1	Max Response Time | 60 seconds(In case no response is received from server)
+230	1	Reference | Note
+230	2	Read Command | Response TA returns FTP Application Context, which consists of the following AT Command parameters. +FTPSCONT:<mode> +FTPSERV: <value> +FTPPORT: <value> +FTPUN: <value> +FTPPW: <value> +FTPCID: <value> +FTPMODE: <value> +FTPTYPE: <value> +FTPPUTOPT: <value> +FTPREST: <value> +FTPGETNAME: <value> +FTPGETPATH: <value> +FTPPUTNAME: <value> +FTPPUTPATH: <value> +FTPTIMEOUT: <value> OK
+230	2	Execution | Response TA saves FTP Application Context which consist of following AT Command parameters, and when system is rebooted, the parameters will be loaded automatically. OK
+231	1	Parameter Saving | AUTO_SAVE
+231	1	Reference | Note
+231	2	Test Command AT+FTPDELE=? | Response OK
+231	2	Execution Command AT+FTPDELE | Response If successed: OK +FTPDELE:1,0 If failed: OK +FTPDELE:1,<error> If error is related to ME functionality: +CME ERROR: <err>
+231	2	Max Response Time | 60 seconds(In case no response is received from server)
+231	2	"Reference | Note The file to be deleted is specified by the ""AT+FTPGETNAME"" and ""AT+FTPGETPATH"" commands."
+231	3	Test Command AT+FTSIZE=? | Response OK
+231	3	Execution Command AT+FTPSIZE | Response If successed: OK
+232	1	Max Response Time | 60 seconds(In case no response is received from server)
+232	1	Reference | Note
+232	2	Test Command AT+FTPSTATE=? | Response
+232	2	Execution Command AT+FTPSTATE | Response
+232	2	Reference | Note
+233	1	Test Command AT+FTPEXTPUT =? | Response
+233	1	Write Command AT+FTPEXTPUT =<mode>[,<pos>,< en>,<timeout>] | Response
+233	1	Max Response Time | 60 seconds(In case no response is received from server)
+233	1	Reference | Note
+233	2	Test Command AT+FTPMKD=? | Response
+233	2	Execution Command AT+FTPMKD | Response
+234	1	Max Response Time | 60 seconds(In case no response is received from server)
+234	1	Reference | Note The created folder is specified by the “AT+FTPGETPATH” command.
+234	2	Test Command AT+FTPRMD=? | Response OK
+234	2	Execution Command AT+FTPRMD | Response If success: OK +FTPRMD: 1,0 If failed: OK +FTPRMD: 1,<error> If error is related to ME functionality: +CME ERROR: <err>
+234	2	Max Response Time | 60 seconds(In case no response is received from server)
+234	2	Reference | Note The removed folder is specified by the “AT+FTPGETPATH” command.
+234	3	Test Command AT+FTPLIST=? | Response OK
+234	3	Write Command AT+FTPLIST=<m ode>[,<reqlength> ] | Response If mode is 1 and it is a successful FTP get session: OK +FTPLIST: 1,1 If data transfer is finished: +FTPLIST: 1,0
+235	1	ax Response ime | 60 seconds(In case no response is received from server)
+235	1	eference | Note
+236	1	Co | mmand | Description
+236	1	AT | +CIPGSMLOC | GSM Location and Time
+236	2	Test Command AT+CIPGSMLOC= ? | Response
+236	2	Write Command AT+CIPGSMLOC= <type>,<cid> | Response
+237	1	Reference | Note
+238	1	C | ommand | Description
+238	1	A | T+EMAILCID | Set Email Bearer Profile Identifier
+238	1	A | T+EMAILTO | Set Timeout Value of SMTP/POP3 Server Response
+238	1	A | T+SMTPSRV | Set SMTP Server Address and Port
+238	1	A | T+SMTPAUTH | Set User Name and Password for SMTP Authentication
+238	1	A | T+SMTPFROM | Set Sender Address and Name
+238	1	A | T+SMTPRCPT | Set the Email Recipient(TO/CC/BCC) Address and Name
+238	1	A | T+SMTPSUB | Set the Email Subject
+238	1	A | T+SMTPBODY | Set the Email Body
+238	1	A | T+SMTPFILE | Set the Email Attachment
+238	1	A | T+SMTPSEND | Send the Email
+238	1	A | T+SMTPFT | Transfer the Email Attachment
+238	1	A | T+SMTPCS | Set the Email Charset
+238	1	A | T+POP3SRV | Set POP3 Server and Account
+238	1	A | T+POP3IN | Log In POP3 Server
+238	1	A | T+POP3NUM | Get Email Number and Total Size
+238	1	A | T+POP3LIST | Get the Specific Email Size
+238	1	A | T+POP3UIDL | Get the Specific Email Unique-id
+238	1	A | T+POP3CMD | Get Multi-line Response
+238	1	A | T+POP3READ | Read Multi-line Response
+238	1	A | T+POP3DEL | Mark the Specific Email to Delete
+238	1	A | T+POP3RSET | Unmark the Emails that Be Marked as Deleted
+238	1	A | T+POP3OUT | Log Out POP3 Server
+239	1	Test Command AT+EMAILCID=? | Response
+239	1	Read Command AT+EMAILCID? | Response
+239	1	Write Command AT+EMAILCID=<c id> | Response
+239	1	Reference | Note
+239	2	Test Command AT+EMAILTO=? | Response
+239	2	Read Command AT+EMAILTO? | Response
+23	1	Max Response ime | 20s(voice call)
+23	1	eference V.25ter | Note
+23	2	xecution ommand ATD<n>[<mgsm [;] | Response
+240	1	Write Command AT+EMAILTO=<ti eout> | Response
+240	1	Reference | Note
+240	2	Test Command AT+SMTPSRV=? | Response
+240	2	Read Command AT+SMTPSRV? | Response
+240	2	Write Command AT+SMTPSRV= <smtpServer>[,<sm pPort>] | Response
+241	2	Test Command AT+SMTPAUTH=? | Response
+241	2	Read Command AT+SMTPAUTH? | Response
+241	2	Write Command AT+SMTPAUTH=< uthType>[,<userNa e>,<password>] | Response
+241	2	Reference | Note
+242	1	Test Command AT+SMTPFROM= ? | Response
+242	1	Read Command AT+SMTPFROM? | Response
+242	1	Write Command AT+SMTPFROM= senderAddress>[,<s nderName>] | Response
+242	1	Reference | Note
+242	2	Test Command AT+SMTPRCPT=? | Response
+242	2	Read Command AT+SMTPRCPT? | Response
+243	1	Write Command AT+SMTPRCPT=< rcptType>[,<index> ,<rcptAddress>[,<r cptName>]]] | Response
+243	1	Reference | Note
+243	2	Test Command AT+SMTPSUB=? | Response
+243	2	Read Command AT+SMTPSUB? | Response
+243	2	Write Command AT+SMTPSUB=<su bject> | Response
+244	2	Test Command AT+SMTPBODY=? | Response +SMTPBODY: <bodyLength> OK
+244	2	Write Command AT+SMTPBODY=< ength> then type data as mail body. When ody’s length equal | Response DOWNLOAD OK If error is related to ME functionality: ERROR
+244	2	ength, command is ver! | Parameter <length> The length of Email body.
+244	2	Reference | Note (cid:122) If the Email charset is not ASCII, the body of Email must be in hexadecimal format. (cid:122) After urc string “DOWNLOAD”, User can input email’s body!
+245	1	Read Command AT+SMTPFILE? | Response
+245	1	Write Command AT+SMTPFILE=<fi Type>[,<fileName> encodeType>] | Response
+245	1	Reference | Note
+245	2	Test Command AT+SMTPSEND=? | Response
+246	1	Execution Command AT+SMTPSEND | Response
+246	1	Reference | Note
+246	2	Test Command AT+SMTPFT=? | Response
+246	2	Write Command AT+SMTPFT=<req ength> | Response
+247	1	Reference | Note
+247	2	Test Command AT+SMTPCS=? | Response
+247	2	Read Command AT+SMTPCS? | Response
+247	2	Write Command AT+SMTPCS=<cha set> | Response
+248	1	Reference | Note
+248	2	Test Command AT+POP3SRV=? | Response
+248	2	Read Command AT+POP3SRV? | Response
+248	2	Write Command AT+POP3SRV=<po 3Server>,<userNa e>,<password>[,<p p3Port>] | Response
+249	2	Test Command AT+POP3IN=? | Response
+249	2	Execution Command AT+POP3IN | Response
+249	2	Reference | Note
+249	3	Test Command AT+POP3NUM=? | Response
+24	1	ax Response ime | 20s(voice call)
+24	1	eference .25ter | Note
+250	1	Execution Command AT+POP3NUM | Response
+250	1	Reference | Note
+250	2	Test Command AT+POP3LIST=? | Response
+250	2	Write Command AT+POP3LIST=<m gNumber> | Response
+251	1	Reference | Note
+251	2	Test Command AT+POP3UIDL=? | Response
+251	2	Write Command AT+POP3UIDL=< sgNumber> | Response
+252	2	Test Command AT+POP3CMD=? | Response
+252	2	Write Command AT+POP3CMD=<c dType>[,<msgNum er>[,lineNumber]] | Response
+253	1	eference | Note
+254	1	est Command T+POP3READ=? | Response
+254	1	Write Command T+POP3READ=< qLength> | Response
+254	1	eference | Note
+255	1	Test Command AT+POP3DEL=? | Response
+255	1	Write Command AT+POP3DEL=<m gNumber> | Response
+255	1	Reference | Note
+255	2	Test Command AT+POP3RSET=? | Response
+256	1	Execution Command AT+POP3RSET | Response
+256	1	Reference | Note
+256	2	Test Command AT+POP3OUT=? | Response
+256	2	Execution Command AT+POP3OUT | Response
+258	1	C | ommand | Description
+258	1	A | T+CMMSCURL | Set the URL of the mms center
+258	1	A | T+CMMSPROTO | Set the protocol parameter and MMS proxy
+258	1	A | T+CMMSCID | Set the network parameters for MMS
+258	1	A | T+CMMSSENDCFG | Set the parameters for sending MMS
+258	1	A | T+CMMSEDIT | Enter or exit edit mode
+258	1	A | T+CMMSDOWN | Download the file data or title from UART
+258	1	A | T+CMMSDELFILE | Delete the file of the edited MMS by file index
+258	1	A | T+CMMSSEND | Start mms sending
+258	1	A | T+CMMSRECP | Add recipients
+258	1	A | T+CMMSCC | Add copy recipients
+258	1	A | T+CMMSBCC | Add Secret Recipients
+258	1	A | T+CMMSDELRECP | Delete recipients
+258	1	A | T+CMMSDELCC | Delete copy recipients
+258	1	A | T+CMMSDELBCC | Delete secret recipients
+258	1	A | T+CMMSRECV | Receive MMS
+258	1	A | T+CMMSVIEW | Get the MMS into buffer and show the information
+258	1	A | T+CMMSREAD | Read the given file of the MMS in the buffer
+258	1	A | T+CMMSRDPUSH | Read the information of the MMS PUSH message
+258	1	A | T+CMMSUA | Set User Agent
+258	1	A | T+CMMSPROFILE | Set User Agent Profile
+258	1	A | T+CMMSTIMEOUT | Set MMS Timeout
+258	1	A | T+CMMSSTATUS | Get MMS Status
+258	1	A | T+CMMSINIT | Initialize MMS Function
+258	1	A | T+CMMSTERM | Exit MMS Function
+258	1	A | T+CMMSSCONT | Save MMS Context
+259	1	Test Command AT+CMMSCURL= | Response +CMMSCURL: “URL” OK Parameter See Write Command
+259	1	Read Command AT+CMMSCURL? | Response +CMMSCURL: <mmscurl> OK
+259	1	Write Command AT+CMMSCURL= mmscurl> | Response OK or ERROR or +CME ERROR: <err>
+259	1	arameter Saving Mode | AT+CMMSSCONT
+259	1	Reference | Note
+259	2	Test Command | Response +CMMSPROTO: “(0-255).(0-255).(0-255).(0-255)”,(1-65535) OK
+25	2	xecution ommand TD><n>[<clir> [ <cug>][;] | Response
+260	1	Read Command AT+CMMSPROTO ? | Response +CMMSPROTO: <Gateway>,<Port> OK
+260	1	Write Command AT+CMMSPROTO =<Gateway>,<Port > | Response OK or ERROR or +CME ERROR: <err>
+260	1	Parameter Saving Mode | AT+CMMSSCONT
+260	1	Reference | Note
+260	2	Test Command AT+CMMSCID=? | Response +CMMSCID: (1-3) OK
+260	2	Read Command AT+CMMSCID? | Response +CMMSCID: <value> OK
+260	2	Write Command AT+CMMSCID=<v lue> | Response OK or ERROR or +CME ERROR: <err>
+261	1	Parameter Saving Mode | AT+CMMSSCONT
+261	1	Reference | Note
+261	2	Test Command AT+CMMSSENDC FG=? | Response
+261	2	Read Command AT+CMMSSENDC FG? | Response
+261	2	Write Command AT+CMMSSENDC FG=<valid>[,<pri>[ <sendrep>[,<readre p>[,<visible>[,<class >[,<subctrl> [,<notifrspcheck>]]] | Response
+261	2	]]]] | Parameter
+262	1	arameter Saving Mode | AT+CMMSSCONT
+262	1	Reference | Note
+262	2	est Command AT+CMMSEDIT=? | Response
+263	1	Read Command AT+CMMSEDIT? | Response
+263	1	Write Command AT+CMMSEDIT=< mode> | Response
+263	1	Reference | Note
+263	2	Test Command AT+CMMSDOWN =? | Response
+263	2	Write Command AT+CMMSDOWN =<type>,<size>,<tim >[,<name>] | Response
+264	1	Max Response Time | Decided by <time>
+264	1	Reference | Note
+264	2	Test Command AT+CMMSDELFI LE=? | Response
+264	2	Write Command AT+CMMSDELFI LE=<fileIndex> | Response
+264	2	Reference | Note
+264	3	Test Command AT+CMMSSEND= ? | Response
+265	1	Write Command AT+CMMSSEND= <address> | Response
+265	1	Execution Command AT+CMMSSEND | Response
+265	1	Max Response Time | AT+CMMSTIMEOUT
+265	1	Reference | Note
+265	2	Test Command AT+CMMSRECP= ? | Response
+265	2	Read Command AT+CMMSRECP? | Response
+265	2	Write Command AT+CMMSRECP= <addr> | Response
+266	1	Reference | Note
+266	2	Test Command AT+CMMSCC=? | Response
+266	2	Read Command AT+CMMSCC? | Response
+266	2	Write Command AT+CMMSCC=<ad dr> | Response
+266	2	Reference | Note
+266	3	Test Command AT+CMMSBCC=? | Response
+266	3	Read Command AT+CMMSBCC? | Response
+267	1	Write Command AT+CMMSBCC=< addr> | Response
+267	1	Reference | Note
+267	2	Test Command AT+CMMSDELRE CP=? | Response
+267	2	Write Command AT+CMMSDELRE CP=<addr> | Response
+267	2	Execution Command AT+CMMSDELRE CP | Delete all the recipients
+267	2	Reference | Note
+268	1	Test Command AT+CMMSDELCC =? | Response
+268	1	Write Command AT+CMMSDELCC =<addr> | Response
+268	1	Execution Command AT+CMMSDELCC | Delete all the copy recipients
+268	1	Reference | Note
+268	2	Test Command AT+CMMSDELBC C=? | Response
+268	2	Write Command AT+CMMSDELBC C=<addr> | Response
+268	2	Execution Command | Delete all the secret recipients
+269	1	AT+CMMSDELBC C | Response
+269	1	Reference | Note
+269	2	Test Command AT+CMMSRECV= ? | Response
+269	2	Write Command AT+CMMSRECV= <index> | Response
+269	2	Max Response Time | AT+CMMSTIMEOUT
+269	2	Reference | Note
+26	1	eference .25ter | Note
+26	2	xecution ommand TD><str>[<clir ][<cug>][;] | Response
+270	2	est Command T+CMMSVIEW= | Response
+270	2	xecution Command T+CMMSVIEW | Response
+271	2	Test Command AT+CMMSREAD= ? | Response OK
+271	2	Write Command AT+CMMSREAD= <fileIndex> | Response +CMMSREAD: <name> <datSize> File content OK
+271	2	Max Response Time | 5s
+271	2	Reference | Note If the file type is text, the character set of the output text is Unicode little endian without the header “FF FE”.
+272	1	rite Command T+CMMSRDPUS =<index> | Response
+273	1	Max Response Time | 5s
+273	1	Reference | Note
+273	2	Test Command AT+CMMSUA=? | Response
+273	2	Read Command AT+CMMSUA? | Response
+273	2	Write Command AT+CMMSUA=<U A> | Response
+273	2	Parameter Saving Mode | AT+CMMSSCONT
+273	2	Reference | Note
+274	1	"Test Command AT+CMMSPROFI LE=? | Response +CMMSPROFILE: ""UserAgentProfile"" OK"
+274	1	Read Command AT+CMMSPROFI LE? | Response +CMMSPROFILE: <UAProfile> OK
+274	1	Write Command AT+CMMSPROFI LE=<UAProfile> | Response OK or ERROR or +CME ERROR: <err>
+274	1	Parameter Saving Mode | AT+CMMSSCONT
+274	1	Reference | Note
+274	2	Test Command AT+CMMSTIMEO UT=? | Response +CMMSTIMEOUT: (10-1000),(10-1000) OK
+274	2	Read Command AT+CMMSTIMEO UT? | Response +CMMSTIMEOUT: <Send timeout>,<Recv timeout> OK
+275	1	Write Command AT+CMMSTIMEO UT=<Send imeout>,<Recv imeout>> | Response
+275	1	Parameter Saving Mode | AT+CMMSSCONT
+275	1	Reference | Note
+275	2	Test Command AT+CMMSSTATU S=? | Response
+275	2	Read Command AT+CMMSSTATU S？ | Response
+275	2	Reference | Note
+276	1	Test Command AT+CMMSINIT=? | Response OK
+276	1	Execution Command AT+CMMSINIT | Response OK or ERROR or +CME ERROR: <err>
+276	1	Reference | Note When first entering the MMS function, this command must be executed.
+276	2	Test Command AT+CMMSTERM= ? | Response OK
+276	2	Execution Command AT+CMMSTERM | Response OK or ERROR or +CME ERROR: <err>
+276	2	Reference | Note When exiting the MMS function, this command must be executed.
+277	1	est Command AT+CMMSSCONT ? | Response
+277	1	Read Command AT+CMMSSCONT | Response
+277	1	xecution Command AT+CMMSSCONT | Response
+277	1	Reference | Note
+278	1	Command | Description
+278	1	AT+DDET | DTMF Detection Control
+278	2	Test Command AT+DDET=? | Response
+278	2	Read Command AT+DDET? | Response
+278	2	Write Command AT+DDET=<mo de> | Response
+278	2	Parameter Saving Mode | AT&W_SAVE
+278	2	Reference | Note
+279	1	Command | Description
+279	1	AT+CREC | Record operation
+279	2	Test Command AT+CREC=? | Response
+279	2	Read Command AT+CREC? | Response
+279	2	Write Command AT+CREC=<mo de>,[<id>] | Response
+27	1	eference .25ter | Note
+27	2	xecution ommand TDL | Response
+281	1	eference | Note
+283	1	Command | Description
+283	1	AT+CTTS | TTS operation
+283	1	AT+CTTSPARAM | Set params of the TTS playing
+283	2	Test Command AT+CTTS=? | Response
+283	2	Read Command AT+CTTS? | Response
+283	2	Write Command AT+CTTS=<mo de>[,<text>] | Response
+284	1	Reference | Note
+284	2	Test Command AT+CTTSPARAM =? | Response
+284	2	Read Command AT+CTTSPARAM ? | Response
+284	2	Write Command AT+CTTSPARAM= <volume>,<mode>, <pitch>,<speed>[,<c | Response
+284	2	hannel>] | Parameter
+284	2	Reference | Note
+285	1	Code of <err> | Meaning
+285	1	10 | SIM not inserted
+285	1	11 | SIM PIN required
+285	1	12 | SIM PUK required
+285	1	13 | SIM failure
+285	1	14 | SIM busy
+285	1	15 | SIM wrong
+285	1	16 | incorrect password
+285	1	17 | SIM PIN2 required
+285	1	18 | SIM PUK2 required
+285	1	20 | memory full
+285	1	21 | invalid index
+285	1	22 | not found
+285	1	23 | memory failure
+285	1	24 | text string too long
+285	1	25 | invalid characters in text string
+285	1	26 | dial string too long
+285	1	27 | invalid characters in dial string
+285	1	30 | no network service
+285	1	31 | network timeout
+286	1	32 | network not allowed - emergency call only
+286	1	40 | network personalisation PIN required
+286	1	41 | network personalisation PUK required
+286	1	42 | network subset personalisation PIN required
+286	1	43 | network subset personalisation PUK required
+286	1	44 | service provider personalisation PIN required
+286	1	45 | service provider personalisation PUK required
+286	1	46 | corporate personalisation PIN required
+286	1	47 | corporate personalisation PUK required
+286	1	99 | resource limitation
+286	1	100 | unknown
+286	1	103 | Illegal MS
+286	1	106 | Illegal ME
+286	1	107 | GPRS services not allowed
+286	1	111 | PLMN not allowed
+286	1	112 | Location area not allowed
+286	1	113 | Roaming not allowed in this location area
+286	1	132 | service option not supported
+286	1	133 | requested service option not subscribed
+286	1	134 | service option temporarily out of order
+286	1	148 | unspecified GPRS error
+286	1	149 | PDP authentication failure
+286	1	150 | invalid mobile class
+286	1	160 | DNS resolve failed
+286	1	161 | Socket open failed
+286	1	171 | MMS task is busy now
+286	1	172 | The mms data is oversize
+286	1	173 | The operation is overtime
+286	1	174 | There is no mms receiver
+286	1	175 | The storage for address is full
+286	1	176 | Not find the address
+286	1	177 | The connection to network is failed
+286	1	178 | Failed to read push message
+286	1	179 | This is not a push message
+286	1	180 | gprs is not attached
+286	1	181 | tcpip stack is busy
+286	1	182 | The mms storage is full
+286	1	183 | The box is empty
+287	1	184 | failed to save mms
+287	1	185 | It is in edit mode
+287	1	186 | It is not in edit mode
+287	1	187 | No content in the buffer
+287	1	188 | Not find the file
+287	1	189 | Failed to receive mms
+287	1	190 | Failed to read mms
+287	1	191 | Not M-Notification.ind
+287	1	192 | The mms inclosure is full
+287	1	193 | Unknown
+287	1	753 | missing required cmd parameter
+287	1	754 | invalid SIM command
+287	1	755 | invalid File Id
+287	1	756 | missing required P1/2/3 parameter
+287	1	757 | invalid P1/2/3 parameter
+287	1	758 | missing required command data
+287	1	759 | invalid characters in command data
+287	1	765 | Invalid input value
+287	1	766 | Unsupported mode
+287	1	767 | Operation failed
+287	1	768 | Mux already running
+287	1	769 | Unable to get control
+287	1	770 | SIM network reject
+287	1	771 | Call setup in progress
+287	1	772 | SIM powered down
+287	1	773 | SIM file not present
+287	1	791 | Param count not enough
+287	1	792 | Param count beyond
+287	1	793 | Param value range beyond
+287	1	794 | Param type not match
+287	1	795 | Param format invalid
+287	1	796 | Get a null param
+287	1	797 | CFUN state is 0 or 4
+287	1	796 | Get a null param
+287	1	810 | No Error
+287	1	811 | Unrecognized Command
+287	1	812 | Return Value Error
+287	1	813 | Syntax Error
+288	1	814 | Unspecified Error
+288	1	815 | Data Transfer Already
+288	1	816 | Action Already
+288	1	817 | Not At Cmd
+288	1	818 | Multi Cmd too long
+288	1	819 | Abort Cops
+288	1	820 | No Call Disc
+288	1	821 | BT SAP Undefined
+288	1	822 | BT SAP Not Accessible
+288	1	823 | BT SAP Card Removed
+288	1	824 | AT Not Allowed By Customer
+288	2	Code of <err> | Meaning
+288	2	10 | Call barred
+288	2	11 | Reserved
+288	2	16 | Normal call clearing
+288	2	17 | User busy
+288	2	18 | No user responding
+288	2	19 | User alerting, no answer
+288	2	21 | Short message transfer rejected
+288	2	22 | Number changed
+288	2	25 | Pre-emption
+288	2	26 | Non-selected user clearing
+288	2	27 | Destination out of service
+288	2	28 | Invalid number format (incomplete number)
+288	2	29 | Facility rejected
+289	1	30 | Response to STATUS ENQUIRY
+289	1	32 | Normal, unspecified
+289	1	34 | No circuit/channel available
+289	1	38 | Network out of order
+289	1	41 | Temporary failure
+289	1	42 | Switching equipment Congestion
+289	1	43 | Access information discarded
+289	1	44 | Requested circuit/channel not available
+289	1	47 | Resources unavailable, unspecified
+289	1	49 | Quality of service unavailable
+289	1	50 | Requested facility not subscribed
+289	1	55 | Requested facility not subscribed
+289	1	57 | Bearer capability not authorized
+289	1	58 | Bearer capability not presently available
+289	1	63 | Service or option not available, unspecified
+289	1	65 | Bearer service not implemented
+289	1	68 | ACM equal or greater than ACM maximum
+289	1	69 | Requested facility not implemented
+289	1	70 | Only restricted digital information bearer capability is available
+289	1	79 | Service or option not implemented, unspecified
+289	1	81 | Invalid transaction identifier value
+289	1	87 | User not member of CUG
+289	1	88 | Incompatible destination
+289	1	91 | Invalid transit network selection
+289	1	95 | Semantically incorrect message
+289	1	96 | Invalid mandatory information
+289	1	97 | Message type non-existent or not implemented
+289	1	98 | Message type not compatible with protocol state
+289	1	99 | Information element non-existent or not implemented
+289	1	100 | Conditional information element error
+289	1	101 | Message not compatible with protocol
+289	1	102 | Recovery on timer expiry
+289	1	111 | Protocol error, unspecified
+289	1	127 | Interworking, unspecified
+289	1	128 | Telematic interworking not supported
+28	1	eference .25ter | Note
+28	2	xecution ommand TE<value> | Response
+290	1	129 | Short message Type 0 not supported
+290	1	130 | Cannot replace short message
+290	1	143 | Unspecified TP-PID error
+290	1	144 | Data coding scheme (alphabet) not supported
+290	1	145 | Message class not supported
+290	1	159 | Unspecified TP-DCS error
+290	1	160 | Command cannot be acted
+290	1	161 | Command unsupported
+290	1	175 | Unspecified TP-Command error
+290	1	176 | TPDU not supported
+290	1	192 | SC busy
+290	1	193 | No SC subscription
+290	1	194 | SC system failure
+290	1	195 | Invalid SME address
+290	1	196 | Destination SME barred
+290	1	197 | SM Rejected-Duplicate SM
+290	1	198 | TP-VPF not supported
+290	1	199 | TP-VP not supported
+290	1	208 | SIM SMS storage full
+290	1	209 | No SMS storage capability in SIM
+290	1	210 | Error in MS
+290	1	211 | Memory Capacity Exceeded
+290	1	212 | SIM Application Toolkit Busy
+290	1	213 | SIM data download error
+290	1	224 | CP retry exceed
+290	1	225 | RP trim timeout
+290	1	226 | SMS connection broken
+290	1	255 | Unspecified error cause
+290	1	300 | ME failure
+290	1	301 | SMS reserved
+290	1	302 | operation not allowed
+290	1	303 | operation not supported
+290	1	304 | invalid PDU mode
+290	1	305 | invalid text mode
+290	1	310 | SIM not inserted
+290	1	311 | SIM pin necessary
+291	1	312 | PH SIM pin necessary
+291	1	313 | SIM failure
+291	1	314 | SIM busy
+291	1	315 | SIM wrong
+291	1	316 | SIM PUK required
+291	1	317 | SIM PIN2 required
+291	1	318 | SIM PUK2 required
+291	1	320 | memory failure
+291	1	321 | invalid memory index
+291	1	322 | memory full
+291	1	323 | invalid input parameter
+291	1	324 | invalid input format
+291	1	325 | invalid input value
+291	1	330 | SMSC address unknown
+291	1	331 | no network
+291	1	332 | network timeout
+291	1	340 | no cnma ack
+291	1	500 | Unknown
+291	1	512 | SMS no error
+291	1	513 | Message length exceeds maximum length
+291	1	514 | Invalid request parameters
+291	1	515 | ME storage failure
+291	1	516 | Invalid bearer service
+291	1	517 | Invalid service mode
+291	1	518 | Invalid storage type
+291	1	519 | Invalid message format
+291	1	520 | Too many MO concatenated messages
+291	1	521 | SMSAL not ready
+291	1	522 | SMSAL no more service
+291	1	523 | Not support TP-Status-Report & TP-Command in storage
+291	1	524 | Reserved MTI
+291	1	525 | No free entity in RL layer
+291	1	526 | The port number is already registerred
+291	1	527 | There is no free entity for port number
+291	1	528 | More Message to Send state error
+291	1	529 | MO SMS is not allow
+291	1	530 | GPRS is suspended
+291	1	531 | ME storage full
+292	2	URC | Description | AT Command
+292	2	+CCWA: | Indication of a call that is currently waiting and can be accepted. | Indication of a call that is currently | AT+CCWA=1
+292	2	<number>,<type>,<class>[,<a | waiting and can be accepted.
+292	2	+CLIP: | The calling line identity (CLI) of the calling party when receiving a mobile terminated call. | AT+CLIP=1
+292	2	+CRING: <type> | +CRING: <type> | Indicates incoming call to the TE if | AT+CRC=1
+292	2	+CREG: <stat>[,<lac>,<ci>] | There is a change in the MT network | AT+CREG=<n>
+292	2	+CCWV | Shortly before the ACM (Accumulated | AT+CCWE=1
+292	2	+CMTI: <mem3>,<index> | Indicates that new message has been | AT+CNMI
+292	2	received. | <mt>=1
+292	2	+CMT: <length><CR><LF><pdu> | Indicates that new message has been received. | Indicates that new message has been | AT+CNMI
+292	2	received. | <mt>=2 (PDU
+292	2	+CMT: | Indicates that new message has been received. | AT+CNMI <mt>=2 (text mode) | AT+CNMI
+292	2	<oa>,<scts>[,<tooa>,<fo>,<pi | <mt>=2 (text
+292	2	d>,<dcs>,<sca>,<tosca>, | mode)
+292	2	+CBM: <length><CR><LF><pdu> | +CBM: | Indicates that new cell broadcast message has been received. | AT+CNMI
+292	2	<length><CR><LF><pdu> | <bm>=2 (PDU
+292	2	+CBM: | Indicates that new cell broadcast message has been received. | AT+CNMI
+292	2	<sn>,<mid>,<dcs>,<page>,<p | <bm>=2 (text
+292	2	ages><CR><LF><data> | mode enabled):
+292	2	+CDS: <length><CR><LF><pdu> | +CDS: | Indicates that new SMS status report has been received. | AT+CNMI
+292	2	<length><CR><LF><pdu> | <ds>=1 (PDU
+292	2	+CDS: | Indicates that new SMS status report has | AT+CNMI
+293	1	<fo>,<mr>[,<ra>][,<tora>],<s | been received. | <ds>=1 (text mode
+293	1	cts>,<dt>,<st> | enabled):
+293	1	+COLP: | The presentation of the COL (Connected | AT+COLP=1
+293	1	<number>,<type>[,<subaddr> | Line) at the TE for a mobile originated
+293	1	,<satype>,<alphaId>] | call.
+293	1	+CSSU:<code2> | +CSSU:<code2> | Presentation status during a mobile | AT+CSSN=<n>[,<
+293	1	+CSSI:<code1>[,<index>] | Presentation status after a mobile originated call setup | Presentation status after a mobile | AT+CSSN=<n>[,<
+293	1	+CLCC: | Report a list of current calls of ME automatically when the current call status changes. | AT+CLCC=1 | AT+CLCC=1
+293	1	"*PSNWID: ""<mcc>"", | Refresh network name by network. | AT+CLTS=1"
+293	1	*PSUTTZ: | Refresh time and time zone by network.
+293	1	"+CTZV: ""<time zone>"" | Refresh network time zone by network."
+293	1	DST: <dst> | DST: <dst> | Refresh Network Daylight Saving Time
+293	1	+CSMINS: <n>,<SIM | Indicates whether SIM card has been | AT+CSMINS=1
+293	1	inserted> | inserted.
+293	1	+CDRIND: <type> | Indicates whether a CS voice call, CS | AT+CDRIND=1 | AT+CDRIND=1
+293	1	+CHF: <state> | Indicates the current channel. | AT+CHF=1
+293	1	+CENG: | Report of network information. | Report of network information. | AT+CENG=<mod e>[,<Ncell>] <mode>=2 | AT+CENG=<mod
+293	1	"<cell>,""<arfcn>,<rxl>,<rxq>, | e>[,<Ncell>]"
+293	1	<mcc>,<mnc>,<bsic>,<cellid | <mode>=2
+293	1	+CENG: | Limited report of network information. | AT+CENG=<mod
+294	1	cellid>,<bsic>,<rxl> | e>[,<Ncell>]
+294	1	MO RING | Shows call state of mobile originated
+294	1	call: the call is alerted. | AT+MORING=1
+294	1	MO CONNECTED | Shows call state of mobile originated | AT+MORING=1 | AT+MORING=1
+294	1	+CPIN:<code> | Indicates whether some password is | AT+CPIN
+294	1	+CPIN: NOT READY | SIM Card is not ready.
+294	1	+CPIN: NOT INSERTED | SIM Card is not inserted.
+294	1	"+CSQN: <rssi>,<ber> | Displays signal strength and channel bit | AT+EXUNSOL="" SQ"",1"
+294	1	+SIMTONE: 0 | The generated tone playing is stopped or completed. | The generated tone playing is stopped or | AT+SIMTONE
+294	1	+STTONE: 0 | The SIM Toolkit tone playing is stopped | AT+STTONE
+294	1	+CR: <serv> | An intermediate result code is | AT+CR=1
+294	1	+CUSD: | Indicates an USSD response from the network, or network initiated operation. | Indicates an USSD response from the | AT+CUSD=1
+294	1	RING | RING | An incoming call signal from network is
+294	1	NORMAL POWER DOWN | SIM800 is powered down by the
+294	1	+CMTE: <n> | The module temperature is abnormal. | AT+CMTE=1
+294	1	UNDER-VOLTAGE | Under-voltage automatic power down. | Under-voltage automatic power down.
+294	1	UNDER-VOLTAGE | under-voltage warning
+294	1	OVER-VOLTAGE POWER | Over-voltage automatic power down.
+294	1	OVER-VOLTAGE | over-voltage warning
+294	1	CHARGE-ONLY MODE | CHARGE-ONLY MODE | The module is charging by charger.
+294	1	RDY | Power on procedure is completed, and | AT+IPR=<rate> <rate> is not 0
+295	1	Call Ready | Module is powered on and phonebook | AT+CIURC=1
+295	1	+CFUN: <fun> | Phone functionality indication (This | AT+IPR=<rate> <rate> is not 0
+295	1	[<n>,]CONNECT OK | TCP/ UDP connection is successful | AT+CIPSTART
+295	1	CONNECT | CONNECT | TCP/UDP connection in channel mode is
+295	1	[<n>,]CONNECT FAIL | TCP/UDP connection fails | AT+CIPSTART
+295	1	[<n>,]ALREADY | TCP/UDP connection exists | TCP/UDP connection exists | AT+CIPSTART | AT+CIPSTART
+295	1	[<n>,]SEND OK | Data sending is successful
+295	1	[<n>,]CLOSED | TCP/UDP connection is closed
+295	1	RECV FROM: <IP | shows remote IP address and port | AT+CIPSRIP=1 | AT+CIPSRIP=1
+295	1	ADDRESS>: <PORT> | (only in single connection mode)
+295	1	+IPD, <data size>,<TCP/UDP>:<data> | +IPD, <data | display transfer protocol in IP header to | AT+CIPHEAD AT+CIPSHOWTP
+295	1	size>,<TCP/UDP>:<data> | received data or not (only in single
+295	1	+RECEIVE,<n>,<length> | Received data from remote client (only
+295	1	REMOTE IP: <IP | Remote client connected in | Remote client connected in
+295	1	+CDNSGIP: 1,<domain | DNS successful | AT+CDNSGIP
+295	1	+CDNSGIP:0,<dns error | DNS failed
+295	1	+PDP DEACT | GPRS is disconnected by network
+295	1	+SAPBR <cid>: DEACT | +SAPBR <cid>: DEACT | The bearer based on IP connection of
+295	1	+HTTPACTION: | Indicates HTTP method, Status Code | AT+HTTPACTIO N=<Method>
+295	1	<Method>,<StatusCode>,<Da | responded by remote server and the
+295	1	taLen> | length of data got.
+295	1	+FTPGET:1,<res> | FTPGET session | AT+FTPGET=1
+295	1	+FTPPUT:1,1,<maxlength> | It is ready to upload data. | AT+FTPPUT
+295	1	+FTPPUT:1,<res> | FTP return result | AT+FTPPUT
+295	1	+FTPDELE:1,<res> | FTP delete session | AT+FTPDELE
+295	1	+FTPSIZE:1,<res>,<size> | FTP size session | AT+FTPSIZE
+295	1	+FTPMKD:1,<res> | +FTPMKD:1,<res> | FTP create directory (not supported for | AT+FTPMKD | AT+FTPMKD
+295	1	+FTPRMD:1,<res> | FTP delete directory (not supported for | AT+FTPRMD
+296	1	+FTPLIST:1,<res> | FTP list session (not supported for all | AT+FTPLIST
+297	1	Demonstration | Syntax | Expect Result
+297	1	The AT Command interpreter actively | AT | AT | OK | OK
+297	1	Display the product name and the product release information. | Display the product name and the | ATI | SIM800 R11.08
+297	1	Display product identification information: the manufacturer, the product name and the product revision information. | AT+GSV | SIMCOM_Ltd
+297	1	Display current configuration, a list of the current active profile parameters. | AT&V | [A complete listing of the
+297	1	"Reporting of mobile equipment errors. The default CME error reporting setting is disabled. Switch to verbose mode Displays a string explaining the error in more details. | AT+CMEE=? AT+CMEE? AT+CSCS=? AT+CSCS=""TEST"" AT+CMEE=2 AT+CSCS=""TEST"" | +CMEE: (0-2)"
+297	1	Store the current configuration in nonvolatile memory. When the board is reset, the configuration changes from the last session are loaded. | ATE0&W | OK
+297	1	AT | [No echo]
+297	1	AT | [No echo]
+298	1	ATE1&W AT | [No echo]
+298	1	Set the ME to minimum functionality | AT+IPR？ AT+CFUN=0 AT+IPR = 115200 AT+IPR? AT+CFUN=0 | +IPR:0
+298	1	ME has entered full functionality mode | AT+CFUN? | +CFUN:1
+298	4	Demonstration | Syntax | Expect Result
+298	4	List available phonebooks, and select the SIM phonebook. | List available phonebooks, and select the | AT+CPBS=? | +CPBS:
+298	4	"SIM phonebook. | (""SM"",""ME"",""ON"")"
+298	4	"AT+CPBS=""SM"" | OK"
+298	4	Display the ranges of phonebook entries and list the contents of the phonebook. | AT+CPBR=? AT+CPBR=1,10 | AT+CPBR=? | +CPBR: (1-250),40,14
+298	4	AT+CPBR=1,10 | [a listing of phonebook
+298	4	"Write an entry to the current phonebook. | AT+CPBW=,""13918 18xxxx"",129,""Daniel"" AT+CPBR=1,10"
+299	1	"Find an entry in the current phonebook using a text search. | AT+CPBF=""Daniel"" | +CPBF:5, ""13918186089"",129,""Daniel"" OK"
+299	1	Delete an entry from the current phonebook specified by its position index. | AT+CPBW=2 AT+CPBR=1,10 | OK [a listing of phonebook contents] OK
+299	2	Demonstration | Syntax | Expect Result
+299	2	"Display the current network operator that the handset is currently registered with. | AT+COPS? | +COPS: 0,0,""CHINA MOBILE"" OK"
+299	2	"Display a full list of network operator names. | AT+COPN | +COPN: ""20201"", ""COSMO"" [skip a bit] +COPN: ""901012"",""Maritime Comm Partner AS"" OK"
+299	2	reduce its functionality. This will deregister the handset from the network. | AT+IPR? AT+CFUN=0 [wait for deregister] ATD6241xxxx; AT+CFUN=1 | +IPR: 0 OK OK ERROR OK
+299	2	Request the IMSI | AT+CIMI | 460008184101641 OK
+299	3	Demonstration | Syntax | Expect Result
+299	3	Make a voice call | ATD6241xxxx; | OK MS makes a voice call
+299	3	Hang up a call | ATH | OK
+29	2	Execution Command ATH | Response Disconnect existing call by local TE from Command line and terminate call OK Note: OK is issued after circuit 109(DCD) is turned off, if it was previously on.
+29	2	Max Response Time | 20s
+29	2	Reference V.25ter | Note
+29	3	Execution Command ATI | Response TA issues product information text Example: SIM800 R11.08 OK
+29	3	Reference V.25ter | Note
+29	4	Execution Command | Response OK
+29	4	ATL<value> | Parameter <value> 0..9 Volume
+29	4	Reference V.25ter | Note No effect in GSM
+2	1	Document Title: | SIM800 Series AT Commands Manual
+2	1	Version: | 1.01
+2	1	Date: | 2013-07-23
+2	1	Status: | Release
+2	1	Document Control ID: | SIM800 Series_AT Command Manual_V1.01
+300	1	Make a voice call using the last number | ATD6241xxxx; ATH ATDL | OK OK OK | OK
+300	1	facility. The initial call is established and | OK
+300	1	then cancelled. The second call is made | OK
+300	1	Example of a MT voice call Make MT voice call to MS. | Example of a MT voice call | ATA ATH | RING
+300	1	Make MT voice call to MS. | RING
+300	1	Call related to supplementary service: | AT+CHLD=<N> | Return
+300	1	AT+CHLD. This Command provides | value:(0,1,1x,2,2x,3,4)
+300	1	"Terminate current call and accept waiting | AT+CCWA=1,1 ATD6241xxxx; <RX incoming call> AT+CHLD=1 | OK OK RING +CCWA: ""62418148 "", 129,1,"""" OK <waiting call active> | OK"
+300	1	call. | OK
+300	1	Establish a voice call from EVB, receive | RING
+300	1	"an incoming call (incoming call accepts | +CCWA: ""62418148 "","
+300	1	"waiting status), terminate active call and | 129,1,"""""
+300	1	accept incoming call. Note call waiting | OK
+300	1	must be active for this option – use | <waiting call active>
+300	1	Switch between active and held calls. | ATD6241xxxx; | OK
+300	1	Establish a voice call from EVB, receive | RING
+300	1	"an incoming call (incoming call accepts | <RX incoming call> | +CCWA: ""1391818"
+300	1	"waiting status), place active call on hold | 6089"",129,1,"""""
+300	1	and switch to incoming call. Switch | AT+CHLD=2 | OK
+300	1	between both calls, placing each in the | <incoming call activated,
+300	1	hold state whilst the other is active | original on hold>
+300	1	before terminating each one. This feature | OK
+300	1	relies on knowing each call’s ID. This is | AT+CHLD=21 | <original call activated,
+300	1	done using the List Current Calls | incoming call held>
+300	1	"required to switch between held and | AT+CLCC | +CLCC:1,0,0,0,0,""62"
+301	1	"active calls. Held calls are not automatically resumed when all other calls are terminated. They need to be made active using the AT+CHLD=2x Command. Note call waiting must have been previously enabled for this demonstration to work. | 418148"",129,"""" +CLCC:2,1,1,0,0, ""139 18186089"",129, """" OK <Note incoming call held flag set> OK <original call held, incoming call active> OK <terminate incoming call> <terminate original call>"
+301	1	Send busy status to incoming waiting | ATD6241xxxx; | OK
+301	1	caller. | RING
+301	1	"Establish a voice call from EVB, receive | <RX incoming call> | +CCWA: ""1391818"
+301	1	"an incoming call (incoming call accepts | 6089"",129,1,"""""
+301	1	waiting status), send ‘busy’ status to | OK
+301	1	waiting mobile. Note call waiting must | AT+CHLD=0 | OK
+301	1	have been previously enabled for this | <incoming call sent busy
+301	1	demonstration to work. | msg, current call retained>
+301	1	Drop all calls on hold. Establish a voice call from EVB, receive an incoming call (incoming call accepts waiting status), switch to incoming call and drop all waiting calls. Note call waiting must have been previously enabled for this demonstration to work. | Drop all calls on hold. | ATD6241xxxx; <RX incoming call> AT+CHLD=2 AT+CHLD=0 | ATD6241xxxx; | OK
+301	1	Establish a voice call from EVB, receive | RING
+301	1	"an incoming call (incoming call accepts | <RX incoming call> | +CCWA: ""1391818"
+301	1	"waiting status), switch to incoming call | 6089"",129,1,"""""
+301	1	and drop all waiting calls. | AT+CHLD=2 | OK
+301	1	Note call waiting must have been | <incoming call actived,
+301	1	previously enabled for this | original on hold>
+301	1	demonstration to work. | AT+CHLD=0 | OK
+301	4	Demonstration | Syntax | Expect Result
+301	4	DTMF tones | DTMF tones | AT+CLDTMF=2, | OK | OK
+302	1	Demonstration | Syntax | Expect Result
+302	1	Set SMS system into text mode, as | AT+CMGF=1 | AT+CMGF=1 | OK | OK
+302	1	"Send an SMS to myself. | Send an SMS to myself. | AT+CSCS=""GSM"" | OK +CMGS:34 OK"
+302	1	"Unsolicited notification of the SMS | +CMTI: ""SM"",1"
+302	1	"Read SMS message that has just arrived. Note: the number should be the same as that given in the +CMTI notification. | Read SMS message that has just arrived. | AT+CMGR=1 | +CMGR: ""REC UNREAD"","
+302	1	"Note: the number should be the same as | +8613918186089, """",""02"
+302	1	"that given in the +CMTI notification. | /01/30,20:40:31+00"""
+302	1	"Reading the message again and change the status to ""READ” from ”UNREAD” | AT+CMGR=1 | +CMGR: ""REC READ"","
+302	1	"Send another SMS to myself. | AT+CMGS=""+861391 | +CMGS:35"
+302	1	>Test again<Ctrl+Z> | OK
+302	1	"Unsolicited notification of the SMS | +CMTI: ""SM"",2 | +CMTI: ""SM"",2"
+302	1	"List all SMS messages. Note:”ALL” must be in uppercase. | List all SMS messages. | AT+CMGL=""ALL"" | +CMGL: 1, ""REC"
+302	1	"Note:”ALL” must be in uppercase. | READ"",""+8613918186089"","
+302	1	Delete an SMS message. | AT+CMGD=1 | OK
+303	1	"List all SMS messages to show message has been deleted. | AT+CMGL=""ALL"" | +CMGL: 2, ""REC READ"","
+303	1	Send SMS using Chinese characters | AT+CSMP=17,167,2, | OK
+303	1	"AT+CSCS=""UCS2"" | OK"
+303	1	"AT+CMGS=""0031003 | +CMGS:36"
+303	1	038003x003x003x003 | OK
+303	4	Demonstration | Syntax | Expect Result
+303	4	Establish a GPRS context. | Establish a GPRS context. | Setup modem driver Setup dial up connection with *99# Run internet explorer | Setup modem driver | Should be able to surf the web using Internet explorer. | Should be able to surf the
+303	4	There are two GPRS Service Codes for | ATD*99# ATD*99***1# | CONNECT CONNECT
+303	4	Check if the MS is connected to the GPRS network Detach from the GPRS network Check if the MS is connected to the GPRS network | Check if the MS is connected to the | AT+CGATT? AT+CGATT=0 AT+CGATT? | +CGATT:1
+303	4	Detach from the GPRS network | OK
+303	4	Check if the MS is connected to the | +CGATT: 0
+304	1	Check the class of the MS | AT+CGCLASS? | +CGCLASS:B
+304	1	"Establish a context using the terminal | AT+CGDCONT=1, ""IP"",""CMNET"" ATD*99# | OK CONNECT | OK"
+304	1	and sets the PDP type to IP, access | CONNECT
+304	1	Cancel a context using the terminal | AT+CGDCONT=1, | OK
+304	1	"equipment | IP,""CMNET"""
+304	1	ATD*99# | CONNECT
+304	1	Pause data transfer and enter Command | +++ | OK
+304	1	Stop the GPRS data transfer | ATH | OK
+304	1	Reconnect a context using the terminal equipment Resume the data transfer | Reconnect a context using the terminal | AT+CGDCONT=1, | OK
+304	1	"equipment | IP,""CMNET"""
+304	1	ATD*99# | CONNECT
+304	1	Resume the data transfer | +++ | OK
+304	1	ATO | CONNECT
+304	3	Overwrite the precedence class of | AT+CGQREQ=1,0,0,3 ,0,0 | OK
+304	3	Response: all QOS values of the activated CID. | Response: all QOS values of the | AT+CGQREQ? | +CGQREQ: 1,0,0,3,0,0
+304	3	activated CID. | +CGQREQ: 2,0,0,3,0,0
+304	3	Set the QOS of CID 1 to not present. | AT+CGQREQ=1 | OK | OK
+305	1	Activate CID 1, if the CID is already | AT+CGACT=1,1 AT+CGACT=1,3 | OK +CME ERROR: requested service option not subscribed.
+305	1	"Use the defined and activated CID | AT+CGDATA=""PPP"", 1 | CONNECT"
+305	6	Demonstration | Syntax | Expect Result
+305	6	Ping Request | Ping Request | AT+CGATT? | +CGATT: 1
+305	6	AT+CSTT=”CMNET” | OK
+305	6	AT+CIICR | OK
+306	1	AT+CIFSR AT+CIPPING=”www. google.cn” | 10.78.245.128
+306	4	Demonstration | Syntax | Expect Result
+306	4	"Activate bearer profile | Activate bearer profile | AT+SAPBR=3,1,""Con | OK"
+306	4	"AT+SAPBR=3,1,""AP | OK"
+306	4	AT+SAPBR =1,1 | OK
+306	4	"AT+SAPBR=2,1 | +SAPBR: 1,1,""10.89.193.1"""
+307	1	Get location | AT+CIPGSMLOC=1, 1 AT+CIPGSMLOC=2, 1 | +CIPGSMLOC:
+307	1	Deactivate bearer profile | AT+SAPBR=0,1 | OK
+307	3	Demonstration | Syntax | Expect Result
+307	3	Initialization | AT+CMMSINIT | OK
+307	3	Configuration | Configuration | AT+CMMSCURL=“m | OK OK OK OK | OK
+307	3	AT+CMMSCID=1 | OK
+307	3	10.0.0.172”,80 | OK
+307	3	AT+CMMSSENDCF | OK
+307	3	"Active bearer profile | AT+SAPBR=3,1,""Con | OK"
+307	3	"AT+SAPBR=3,1,""AP | OK"
+307	3	AT+SAPBR=1,1 | OK
+307	3	"AT+SAPBR=2,1 | +SAPBR: 1,1,""10.89.193.1"""
+307	3	Send MMS | AT+CMMSEDIT=1 | OK
+307	3	AT+CMMSDOWN=“ | CONNECT
+307	3	PIC”,12963,20000 | ... ...
+308	1	AT+CMMSDOWN=“ | CONNECT
+308	1	TITLE”,3,5000 | ... ...
+308	1	AT+CMMSRECP=“1 | OK
+308	1	AT+CMMSSEND | ……
+308	1	"Receive MMS When received a MMS push message,UART will output message,such as “+CMTI: ""SM"",3,""MMS PUSH""” | AT+CMMSEDIT=0 | OK"
+308	1	AT+CMMSRECV=3 | +CMMSRECV:
+308	1	AT+CMGD=3 | OK
+308	1	"Receive MMS when the MMS push message is a concatenated message. UART output messages: +CMTI: ""SM"",1,""MMS PUSH"",2,1 +CMTI: ""SM"",2,""MMS PUSH"",2,2 +CMTI: ""SM"",1,""MMS PUSH"" | AT+CMMSEDIT=0 | OK"
+308	1	AT+CMMSRECV=1 | +CMMSRECV:
+308	1	AT+CMGD=1 | OK
+308	1	Read a file of MMS | AT+CMMSREAD=1 | AT+CMMSREAD=1 | +CMMSREAD:
+308	1	Exit MMS function | AT+CMMSTERM | OK
+308	5	Demonstration | Syntax | Expect Result
+308	5	enable DTMF detection | AT+DDET=1 | OK
+308	5	Set up a call connection | Set up a call connection | ATD***********; | ATD***********; | OK
+309	1	Receive an incoming call | ATA | OK
+30	1	ATM<value> | Parameter
+30	1	Reference V.25ter | Note
+30	2	Execution Command +++ | Response
+30	2	Reference V.25ter | Note
+30	3	Execution Command ATO[n] | Response
+30	3	Reference V.25ter | Note
+310	2	Demonstration | Syntax | Expect Result
+310	2	Start record | Start record | AT+CREC=1,1,0 //start record | AT+CREC=1,1,0 | OK
+310	2	//start record | // the record id is 1, format is
+310	2	Stop record | AT+CREC=2 //stop record | OK
+310	2	Delete record | AT+CREC=3,1 | OK | OK
+310	2	Play record file | AT+CREC=4,1,0,80 | OK
+310	2	Stop play record file | AT+CREC=5 //stop play record file | AT+CREC=5 | +CREC: 0
+310	2	//stop play record file | OK
+310	2	Get record status | AT+CREC？ //get record status | +CREC:2
+310	2	List record file information | AT+CREC=7 //list record file list | +CREC: 7,1,7728,0
+311	1	Get record file data | AT+CREC=6,1,200,0 //get 200 bytes from record file with offset 0 to file head | +CREC: 6,1,200
+311	1	Query free space | AT+CREC=8 //query free memory space | +CREC: 8,938600
+311	1	Create record file directory | AT+CREC=9,0 | OK | OK
+311	4	Demonstration | Syntax | Expect Result
+311	4	"Play synthetic speech with UCS2 coding text | Play synthetic speech with UCS2 coding | AT+CTTS=1,""6B228F | OK"
+311	4	text | CE4F7F75288BED97 | //speech synthetized
+311	4	F3540862107CFB7E | successfully, played locally.
+311	4	"DF"" | +CTTS:0"
+311	4	// text in UCS2 coding | //speech played over Note:
+311	4	format，context of the | User needs to wait
+312	1	text is “欢迎使用语音 | thisresponse to play next
+312	1	合成系统”。 | speech!
+312	1	"Play synthetic speech with ASCII coding text | AT+CTTS=2,""hello ， 欢迎使用语音合成系 统"" // text in ASIIC coding format.Chinese in GBK coding format. | AT+CTTS=2,""hello ， | OK"
+312	1	欢迎使用语音合成系 | //speech synthetized
+312	1	"统"" | Successfully played locally."
+312	1	// text in ASIIC coding | +CTTS:0
+312	1	format.Chinese in | //speech played over. Note:
+312	1	GBK coding format. | User needs to wait
+312	1	Stop playing TTS | AT+CTTS=0 | OK //speech played over. | OK
+312	1	//Stop playing | //speech played over.
+312	1	Set parameters of the TTS playing | AT+CTTSPARAM=5 | OK // set params over.
+313	1	SI | M800V | SIM800H/L,SIM800W,SIM800
+313	2	SI | M800V | SIM800H/L,SIM800W,SIM800
+313	3	SI | M800V,SIM800W | SIM800H/L,SIM800
+313	3	A +S | T+SGPIO=? | AT+SGPIO=?
+313	3	GPIO: (0-1),(1-11),(0-1),(0-1) | +SGPIO: (0-1),(1-3),(0-1),(0-1)
+314	2	SI | M800W, SIM800V | SIM840W,SIM840V, SIM800H/L,SIM800
+314	2	AT+CBAND=? +CBAND: (EGSM_MODE,DCS_MODE,EGSM_DCS _MODE,ALL_BAND) OK | T+CBAND=? | AT+CBAND=?
+314	2	CBAND: | +CBAND:
+314	2	GSM_MODE,DCS_MODE,EGSM_DCS | (EGSM_MODE,DCS_MODE,GSM850_MOD
+314	2	MODE,ALL_BAND) | E,PCS_MODE,EGSM_DCS_MODE,GSM850
+314	2	D SI | ifference: SIM800V/SIM800W support Dual-band;
+31	1	Execution Command ATP | Response
+31	1	Reference V.25ter | Note
+31	2	Execution Command ATQ<n> | Response
+31	2	Reference V.25ter | Note
+31	3	Read Command ATS0? | Response
+31	3	Write Command ATS0=<n> | Response
+31	3	Parameter Saving Mode | AT&W_SAVE
+32	1	Reference V.25ter | Note
+32	2	Read Command ATS3? | Response
+32	2	Write Command ATS3=<n> | Response
+32	2	Reference V.25ter | Note
+32	3	Read Command ATS4? | Response
+32	3	Write Command ATS4=<n> | Response
+32	3	Reference | Note
+33	2	Read Command ATS5? | Response <n> OK
+33	2	Write Command ATS5=<n> | Response This parameter setting determines the character recognized by TA as a request to delete from the Command line the immediately preceding character. OK ERROR
+33	2	Reference V.25ter | Note Default 8 = Backspace.
+33	3	Read Command ATS6? | Response <n> OK
+33	3	Write Command ATS6=<n> | Response OK ERROR
+33	3	Parameter Saving Mode | AT&W_SAVE
+33	3	Reference V.25ter | Note No effect in GSM
+34	1	Read Command ATS7? | Response
+34	1	Write Command ATS7=<n> | Response
+34	1	Parameter Saving Mode | AT&W_SAVE
+34	1	Reference V.25ter | Note
+34	2	Read Command ATS8? | Response
+34	2	Write Command ATS8=<n> | Response
+34	2	Parameter Saving | AT&W_SAVE
+35	2	Read Command ATS10? | Response <n> OK
+35	2	Write Command ATS10=<n> | Response This parameter setting determines the amount of time that the TA will remain connected in absence of data carrier. If the data carrier is once more detected before disconnecting, the TA remains connected. OK ERROR
+35	2	Reference V.25ter | Note
+35	3	Execution Command ATT | Response OK
+35	3	Reference V.25ter | Note No effect in GSM
+36	1	Reference | Note
+36	2	ATV1 | ATV0 | Description
+36	2	OK | 0 | Acknowledges execution of a Command
+36	2	CONNECT | 1 | A connection has been established; the DCE is moving from Command state to online data state
+36	2	RING | 2 | The DCE has detected an incoming call signal from network
+36	2	NO CARRIER | 3 | The connection has been terminated or the attempt to establish a connection failed
+36	2	ERROR | 4 | Command not recognized, Command line maximum length exceeded, parameter value invalid, or other problem with processing the Command line
+36	2	NO DIALTONE | 6 | No dial tone detected
+36	2	BUSY | 7 | Engaged (busy) signal detected
+36	2	NO ANSWER | 8 | @ (Wait for Quiet Answer) dial modifier was used, but remote ringing followed by five seconds of silence was not detected before expiration of the connection timer (S7)
+36	2	PROCEEDING | 9 | An AT command is being processed
+36	2	CONNECT <text> | Manufacturer- specific | Same as CONNECT, but includes manufacturer-specific text that may specify DTE speed, line speed, error control, data compression, or other status
+36	3	Execution | Response This parameter setting determines whether or not the TA detected the presence of dial tone and busy signal and whether or not TA transmits particular result codes. OK ERROR
+37	1	Parameter Saving Mode | AT&W_SAVE
+37	1	Reference V.25ter | Note
+37	2	Execution Command ATZ[<value>] | Response
+37	2	Reference V.25ter | Note
+37	3	Execution Command AT&C[<value>] | Response
+37	3	Parameter Saving | AT&W_SAVE
+38	2	Execution Command AT&D[<value>] | Response This parameter determines how the TA responds when circuit 108/2 (DTR) is changed from the ON to the OFF condition during data mode. OK ERROR
+38	2	Parameter Saving Mode | AT&W_SAVE
+38	2	Reference V.25ter | Note
+38	3	Execution Command AT&F[<value>] | Response TA sets all current parameters to the manufacturer defined profile. OK
+38	3	Reference V.25ter | Note
+39	1	Reference V.25ter | Note
+39	2	Execution Command AT&W[<n>] | Response TA stores the current parameter setting in the user defined profile. OK ERROR
+39	2	Reference V.25ter | Note The user defined profile is stored in non volatile memory.
+39	3	Command | Parameter name | Displayedby &V
+39	3	ATS0 | <num> | Y
+39	3	ATS3 | <char> | Y
+39	3	ATS4 | <char> | Y
+39	3	ATS5 | <char> | Y
+39	3	ATS6 | <short> | Y
+39	3	ATS7 | <time> | Y
+39	3	ATS8 | <time> | Y
+39	3	ATS10 | <time> | Y
+39	3	AT+CBST | <speed>,<name>,<ce> | Y
+39	3	AT+CRLP | <iws>,<mws>,<T1>,<N2> | Y
+39	3	ATV | <format> | Y
+39	3	ATE | <echo> | Y
+39	3	ATQ | <result> | Y
+39	3	ATX | <result> | Y
+39	3	AT&C | <behavior> | Y
+39	3	AT&D | <behavior> | Y
+39	3	AT+CLTS | <timestamp> | Y
+39	3	AT+CREG | <n> | Y
+39	3	AT+CGREG | <n> | Y
+40	1	AT+CMEE | <n> | Y
+40	1	AT+CSCLK | <n> | Y
+40	1	AT+CIURC | <mode> | Y
+40	1	AT+CFGRI | <mode> | Y
+40	1	AT+CMTE | <mode> | Y
+40	1	AT+STKPCIS | <switch> | Y
+40	1	AT+CMGF | <mode> | Y
+40	1	AT+CNMI | <mode>,<mt>,<bm>,<ds>,<bfr> | Y
+40	1	AT+CSCS | <chest> | Y
+40	1	AT+VTD | <n> | Y
+40	1	AT+CALS | <n> | Y
+40	1	AT+CEXTHS | <mode> | Y
+40	1	AT+CEXTBUT | <mode> | Y
+40	1	AT+CHF | <ind> | Y
+40	1	AT+CAAS | <mode> | Y
+40	1	AT+CBUZZERRING | <mode> | Y
+40	1	AT+DDET | <n> | Y
+40	1	AT+MORING | <mode> | Y
+40	1	AT+SVR | <voice_rate_coding> | Y
+40	1	AT+CCPD | <mode> | Y
+40	1	AT+CSGS | <mode> | Y
+40	1	AT+CNETLIGHT | <mode> | Y
+40	1	AT+SLEDS | <mode>,<timer_on>,<timer_off> | Y
+40	1	AT+CSDT | <mode> | Y
+40	1	AT+CSMINS | <n> | Y
+40	1	AT+EXUNSOL | <exunsol> | Y
+40	1	AT+IPR | <n> | Y
+40	1	AT+IFC | <TA_by_TE>, <TE_by_TA> | Y
+40	1	AT+ICF | <format>,<parity> | Y
+40	1	AT+FCLASS | <mode> | Y
+41	1	Reference V.25ter | Note
+41	2	Test Command AT+GMI=? | Response OK
+41	2	Execution Command AT+GMI | TA reports one or more lines of information text which permit the user to identify the manufacturer. SIMCOM_Ltd OK
+41	2	Reference V.25ter | Note
+41	3	Test Command AT+GMM=? | Response OK
+41	3	Execution Command AT+GMM | TA reports one or more lines of information text which permit the user to identify the specific model of device. <model> OK
+41	3	Reference V.25ter | Note
+42	1	Test Command AT+GMR=? | Response OK
+42	1	Execution Command AT+GMR | TA reports one or more lines of information text which permit the user to identify the revision of software release. Revision: <revision> OK
+42	1	Reference V.25ter | Note
+42	2	Test Command AT+GOI=? | Response OK
+42	2	Execution Command AT+GOI | Response TA reports one or more lines of information text which permit the user to identify the device, based on the ISO system for registering unique object identifiers. <Object Id> OK
+42	2	Reference V.25ter | Note
+42	3	Test Command AT+GSN=? | Response OK
+42	3	Execution Command AT+GSN | Response TA reports the IMEI (international mobile equipment identifier) number in information text which permit the user to identify the individual ME device. <sn> OK
+43	1	Reference V.25ter | Note
+43	2	Test Command AT+ICF=? | Response
+43	2	Read Command AT+ICF? | Response
+43	2	Write Command AT+ICF=<forma >[,<parity>] | Response
+43	2	Reference V.25ter | Note
+44	1	Test Command AT+IFC=? | Response
+44	1	Read Command AT+IFC? | Response
+44	1	Write Command AT+IFC=<dce_b y_dte>[,<dte_by _dce>] | Response
+44	1	Reference V.25ter | Note
+44	2	Test Command AT+IPR=? | Response
+45	1	ead Command T+IPR? | Response
+45	1	Write Command T+IPR=<rate> | Response
+45	1	eference .25ter | Note
+46	1	xecution ommand T+HVOIC | Response Disconnect existing voice call by local TE from Command line and terminate call with existing PPP or CSD connection on. OK
+46	1	eference .25ter | Note
+47	1	C | ommand | Description
+47	1	A | T+CACM | ACCUMULATED CALL METER(ACM) RESET OR QUERY
+47	1	AT+CAMM | T+CAMM | ACCUMULATED CALL METER MAXIMUM(ACM MAX) SET OR
+47	1	A | T+CAOC | ADVICE OF CHARGE
+47	1	A | T+CBST | SELECT BEARER SERVICE TYPE
+47	1	A | T+CCFC | CALL FORWARDING NUMBER AND CONDITIONS CONTROL
+47	1	A | T+CCWA | CALL WAITING CONTROL
+47	1	A | T+CEER | EXTENDED ERROR REPORT
+47	1	A | T+CGMI | REQUEST MANUFACTURER IDENTIFICATION
+47	1	A | T+CGMM | REQUEST MODEL IDENTIFICATION
+47	1	AT+CGMR | T+CGMR | REQUEST TA REVISION IDENTIFICATION OF SOFTWARE
+47	1	AT+CGSN | REQUEST PRODUCT SERIAL NUMBER IDENTIFICATION
+47	1	A | T+CSCS | SELECT TE CHARACTER SET
+47	1	A | T+CSTA | SELECT TYPE OF ADDRESS
+47	1	A | T+CHLD | CALL HOLD AND MULTIPARTY
+47	1	A | T+CIMI | REQUEST INTERNATIONAL MOBILE SUBSCRIBER IDENTITY
+47	1	A | T+CLCC | LIST CURRENT CALLS OF ME
+47	1	A | T+CLCK | FACILITY LOCK
+47	1	A | T+CLIP | CALLING LINE IDENTIFICATION PRESENTATION
+47	1	A | T+CLIR | CALLING LINE IDENTIFICATION RESTRICTION
+47	1	A | T+CMEE | REPORT MOBILE EQUIPMENT ERROR
+47	1	A | T+COLP | CONNECTED LINE IDENTIFICATION PRESENTATION
+47	1	A | T+COPS | OPERATOR SELECTION
+47	1	A | T+CPAS | PHONE ACTIVITY STATUS
+47	1	A | T+CPBF | FIND PHONEBOOK ENTRIES
+47	1	A | T+CPBR | READ CURRENT PHONEBOOK ENTRIES
+47	1	A | T+CPBS | SELECT PHONEBOOK MEMORY STORAGE
+47	1	A | T+CPBW | WRITE PHONEBOOK ENTRY
+47	1	A | T+CPIN | ENTER PIN
+47	1	A | T+CPWD | CHANGE PASSWORD
+47	1	A | T+CR | SERVICE REPORTING CONTROL
+48	1	AT+CRC | SET CELLULAR RESULT CODES FOR INCOMING CALL
+48	1	A | T+CREG | NETWORK REGISTRATION
+48	1	A | T+CRLP | SELECT RADIO LINK PROTOCOL PARAMETERS
+48	1	A | T+CRSM | RESTRICTED SIM ACCESS
+48	1	A | T+CSQ | SIGNAL QUALITY REPORT
+48	1	A | T+FCLASS | FAX: SELECT, READ OR TEST SERVICE CLASS
+48	1	A | T+FMI | FAX: REPORT MANUFACTURED ID
+48	1	A | T+FMM | FAX: REPORT MODEL ID
+48	1	A | T+FMR | FAX: REPORT REVISION ID
+48	1	A | T+VTD | TONE DURATION
+48	1	A | T+VTS | DTMF AND TONE GENERATION
+48	1	A | T+CMUX | MULTIPLEXER CONTROL
+48	1	A | T+CNUM | SUBSCRIBER NUMBER
+48	1	A | T+CPOL | PREFERRED OPERATOR LIST
+48	1	A | T+COPN | READ OPERATOR NAMES
+48	1	A | T+CFUN | SET PHONE FUNCTIONALITY
+48	1	A | T+CCLK | CLOCK
+48	1	A | T+CSIM | GENERIC SIM ACCESS
+48	1	A | T+CALM | ALERT SOUND MODE
+48	1	A | T+CALS | ALERT SOUND SELECT
+48	1	A | T+CRSL | RINGER SOUND LEVEL
+48	1	A | T+CLVL | LOUD SPEAKER VOLUME LEVEL
+48	1	A | T+CMUT | MUTE CONTROL
+48	1	A | T+CPUC | PRICE PER UNIT AND CURRENCY TABLE
+48	1	A | T+CCWE | CALL METER MAXIMUM EVENT
+48	1	A | T+CBC | BATTERY CHARGE
+48	1	A | T+CUSD | UNSTRUCTURED SUPPLEMENTARY SERVICE DATA
+48	1	A | T+CSSN | SUPPLEMENTARY SERVICES NOTIFICATION
+48	2	T A | est Command | Response
+48	2	T+CACM=? | OK
+48	2	Read Command AT+CACM? | ead Command | Response
+48	2	T+CACM? | TA returns the current value of ACM.
+49	1	Write Command AT+CACM=<pa sswd> | Response TA resets the Advice of Charge related accumulated call meter (ACM) value in SIM file EF (ACM). ACM contains the total number of home units for both the current and preceding calls. OK If error is related to ME functionality: +CME ERROR: <err> | Response
+49	1	R 3 [1 | eference | Note | Note
+49	3	Test Command AT+CAMM=? | Response OK
+49	3	Read Command AT+CAMM? | Response
+49	3	Write Command AT+CAMM=<ac mmax>[,<passwd >] | Response
+50	1	R 3 [1 | eference | Note | Note
+50	2	Test Command AT+CAOC=? | Response
+50	2	Read Command AT+CAOC? | Response
+50	2	Write Command AT+CAOC=<mo de> | Response
+51	1	Execution Command AT+CAOC | Response
+51	1	R 3 [1 | eference | Note | Note
+51	3	Test Command AT+CBST=? | Response
+51	3	Read Command AT+CBST? | Response
+51	3	Write Command AT+CBST=<spee d>[,<name>[,<ce >]] | Response
+52	1	Parameter Saving | AT&W_SAVE
+52	1	Reference | Note GSM 02.02[1]: lists the allowed combinations of the sub parameters.
+52	2	Test Command AT+CCFC=? | Response
+52	2	Write Command AT+CCFC=<rea on>, <mode>[,<numb r> [,<type> ,<class>[,<subad dr>[,<satype>[,ti me]]]]]] | Response
+53	1	Max Response ime | 15s
+53	1	eference GPP TS 27.007 | Note
+54	1	est Command T+CCWA=? | Response
+54	1	ead Command T+CCWA? | Response
+54	1	Write Command T+CCWA=<n>[, mode>[,<class>]] | Response
+55	1	Max Response Time | 15s
+55	1	Reference 3GPP TS 27.007 | Note
+55	2	Test Command AT+CEER=? | Response +CEER: (list of supported <n>s) OK
+55	2	Read Command AT+CEER? | Response +CEER: <n> OK
+55	2	Write Command AT+CEER=<n> | Response OK
+56	1	Execution Command AT+CEER | Response
+57	1	R 3G [1 | eference | Note | Note
+57	2	Te A | st Command | Response
+57	2	T+CGMI=? | OK
+57	2	Ex C | ecution | Response
+57	2	ommand | TA returns manufacturer identification text.
+58	1	AT+CGMI | <manufacturer>
+58	1	R 3 [1 | eference | Note | Note
+58	2	T A | est Command | Response
+58	2	T+CGMM=? | OK
+58	2	Execution Command AT+CGMM | xecution | Response
+58	2	ommand | TA returns product model identification text.
+58	2	T+CGMM | <model>
+58	2	R 3 [1 | eference | Note | Note
+58	3	T A | est Command | Response
+58	3	T+CGMR=? | OK
+58	3	Execution Command AT+CGMR | xecution | Response
+58	3	ommand | TA returns product software version identification text.
+58	3	T+CGMR | Revision: <revision>
+58	3	R 3 [1 | eference | Note | Note
+59	1	T A | est Command | Response
+59	1	T+CGSN=? | OK
+59	1	Execution Command AT+CGSN | xecution | Response
+59	1	ommand | see +GSN
+59	1	T+CGSN | <sn>
+59	1	R 3 [1 | eference | Note | Note
+59	2	Test Command AT+CSCS=? b | Response
+59	2	Read Command AT+CSCS? | Response
+59	2	Write Command AT+CSCS=<chse t> | Response
+60	1	Parameter Saving Mode | AT&W_SAVE
+60	1	Reference 3GPP TS 27.007 [13] | Note
+60	2	Test Command AT+CSTA=? | Response +CSTA: (list of supported <type>s) OK
+60	2	Read Command AT+CSTA? | Response +CSTA: <type> OK
+60	2	Write Command AT+CSTA=<type > | Response OK If <type> is not in the parameter range: ERROR
+60	2	Reference 3GPP TS 27.007 [13] | Note The ATD Command overrides this setting when a number is dialed.
+61	1	AT+CHLD=? | +CHLD: (list of supported <n>s)
+61	1	Write Command AT+CHLD=<n> | Response
+61	1	Max Response Time | 20s
+61	1	Reference | Note
+61	2	Test Command AT+CIMI=? | Response OK
+61	2	Execution Command AT+CIMI | Response TA returns <IMSI>for identifying the individual SIM which is attached to ME. <IMSI>
+62	1	M T | ax Response | 20s | 20s
+62	1	R 3 [1 | eference | Note
+62	2	Test Command AT+CLCC=? | Response
+62	2	Read Command AT+CLCC? | Response
+62	2	Write Command AT+CLCC=<n> | Response
+62	2	Execution Command AT+CLCC | Response
+63	1	Parameter Saving Mode | AUTO_SAVE
+63	1	Reference 3GPP TS 27.007 [13][14] | Note
+63	2	Test Command AT+CLCK=? | Response
+63	2	Write Command | Response
+64	1	T+CLCK=<fac> mode>[,<passw >[,<class>]] | This Command is used to lock, unlock or interrogate a ME or a network
+65	1	Max Response Time | 15s
+65	1	Reference 3GPP TS 27.007 [14] | Note
+65	2	Test Command AT+CLIP=? | Response
+65	2	Read Command AT+CLIP? | Response
+65	2	Write Command AT+CLIP=<n> | Response
+66	1	Max Response Time | 15s
+66	1	Reference | Note
+66	2	Test Command AT+CLIR=? | Response
+66	2	Read Command AT+CLIR? | Response
+67	1	Write Command AT+CLIR=<n> | Response
+67	1	Max Response Time | 15s
+67	1	Reference | Note
+67	2	Test Command AT+CMEE=? | Response +CMEE: (list of supported <n>s) OK
+67	2	Read Command AT+CMEE? | Response +CMEE: <n> OK
+68	1	Write Command AT+CMEE=[<n> ] | Response TA disables or enables the use of result code +CME ERROR: <err> as an indication of an error relating to the functionality of the ME. OK If error is related to ME functionality: +CME ERROR:<err>
+68	1	Reference 3GPP TS 27.007 [13] | Note
+68	2	Test Command AT+COLP=? | Response
+68	2	Read Command AT+COLP? | Response
+68	2	Write Command AT+COLP=<n> | Response
+69	1	eference | Note
+70	1	Read Command AT+COPS? | Response
+70	1	Write Command AT+COPS=<mo de>,[<format>[,< oper>]] | Response
+71	1	Max Response Time | Test command: 45 seconds Write command: 120 seconds
+71	1	Reference 3GPP TS 27.007 [14] | Note
+71	2	Test Command AT+CPAS=? | Response +CPAS: (list of supported <pas>s) OK
+71	2	Execution Command AT+CPAS | Response TA returns the activity status of ME. +CPAS: <pas> OK If error is related to ME functionality: +CME ERROR: <err>
+71	2	Reference 3GPP TS 27.007 [13] | Note
+71	3	Test Command AT+CPBF=? | Response
+72	1	Write Command AT+CPBF=[<find ext>] | Response
+72	1	Max Response ime | 30 seconds (complete reading of a 250 records full phonebook)
+72	1	eference GPP TS 27.007 13] | Note
+73	1	Test Command AT+CPBR=? | Response
+73	1	Write Command AT+CPBR=<inde x1>[,<index2>] | Response
+73	1	Max Response Time | 3 seconds (single reading)
+73	1	Reference 3GPP TS 27.007 13] | Note
+73	2	Test Command AT+CPBS=? | Response
+74	1	Read Command AT+CPBS? | Response
+74	1	Write Command AT+CPBS=<stora ge> | Response
+74	1	Max Response Time | 3 seconds
+74	1	Reference 3GPP TS 27.007 13] | Note
+74	2	Test Command AT+CPBW=? | Response
+75	1	Write Command AT+CPBW=<inde x>[,<number>,[<t ype>,[<text>]]] | Response
+75	2	Test Command AT+CPIN=? | Response
+75	2	Read Command | Response
+76	1	AT+CPIN? | TA returns an alphanumeric string indicating whether some password is
+76	1	Write Command AT+CPIN=<pin>[ <new pin>] | Response
+76	1	Max Response Time | 5s
+76	1	Reference 3GPP TS 27.007 13] | Note
+76	2	Test Command AT+CPWD=? | Response
+77	1	Write Command AT+CPWD = <fac>, <oldpwd>, | Response
+77	1	<newpwd> | Parameters
+77	1	Max Response Time | 15s
+77	1	Reference 3GPP TS 27.007 13] | Note
+77	2	Test Command AT+CR=? | Response +CR: (list of supported <mode>s) OK
+77	2	Read Command AT+CR? | Response +CR: <mode>
+78	1	Write Command AT+CR=[<mode >] | Response
+78	1	R 3 [1 | eference | Note | Note
+78	3	Test Command AT+CRC=? | Response
+78	3	Read Command AT+CRC? | Response
+78	3	W | rite Command | Response
+79	1	AT+CRC=[<mod e>] | TA controls whether or not the extended format of incoming call
+79	1	R 3 [1 | eference | Note | Note
+79	3	Test Command AT+CREG=? | Response
+79	3	Read Command AT+CREG? | Response
+79	3	W A ] | rite Command | Response
+79	3	T+CREG=[<n> | TA controls the presentation of an unsolicited result code +CREG: <stat>
+80	1	Pa M | rameter Saving | AT&W_SAVE | AT&W_SAVE
+80	1	R 3G [1 | eference | Note
+80	3	Test Command AT+CRLP=? | Response
+81	1	Read Command AT+CRLP? | Response
+81	1	Write Command AT+CRLP=<iws >[,<mws>[,<T1>[ ,<N2> [,<T4>]]]] | Response
+81	1	R 3 [1 | eference | Note | Note
+81	4	T A | est Command | Response
+81	4	T+CRSM=? | OK
+81	4	Write Command AT+CRSM=<Co mmand>[,<fileId >[,<P1>,<P2>,<P 3>[,<data>]]] | rite Command | Response
+81	4	T+CRSM=<Co | +CRSM: <sw1>, <sw2> [,<response>]
+81	4	[,<P1>,<P2>,<P | OK
+81	4	>[,<data>]]] | ERROR
+82	1	R 3 G | eference | Note | Note
+82	2	Test Command AT+CSQ=? | Response
+82	2	Execution Command AT+CSQ | Response
+83	2	Test Command AT+FCLASS=? | Response +FCLASS: (list of supported <class>s) OK
+83	2	Read Command AT+FCLASS? | Response +FCLASS: <class> OK
+83	2	Write Command AT+FCLASS=<cl ass> | Response TA sets a particular mode of operation (data fax). This causes the TA to process information in a manner suitable for that type of information OK
+83	2	Reference 3GPP TS 27.007 [13] | Note
+83	3	Test Command AT+FMI=? | Response OK
+83	3	Execution Command AT+FMI | Response TA reports one or more lines of information text which permit the user to identify the manufacturer. <manufacturer Id>
+84	1	Reference EIA/TIA-578-D | Note
+84	2	Test Command AT+FMM=? | Response OK
+84	2	Execution Command AT+FMM | Response TA reports one or more lines of information text which permit the user to identify the specific model of device. <model Id> OK
+84	2	Reference EIA/TIA-578-D | Note
+84	3	Test Command AT+FMR=? | Response OK
+84	3	Execution Command AT+FMR | Response TA reports one or more lines of information text which permit the user to identify the version, revision level or data or other information of the device. Revision:<Revision Id> OK
+84	3	Reference EIA/TIA-578-D | Note
+85	1	Test Command AT+VTD=? | est Command | Response
+85	1	T+VTD=? | +VTD: (list of supported <n>s)
+85	1	Read Command AT+VTD? | Response
+85	1	Write Command AT+VTD=<n> | Response
+85	1	P M | arameter Saving | AT&W_SAVE | AT&W_SAVE
+85	1	R 3 [1 | eference | Note
+85	5	Test Command AT+VTS=? | est Command | Response
+85	5	T+VTS=? | +VTS: (list of supported <dtmf>s),(list of supported <duration>s)
+85	5	Write Command Generate tone Duration is set by +VTD AT+VTS=<dtmf- string> | Response
+86	1	M Ti | ax Response | number of DTMF characters*duration. | number of DTMF characters*duration.
+86	1	R 3 [1 | eference | Note
+86	3	Test Command AT+CMUX=? | Response
+86	3	Read Command AT+CMUX? | Response:
+87	1	Write Command AT+CMUX=<mo de> | Response
+87	1	Reference 3GPP TS 27.007 [13] | Note
+88	1	T A | est Command | Response
+88	1	T+CNUM=? | OK
+88	1	Execution Command AT+CNUM | xecution | Response
+88	1	ommand | +CNUM: [<alpha1>],<number1>,<type1>[,<speed>,<service>]
+88	1	T+CNUM | [<CR><LF>+CNUM:[<alpha2>],<number2>,<type2>[,<speed>,<serv
+88	1	R 3 [1 | eference | Note | Note
+88	2	Test Command AT+CPOL=? | Response
+88	2	Read Command AT+CPOL? | Response
+89	1	Write Command AT+CPOL=<ind ex>[,<format>,<o per>] | Response
+89	1	M Ti | ax Response | Immediately | Immediately
+89	1	R 3 [1 | eference | Note
+89	4	T A | est Command | Response
+89	4	T+COPN=? | OK
+89	4	Execution Command AT+COPN | xecution | Response
+89	4	ommand | +COPN: <numeric1>,<alpha1>
+89	4	T+COPN | [<CR><LF>+COPN: <numeric2>,<alpha2>
+90	1	M T | ax Response | Immediately
+90	1	R 3 [1 | eference | Note
+90	3	Test Command AT+CFUN=? | Response
+90	3	Read Command AT+CFUN? | Response
+90	3	Write Command AT+CFUN=<fun >[,<rst>] | Response
+90	3	Reference 3GPP TS 27.007 [13] | Note
+91	1	Test Command AT+CCLK=? | Response OK
+91	1	Read Command AT+CCLK? | Response
+91	1	Write Command AT+CCLK=<tim e> | Response
+91	1	P M | arameter Saving | AUTO_SAVE | AUTO_SAVE
+91	1	R 3 [1 | eference | Note
+91	7	Test Command AT+CSIM=? | Response OK
+91	7	Write Command AT+CSIM=<leng th>,<Command> | Response
+92	1	R 3 [1 | eference | Note | Note
+92	2	Test Command AT+CALM=? | Response
+92	2	Read Command AT+CALM? | Response
+92	2	Write Command AT+CALM=<mo de> | Response
+92	2	Reference 3GPP TS 27.007 [13] | Note
+93	1	Test Command AT+CALS=? | Response
+93	1	Read Command AT+CALS? | Response
+93	1	Write Command AT+CALS=<n> | Response
+93	1	P M | arameter Saving | AT&W_SAVE | AT&W_SAVE
+93	1	R | eference | Note
+93	5	Test Command AT+CRSL=? | est Command | Response
+93	5	T+CRSL=? | +CRSL: (list of supported <level>s)
+93	5	R | ead Command | Response
+94	1	AT+CRSL? | +CRSL: <level> OK If error is related to ME functionality: +CME ERROR: <err>
+94	1	Write Command AT+CRSL=<leve l> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+94	1	Parameter Saving Mode | AUTO_SAVE
+94	1	Reference 3GPP TS 27.007 [13] | Note
+94	2	Test Command AT+CLVL=? | Response +CLVL: (list of supported <level>s) OK If error is related to ME functionality: +CME ERROR: <err>
+94	2	Read Command AT+CLVL? | Response +CLVL: <level> OK If error is related to ME functionality: +CME ERROR: <err>
+94	2	Write Command AT+CLVL=<leve l> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+95	1	Parameter Saving Mode | AUTO_SAVE
+95	1	Reference 3GPP TS 27.007 [13] | Note
+95	2	Test Command AT+CMUT=? | Response +CMUT: (list of supported <n>s) OK
+95	2	Read Command AT+CMUT? | Response +CMUT: <n> OK If error is related to ME functionality: +CME ERROR: <err>
+95	2	Write Command AT+CMUT=<n> | Response OK If error is related to ME functionality: +CME ERROR: <err>
+95	2	Reference 3GPP TS 27.007 [13] | Note Only during a call this command can be set successfully.
+95	3	Test Command AT+CPUC=? | Response OK
+95	3	Read Command | Response
+96	1	AT+CPUC? | +CPUC: <currency>,<ppu>
+96	1	Write Command AT+CPUC=<cur rency>,<ppu>[,< passwd>] | Response
+96	1	M T | ax Response | 5s | 5s
+96	1	R 3 [1 | eference | Note
+96	4	Test Command AT+CCWE=? | Response
+96	4	Read Command AT+CCWE? | Response
+97	1	Write Command AT+CCWE=<m ode> | Response
+97	1	R 3 [1 | eference | Note
+97	1	GPP TS 27.007 | 3GPP TS 27.007 specifies 30 seconds, so SIMCom deviates from the
+97	1	3] | specification.
+97	3	Test Command AT+CBC=? | Response
+97	3	Execution Command AT+CBC | Response
+98	1	R 3 [1 | eference | Note
+98	1	GPP TS 27.007 | This command depends on hardware and only be used when battery is
+98	1	3] | charging.
+98	2	Test Command AT+CUSD=? | Response
+98	2	Read Command AT+CUSD? | Response
+98	2	Write Command AT+CUSD=<n>[, <str>[,<dcs>]] | Response
+98	2	R G | eference | Note
+98	6	Test Command AT+CSSN=? | Response
+99	1	Read Command AT+CSSN? | Response
+99	1	Write Command AT+CSSN=<n>[, <m>] | Response

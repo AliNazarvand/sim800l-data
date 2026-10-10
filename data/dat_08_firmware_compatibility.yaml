@@ -1,0 +1,17 @@
+- id: dat_08_0001
+  category: Blocked
+  source:
+    name: SIM800 Firmware Release Notes
+    version: unknown
+    date: unknown
+  source_type: primary
+  confidence: 0.0
+  status: blocked
+  conflicts: []
+  notes: Needs official firmware release notes.
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  coverage_estimate: low

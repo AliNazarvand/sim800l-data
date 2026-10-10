@@ -1,0 +1,1560 @@
+- id: dat_14_0001
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '310'
+  mnc: '260'
+  country: United States
+  country_code: US
+  operator: T-Mobile
+  brand: T-Mobile
+  network_type: GSM
+  apn_list:
+  - fast.t-mobile.com
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0002
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '310'
+  mnc: '410'
+  country: United States
+  country_code: US
+  operator: AT&T
+  brand: AT&T
+  network_type: GSM
+  apn_list:
+  - phone
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0003
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '310'
+  mnc: '150'
+  country: United States
+  country_code: US
+  operator: AT&T
+  brand: AT&T
+  network_type: GSM
+  apn_list:
+  - phone
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0004
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '310'
+  mnc: '030'
+  country: United States
+  country_code: US
+  operator: AT&T
+  brand: AT&T
+  network_type: GSM
+  apn_list:
+  - phone
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0005
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '311'
+  mnc: '480'
+  country: United States
+  country_code: US
+  operator: Verizon
+  brand: Verizon
+  network_type: GSM
+  apn_list:
+  - vzwinternet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0006
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '234'
+  mnc: '15'
+  country: United Kingdom
+  country_code: GB
+  operator: Vodafone
+  brand: Vodafone
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0007
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '234'
+  mnc: '10'
+  country: United Kingdom
+  country_code: GB
+  operator: O2
+  brand: O2
+  network_type: GSM
+  apn_list:
+  - mobile.o2.co.uk
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0008
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '234'
+  mnc: '20'
+  country: United Kingdom
+  country_code: GB
+  operator: '3'
+  brand: Three
+  network_type: GSM
+  apn_list:
+  - three.co.uk
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0009
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '234'
+  mnc: '30'
+  country: United Kingdom
+  country_code: GB
+  operator: EE
+  brand: EE
+  network_type: GSM
+  apn_list:
+  - everytime
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0010
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '234'
+  mnc: '33'
+  country: United Kingdom
+  country_code: GB
+  operator: EE
+  brand: Orange
+  network_type: GSM
+  apn_list:
+  - orangeinternet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0011
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '262'
+  mnc: '01'
+  country: Germany
+  country_code: DE
+  operator: Telekom
+  brand: T-Mobile
+  network_type: GSM
+  apn_list:
+  - internet.t-mobile
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0012
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '262'
+  mnc: '02'
+  country: Germany
+  country_code: DE
+  operator: Vodafone
+  brand: Vodafone
+  network_type: GSM
+  apn_list:
+  - web.vodafone.de
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0013
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '262'
+  mnc: '03'
+  country: Germany
+  country_code: DE
+  operator: O2
+  brand: O2
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0014
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '262'
+  mnc: '07'
+  country: Germany
+  country_code: DE
+  operator: O2
+  brand: O2
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0015
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '208'
+  mnc: '01'
+  country: France
+  country_code: FR
+  operator: Orange
+  brand: Orange
+  network_type: GSM
+  apn_list:
+  - orange.fr
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0016
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '208'
+  mnc: '10'
+  country: France
+  country_code: FR
+  operator: SFR
+  brand: SFR
+  network_type: GSM
+  apn_list:
+  - websfr
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0017
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '208'
+  mnc: '20'
+  country: France
+  country_code: FR
+  operator: Bouygues
+  brand: Bouygues
+  network_type: GSM
+  apn_list:
+  - mmsbouygtel.com
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0018
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '222'
+  mnc: '01'
+  country: Italy
+  country_code: IT
+  operator: TIM
+  brand: TIM
+  network_type: GSM
+  apn_list:
+  - ibox.tim.it
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0019
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '222'
+  mnc: '10'
+  country: Italy
+  country_code: IT
+  operator: Vodafone
+  brand: Vodafone
+  network_type: GSM
+  apn_list:
+  - web.omnitel.it
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0020
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '222'
+  mnc: '88'
+  country: Italy
+  country_code: IT
+  operator: Wind
+  brand: Wind
+  network_type: GSM
+  apn_list:
+  - internet.wind
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0021
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '214'
+  mnc: '01'
+  country: Spain
+  country_code: ES
+  operator: Vodafone
+  brand: Vodafone
+  network_type: GSM
+  apn_list:
+  - airtelnet.es
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0022
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '214'
+  mnc: '03'
+  country: Spain
+  country_code: ES
+  operator: Orange
+  brand: Orange
+  network_type: GSM
+  apn_list:
+  - orangeworld
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0023
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '214'
+  mnc: '07'
+  country: Spain
+  country_code: ES
+  operator: Movistar
+  brand: Movistar
+  network_type: GSM
+  apn_list:
+  - movistar.es
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0024
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '204'
+  mnc: '04'
+  country: Netherlands
+  country_code: NL
+  operator: Vodafone
+  brand: Vodafone
+  network_type: GSM
+  apn_list:
+  - web.vodafone.de
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0025
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '204'
+  mnc: 08
+  country: Netherlands
+  country_code: NL
+  operator: KPN
+  brand: KPN
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0026
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '204'
+  mnc: '16'
+  country: Netherlands
+  country_code: NL
+  operator: T-Mobile
+  brand: T-Mobile
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0027
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '286'
+  mnc: '01'
+  country: Turkey
+  country_code: TR
+  operator: Turkcell
+  brand: Turkcell
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0028
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '286'
+  mnc: '02'
+  country: Turkey
+  country_code: TR
+  operator: Vodafone
+  brand: Vodafone
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0029
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '286'
+  mnc: '03'
+  country: Turkey
+  country_code: TR
+  operator: Turk Telekom
+  brand: Avea
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0030
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '432'
+  mnc: '11'
+  country: Iran
+  country_code: IR
+  operator: MCI
+  brand: Hamrah-e Aval
+  network_type: GSM
+  apn_list:
+  - mci-gprs
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0031
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '432'
+  mnc: '35'
+  country: Iran
+  country_code: IR
+  operator: MTN Irancell
+  brand: Irancell
+  network_type: GSM
+  apn_list:
+  - mtnirancell
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0032
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '432'
+  mnc: '14'
+  country: Iran
+  country_code: IR
+  operator: Rightel
+  brand: Rightel
+  network_type: GSM
+  apn_list:
+  - rightel
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0033
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '440'
+  mnc: '10'
+  country: Japan
+  country_code: JP
+  operator: NTT docomo
+  brand: docomo
+  network_type: GSM
+  apn_list:
+  - mopera.net
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0034
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '440'
+  mnc: '20'
+  country: Japan
+  country_code: JP
+  operator: SoftBank
+  brand: SoftBank
+  network_type: GSM
+  apn_list:
+  - softbank
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0035
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '440'
+  mnc: '50'
+  country: Japan
+  country_code: JP
+  operator: KDDI
+  brand: au
+  network_type: GSM
+  apn_list:
+  - au.au-net.ne.jp
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0036
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '450'
+  mnc: '05'
+  country: South Korea
+  country_code: KR
+  operator: SK Telecom
+  brand: SKT
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0037
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '450'
+  mnc: 08
+  country: South Korea
+  country_code: KR
+  operator: KT
+  brand: KT
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0038
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '450'
+  mnc: '06'
+  country: South Korea
+  country_code: KR
+  operator: LG U+
+  brand: LGU+
+  network_type: GSM
+  apn_list:
+  - internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0039
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '460'
+  mnc: '00'
+  country: China
+  country_code: CN
+  operator: China Mobile
+  brand: China Mobile
+  network_type: GSM
+  apn_list:
+  - cmnet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0040
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '460'
+  mnc: '01'
+  country: China
+  country_code: CN
+  operator: China Unicom
+  brand: China Unicom
+  network_type: GSM
+  apn_list:
+  - 3gnet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0041
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '460'
+  mnc: '03'
+  country: China
+  country_code: CN
+  operator: China Telecom
+  brand: China Telecom
+  network_type: GSM
+  apn_list:
+  - ctnet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0042
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '404'
+  mnc: '10'
+  country: India
+  country_code: IN
+  operator: Airtel
+  brand: Airtel
+  network_type: GSM
+  apn_list:
+  - airtelgprs.com
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0043
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '404'
+  mnc: '45'
+  country: India
+  country_code: IN
+  operator: Airtel
+  brand: Airtel
+  network_type: GSM
+  apn_list:
+  - airtelgprs.com
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0044
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '404'
+  mnc: '20'
+  country: India
+  country_code: IN
+  operator: Vodafone
+  brand: Vodafone
+  network_type: GSM
+  apn_list:
+  - www
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0045
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '404'
+  mnc: '11'
+  country: India
+  country_code: IN
+  operator: Vodafone
+  brand: Vodafone
+  network_type: GSM
+  apn_list:
+  - www
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0046
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '405'
+  mnc: '840'
+  country: India
+  country_code: IN
+  operator: Jio
+  brand: Jio
+  network_type: GSM
+  apn_list:
+  - jionet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0047
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '505'
+  mnc: '01'
+  country: Australia
+  country_code: AU
+  operator: Telstra
+  brand: Telstra
+  network_type: GSM
+  apn_list:
+  - telstra.internet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0048
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '505'
+  mnc: '02'
+  country: Australia
+  country_code: AU
+  operator: Optus
+  brand: Optus
+  network_type: GSM
+  apn_list:
+  - yesinternet
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0049
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '505'
+  mnc: '03'
+  country: Australia
+  country_code: AU
+  operator: Vodafone
+  brand: Vodafone
+  network_type: GSM
+  apn_list:
+  - vfinternet.au
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0050
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '724'
+  mnc: '05'
+  country: Brazil
+  country_code: BR
+  operator: Claro
+  brand: Claro
+  network_type: GSM
+  apn_list:
+  - claro.com.br
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0051
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '724'
+  mnc: '06'
+  country: Brazil
+  country_code: BR
+  operator: Vivo
+  brand: Vivo
+  network_type: GSM
+  apn_list:
+  - zap.vivo.com.br
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high
+- id: dat_14_0052
+  category: MCC/MNC
+  source:
+    name: mcc-mnc.com
+    version: public
+    date: ''
+    page: ''
+    section: Operator/APN
+  source_type: external
+  confidence: 0.7
+  status: partial
+  conflicts: []
+  notes: external reference; برای کامل شدن نیاز به تطبیق دقیق با mcc-mnc.com
+  tags:
+  - mcc/mnc
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T15:24:03Z'
+  updated_at: '2026-10-10T17:17:37Z'
+  mcc: '724'
+  mnc: '10'
+  country: Brazil
+  country_code: BR
+  operator: TIM
+  brand: TIM
+  network_type: GSM
+  apn_list:
+  - tim.br
+  source_url: https://www.mcc-mnc.com/
+  coverage_estimate: high

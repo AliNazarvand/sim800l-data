@@ -1,0 +1,7336 @@
+- id: dat_02_0001
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CAAS
+  trigger_event: event code (indicating
+  related_command: AT+CAAS
+  related_state: ''
+  format: (0-2)
+  parameters:
+  - name: mode
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - (0-2)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0002
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CACM
+  trigger_event: decimal value 30)
+  related_command: AT+CACM
+  related_state: ''
+  format: <acm>
+  parameters:
+  - name: acm
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  - name: err
+    description: Parameter
+  - name: passwd
+    description: 'String type (string should be included in quotation marks):'
+  - name: acmmax
+    description: OK
+  examples:
+  - <acm>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0003
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CADC
+  trigger_event: ''
+  related_command: AT+CADC
+  related_state: ''
+  format: (list of supported <status>s),(list of supported <value>s)
+  parameters:
+  - name: status
+    description: s),(list of supported
+  - name: value
+    description: s)
+  - name: mode
+    description: s)
+  examples:
+  - (list of supported <status>s),(list of supported <value>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0004
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CALA
+  trigger_event: Result Code
+  related_command: AT+CALA
+  related_state: ''
+  format: ("yy/mm/dd,hh:mm:ss","hh:mm:ss"),(1-5),(0-7)
+  parameters:
+  - name: err
+    description: Test Command
+  - name: time
+    description: ','
+  - name: n1
+    description: '[,'
+  - name: recurr
+    description: ']'
+  - name: n2
+    description: '[,'
+  - name: n
+    description: Write Command
+  examples:
+  - ("yy/mm/dd,hh:mm:ss","hh:mm:ss"),(1-5),(0-7)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0005
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CALD
+  trigger_event: ''
+  related_command: AT+CALD
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: err
+    description: Write Command
+  - name: status
+    description: s),(list of supported
+  - name: value
+    description: s)
+  - name: mode
+    description: s)
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0006
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CALM
+  trigger_event: ''
+  related_command: AT+CALM
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: err
+    description: Test Command
+  - name: n
+    description: s)
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0007
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CALS
+  trigger_event: ''
+  related_command: AT+CALS
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: err
+    description: Test Command
+  - name: level
+    description: s)
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0008
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CALV
+  trigger_event: the time when alarm arrives
+  related_command: AT+CALA
+  related_state: ''
+  format: <n>
+  parameters:
+  - name: n
+    description: Write Command
+  - name: time
+    description: '[,'
+  - name: recurr
+    description: ']]'
+  examples:
+  - <n>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0009
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CAMM
+  trigger_event: decimal value 30)
+  related_command: AT+CAMM
+  related_state: ''
+  format: <acmmax>
+  parameters:
+  - name: acmmax
+    description: OK
+  - name: err
+    description: Read Command
+  - name: passwd
+    description: String type (string should be included in quotation marks)
+  - name: mode
+    description: s)
+  examples:
+  - <acmmax>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0010
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CAOC
+  trigger_event: reporting of CCM value
+  related_command: AT+CAOC
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: ccm
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0011
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CBAND
+  trigger_event: ''
+  related_command: AT+CBAND
+  related_state: ''
+  format: (list of supported <op_band>s)
+  parameters:
+  - name: op_band
+    description: s)
+  - name: err
+    description: Write Command
+  - name: ind
+    description: s),(list of supported
+  - name: state
+    description: s)
+  examples:
+  - (list of supported <op_band>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0012
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CBC
+  trigger_event: ''
+  related_command: AT+CBC
+  related_state: ''
+  format: (list of supported <bcs>s),(list of supported <bcl>s),(<voltage>)
+  parameters:
+  - name: bcs
+    description: s),(list of supported
+  - name: bcl
+    description: s),(
+  - name: voltage
+    description: )
+  - name: err
+    description: Execution
+  - name: n
+    description: s)
+  examples:
+  - (list of supported <bcs>s),(list of supported <bcl>s),(<voltage>)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0013
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CBM
+  trigger_event: 'result code: +CDS:'
+  related_command: ''
+  related_state: ''
+  format: <sn>,<mid>,<dcs>,<page>,<pages><CR><LF><data>
+  parameters:
+  - name: sn
+    description: ','
+  - name: mid
+    description: ','
+  - name: dcs
+    description: ','
+  - name: page
+    description: ','
+  - name: pages
+    description: ''
+  - name: data
+    description: (text mode enabled).
+  - name: ds
+    description: 0 No SMS-STATUS-REPORTs are routed to the TE.
+  - name: length
+    description: ''
+  - name: pdu
+    description: (PDU mode enabled) or
+  - name: fo
+    description: ','
+  - name: mr
+    description: '[,'
+  - name: ra
+    description: '][,'
+  - name: tora
+    description: '],'
+  - name: scts
+    description: ','
+  - name: dt
+    description: ','
+  examples:
+  - <sn>,<mid>,<dcs>,<page>,<pages><CR><LF><data>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0014
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CBST
+  trigger_event: ''
+  related_command: AT+CBST
+  related_state: ''
+  format: (list of supported <speed>s),(list of supported <name>s),(list of
+  parameters:
+  - name: speed
+    description: s),(list of supported
+  - name: name
+    description: s),(list of
+  - name: ce
+    description: s)
+  examples:
+  - (list of supported <speed>s),(list of supported <name>s),(list of
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0015
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CBUZZERRING
+  trigger_event: ''
+  related_command: AT+CBUZZERRING
+  related_state: ''
+  format: <mode>
+  parameters:
+  - name: mode
+    description: OK
+  examples:
+  - <mode>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0016
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CCALR
+  trigger_event: whether the module
+  related_command: AT+CCALR
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: n
+    description: which shows whether the module is currently ready for phone call.
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0017
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CCFC
+  trigger_event: ''
+  related_command: AT+CCFC
+  related_state: ''
+  format: (list of supported <reason>s)
+  parameters:
+  - name: reason
+    description: s)
+  - name: mode
+    description: '[,'
+  - name: type
+    description: '[,'
+  - name: class
+    description: '[,'
+  - name: satype
+    description: '[,ti'
+  - name: reads
+    description: and
+  - name: status
+    description: ','
+  - name: class1
+    description: '[,'
+  - name: number
+    description: ','
+  - name: subaddr
+    description: ','
+  - name: time
+    description: ']]]'
+  - name: class2
+    description: '[,'
+  - name: err
+    description: Parameters
+  examples:
+  - (list of supported <reason>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0018
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CCLK
+  trigger_event: the difference, expressed in quarters of an hour, between the
+  related_command: AT+CCLK
+  related_state: ''
+  format: <time>
+  parameters:
+  - name: time
+    description: OK
+  - name: err
+    description: Read Command
+  - name: length
+    description: ','
+  - name: response
+    description: OK
+  examples:
+  - <time>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0019
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CCODE
+  trigger_event: Enable or Disable Initial URC Presentation
+  related_command: AT+CCODE
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: mode
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0020
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CCPD
+  trigger_event: ''
+  related_command: AT+CCPD
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: mode
+    description: OK
+  - name: err
+    description: Write Command
+  - name: gid1
+    description: ','
+  - name: gid2
+    description: OK
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0021
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CCVM
+  trigger_event: ''
+  related_command: AT+CCVM
+  related_state: ''
+  format: maximum length of field <vm number>, maximum length of
+  parameters:
+  - name: err
+    description: number>[,
+  - name: op_band
+    description: s)
+  examples:
+  - maximum length of field <vm number>, maximum length of
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0022
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CCWA
+  trigger_event: result code
+  related_command: AT+CCWA
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: mode
+    description: ≠2 and Command successful
+  - name: status
+    description: ','
+  - name: class1
+    description: '['
+  - name: class2
+    description: '[...]]'
+  - name: err
+    description: 'Note:'
+  - name: class
+    description: 'i.e. +CCWA: 0, 7 will be returned in this case.'
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0023
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CCWE
+  trigger_event: 'result codes supported:'
+  related_command: AT+CCWE
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: err
+    description: Test Command
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0024
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CDNSCFG
+  trigger_event: the IP address of the
+  related_command: AT+CDNSCFG
+  related_state: ''
+  format: ("Primary DNS"),("Secondary DNS")
+  parameters:
+  - name: pri_dns
+    description: 'SecondaryDns:'
+  - name: sec_dns
+    description: OK
+  examples:
+  - ("Primary DNS"),("Secondary DNS")
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0025
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CDNSGIP
+  trigger_event: the domain name
+  related_command: AT+CDNSGIP
+  related_state: ''
+  format: 1, <domain name>,<IP1>[,<IP2>]
+  parameters:
+  - name: mode
+    description: s)
+  examples:
+  - 1, <domain name>,<IP1>[,<IP2>]
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0026
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CDRIND
+  trigger_event: event code indicating
+  related_command: AT+CDRIND
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: type
+    description: Write Command
+  - name: spn
+    description: ','
+  - name: err
+    description: Read Command
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0027
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CDS
+  trigger_event: result codes defined within this
+  related_command: ''
+  related_state: ''
+  format: <fo>,<mr>[,<ra>][,<tora>],<scts>,<dt>,<st>
+  parameters:
+  - name: fo
+    description: ','
+  - name: mr
+    description: '[,'
+  - name: ra
+    description: '][,'
+  - name: tora
+    description: '],'
+  - name: scts
+    description: ','
+  - name: dt
+    description: ','
+  - name: st
+    description: (text mode enabled)
+  - name: bfr
+    description: 0 TA buffer of unsolicited result codes defined within this
+  - name: mode
+    description: 1...3 is entered (OK response
+  - name: mt
+    description: '=1:'
+  - name: mem3
+    description: ','
+  - name: index
+    description: If
+  - name: length
+    description: ''
+  - name: pdu
+    description: If
+  - name: oa
+    description: ','
+  examples:
+  - <fo>,<mr>[,<ra>][,<tora>],<scts>,<dt>,<st>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0028
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CEER
+  trigger_event: ''
+  related_command: AT+CEER
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: report
+    description: OK
+  - name: s
+    description: a string that represents the Cause
+  - name: c
+    description: ''
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0029
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CEMNL
+  trigger_event: ''
+  related_command: AT+CEMNL
+  related_state: ''
+  format: (0-1),(1-11), ("0"-"999")…
+  parameters:
+  - name: mode
+    description: '[,'
+  - name: amount
+    description: ','
+  examples:
+  - (0-1),(1-11), ("0"-"999")…
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0030
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CENG
+  trigger_event: ''
+  related_command: AT+CENG
+  related_state: ''
+  format: (list of supported <mode>s),(list of supported <Ncell>s)
+  parameters:
+  - name: mode
+    description: s),(list of supported
+  - name: cell
+    description: carry with them corresponding network
+  - name: arfcn
+    description: ','
+  - name: rxl
+    description: ','
+  - name: rxq
+    description: ','
+  - name: mcc
+    description: ','
+  - name: mnc
+    description: ','
+  - name: bsic
+    description: ','
+  - name: cellid
+    description: ','
+  - name: rla
+    description: ','
+  - name: txp
+    description: ','
+  - name: lac
+    description: ','
+  examples:
+  - (list of supported <mode>s),(list of supported <Ncell>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0031
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CEXTERNTONE
+  trigger_event: ''
+  related_command: AT+CEXTERNTONE
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: mode
+    description: OK
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0032
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CFGRI
+  trigger_event: Result Code
+  related_command: AT+CFGRI
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: status
+    description: OK
+  - name: mode
+    description: OK
+  - name: mcc
+    description: '", "'
+  - name: mnc
+    description: '", "'
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0033
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CFUN
+  trigger_event: ''
+  related_command: AT+CFUN
+  related_state: ''
+  format: (list of supported <fun>s),(list of supported <rst>s)
+  parameters:
+  - name: fun
+    description: s),(list of supported
+  - name: rst
+    description: s)
+  - name: err
+    description: Test Command
+  examples:
+  - (list of supported <fun>s),(list of supported <rst>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0034
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGACT
+  trigger_event: the state of PDP context activation
+  related_command: AT+CGACT
+  related_state: ''
+  format: (list of supported <state>s)
+  parameters:
+  - name: state
+    description: s)
+  - name: cid
+    description: ','
+  - name: err
+    description: Write Command
+  examples:
+  - (list of supported <state>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0035
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGATT
+  trigger_event: the state of GPRS attachment
+  related_command: AT+CGATT
+  related_state: ''
+  format: (list of supported <state>s)
+  parameters:
+  - name: state
+    description: s)
+  - name: err
+    description: Write Command
+  - name: cid
+    description: s),
+  - name: d_comp
+    description: s),(list of supported
+  - name: h_comp
+    description: s)
+  examples:
+  - (list of supported <state>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0036
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGCLASS
+  trigger_event: the GPRS mobile class (in
+  related_command: AT+CGCLASS
+  related_state: ''
+  format: (list of supported <class>s)
+  parameters:
+  - name: class
+    description: s)
+  - name: err
+    description: Write Command
+  - name: mode
+    description: s)
+  examples:
+  - (list of supported <class>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0037
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGDATA
+  trigger_event: the layer 2 protocol to be used between the
+  related_command: AT+CGDATA
+  related_state: ''
+  format: list of supported <L2P>s
+  parameters:
+  - name: err
+    description: Write Command
+  - name: cid
+    description: ']'
+  - name: n
+    description: .
+  examples:
+  - list of supported <L2P>s
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0038
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGDCONT
+  trigger_event: ''
+  related_command: AT+CGDCONT
+  related_state: ''
+  format: (range of supported <cid>s),<PDP_type>,,,(list of
+  parameters:
+  - name: cid
+    description: s),
+  - name: d_comp
+    description: s),(list of supported
+  - name: h_comp
+    description: s)
+  - name: data_comp
+    description: ','
+  - name: head_comp
+    description: '['
+  examples:
+  - (range of supported <cid>s),<PDP_type>,,,(list of
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0039
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGEREP
+  trigger_event: result codes in the MT; if MT
+  related_command: AT+CGEREP
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: n
+    description: s)
+  - name: stat
+    description: '[,'
+  - name: lac
+    description: ','
+  - name: ci
+    description: ']'
+  - name: err
+    description: Read Command
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0040
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGPADDR
+  trigger_event: ''
+  related_command: AT+CGPADDR
+  related_state: ''
+  format: (list of defined <cid>s)
+  parameters:
+  - name: cid
+    description: s)
+  - name: n
+    description: .
+  - name: class
+    description: s)
+  - name: err
+    description: Write Command
+  examples:
+  - (list of defined <cid>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0041
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGQMIN
+  trigger_event: ''
+  related_command: AT+CGQMIN
+  related_state: ''
+  format: <PDP_type>,(list of supported <precedence>s),(list of
+  parameters:
+  - name: precedence
+    description: s),(list of
+  - name: delay
+    description: s),(list of supported
+  - name: reliability
+    description: s),(list of supported
+  - name: peak
+    description: s),(list of supported
+  - name: mean
+    description: s)
+  - name: cid
+    description: ','
+  - name: err
+    description: Write Command
+  examples:
+  - <PDP_type>,(list of supported <precedence>s),(list of
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0042
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGQREQ
+  trigger_event: ''
+  related_command: AT+CGQREQ
+  related_state: ''
+  format: <PDP_type>,(list of supported  <precedence> s),(list of
+  parameters:
+  - name: precedence
+    description: s),(list of
+  - name: delay
+    description: s),(list of supported
+  - name: reliability
+    description: s),
+  - name: peak
+    description: s),(list of supported
+  - name: mean
+    description: s)
+  - name: cid
+    description: ','
+  - name: err
+    description: Write Command
+  examples:
+  - <PDP_type>,(list of supported  <precedence> s),(list of
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0043
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGREG
+  trigger_event: result code
+  related_command: AT+CGREG
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: stat
+    description: '[,'
+  - name: lac
+    description: ','
+  - name: ci
+    description: ']'
+  - name: err
+    description: Read Command
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0044
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CGSMS
+  trigger_event: the service or service
+  related_command: AT+CGSMS
+  related_state: ''
+  format: (list of currently available <service>s)
+  parameters:
+  - name: service
+    description: s)
+  - name: err
+    description: Write Command
+  examples:
+  - (list of currently available <service>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0045
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CHF
+  trigger_event: Result Code
+  related_command: AT+CHF
+  related_state: ''
+  format: (list of supported <ind>s),(list of supported <state>s)
+  parameters:
+  - name: ind
+    description: s),(list of supported
+  - name: state
+    description: s)
+  - name: err
+    description: Unsolicited Result Code
+  - name: n
+    description: OK
+  examples:
+  - (list of supported <ind>s),(list of supported <state>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0046
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CHFA
+  trigger_event: ''
+  related_command: AT+CHFA
+  related_state: ''
+  format: (0 = NORMAL_AUDIO, 1 = AUX_AUDIO)
+  parameters:
+  - name: n
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - (0 = NORMAL_AUDIO, 1 = AUX_AUDIO)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0047
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CHLD
+  trigger_event: ''
+  related_command: AT+CHLD
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: err
+    description: Write Command
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0048
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPACK
+  trigger_event: the connection number
+  related_command: AT+CIPACK
+  related_state: ''
+  format: <txlen>, <acklen>, <nacklen>
+  parameters:
+  - name: txlen
+    description: ','
+  - name: acklen
+    description: ','
+  - name: nacklen
+    description: OK
+  - name: n
+    description: ', CLOSE OK'
+  - name: id
+    description: A numeric parameter which indicates the connection number
+  examples:
+  - <txlen>, <acklen>, <nacklen>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0049
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPATS
+  trigger_event: whether set timer when
+  related_command: AT+CIPATS
+  related_state: ''
+  format: (list of supported <mode>s),(list of supported <time>)
+  parameters:
+  - name: mode
+    description: s),(list of supported
+  - name: time
+    description: )
+  examples:
+  - (list of supported <mode>s),(list of supported <time>)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0050
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPCCFG
+  trigger_event: ''
+  related_command: AT+CIPCCFG
+  related_state: ''
+  format: (NmRetry:3-8),(WaitTm:2-10),(SendSz:1-1460),(esc:0,1) ,(Rxmode:0,1),
+  parameters:
+  - name: esc
+    description: ','
+  examples:
+  - (NmRetry:3-8),(WaitTm:2-10),(SendSz:1-1460),(esc:0,1) ,(Rxmode:0,1),
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0051
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPCSGP
+  trigger_event: the wireless connection
+  related_command: AT+CIPCSGP
+  related_state: ''
+  format: 0-CSD,DIALNUMBER,USER
+  parameters:
+  - name: mode
+    description: ','
+  - name: apn
+    description: ','
+  - name: password
+    description: '[,'
+  - name: rate
+    description: ']'
+  examples:
+  - 0-CSD,DIALNUMBER,USER
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0052
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPCTL
+  trigger_event: ''
+  related_command: AT+CIPCTL
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: err
+    description: Write Command
+  - name: action
+    description: s),(list of supported
+  - name: item
+    description: s)
+  - name: mask
+    description: '['
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0053
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPDPDP
+  trigger_event: is reported because of module not attaching to gprs
+  related_command: AT+CIPDPDP
+  related_state: ''
+  format: (list of supported<mode> s, list of supported <interval>, list
+  parameters:
+  - name: mode
+    description: s, list of supported
+  - name: interval
+    description: ', list'
+  - name: timer
+    description: )
+  examples:
+  - (list of supported<mode> s, list of supported <interval>, list
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0054
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPFLT
+  trigger_event: ''
+  related_command: AT+CIPFLT
+  related_state: ''
+  format: (list of supported <action>s),(list of supported <item>s)
+  parameters:
+  - name: action
+    description: s),(list of supported
+  - name: item
+    description: s)
+  - name: mask
+    description: '['
+  - name: err
+    description: Write Command
+  examples:
+  - (list of supported <action>s),(list of supported <item>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0055
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPGSMLOC
+  trigger_event: ''
+  related_command: AT+CIPGSMLOC
+  related_state: ''
+  format: (1,2),(1-3)
+  parameters:
+  - name: type
+    description: '=1:'
+  - name: locationcode
+    description: '[,'
+  - name: longitude
+    description: ','
+  - name: latitude
+    description: ','
+  - name: date
+    description: ','
+  - name: time
+    description: ']'
+  - name: err
+    description: Write Command
+  - name: cid
+    description: Parameter
+  examples:
+  - (1,2),(1-3)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0056
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPHEAD
+  trigger_event: whether an IP header
+  related_command: AT+CIPHEAD
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: n
+    description: ','
+  - name: time
+    description: )
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0057
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPMODE
+  trigger_event: ''
+  related_command: AT+CIPMODE
+  related_state: ''
+  format: (0-NORMAL MODE,1-TRANSPARENT MODE)
+  parameters:
+  - name: mode
+    description: OK
+  - name: esc
+    description: ','
+  examples:
+  - (0-NORMAL MODE,1-TRANSPARENT MODE)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0058
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPMUX
+  trigger_event: ''
+  related_command: AT+CIPMUX
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: n
+    description: OK
+  - name: mode
+    description: ),(
+  - name: port
+    description: )
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0059
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPPING
+  trigger_event: ''
+  related_command: AT+CIPPING
+  related_state: ''
+  format: (list of supported <retryNum>s),(list of supported
+  parameters:
+  - name: timeout
+    description: s),(list of supported
+  - name: ttl
+    description: s)
+  - name: err
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  examples:
+  - (list of supported <retryNum>s),(list of supported
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0060
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPQSEND
+  trigger_event: the connection number
+  related_command: AT+CIPQSEND
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: n
+    description: OK
+  - name: length
+    description: ', while not responding SEND OK.'
+  - name: txlen
+    description: ','
+  - name: acklen
+    description: ','
+  - name: nacklen
+    description: OK
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0061
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPRDTIMER
+  trigger_event: ''
+  related_command: AT+CIPSCONT
+  related_state: ''
+  format: <rdsigtimer>,<rdmuxtimer>
+  parameters:
+  - name: rdsigtimer
+    description: ','
+  - name: rdmuxtimer
+    description: OK
+  - name: mode0
+    description: 0  Saved, the value from NVRAM
+  - name: err
+    description: Write Command
+  examples:
+  - <rdsigtimer>,<rdmuxtimer>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0062
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPRXGET
+  trigger_event: ''
+  related_command: AT+CIPRXGET
+  related_state: ''
+  format: (list of supported <mode>s),(list of supported <reqlength>)
+  parameters:
+  - name: mode
+    description: s),(list of supported
+  - name: reqlength
+    description: )
+  - name: id
+    description: s), (list
+  - name: cnflength
+    description: '[,'
+  examples:
+  - (list of supported <mode>s),(list of supported <reqlength>)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0063
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPSCONT
+  trigger_event: ''
+  related_command: AT+CIPSCONT
+  related_state: ''
+  format: <mode0>
+  parameters:
+  - name: mode0
+    description: '+CIPCSGP:'
+  - name: mode
+    description: 'Gprs Config APN:'
+  - name: apn
+    description: 'Gprs Config UserId:'
+  - name: password
+    description: '+CIPHEAD:'
+  - name: time
+    description: '+CIPSPRT:'
+  - name: notshowsendok
+    description: '+CIPQSEND:'
+  - name: n
+    description: '+CIPMODE:'
+  - name: esc
+    description: ','
+  - name: interval
+    description: ','
+  - name: timer
+    description: '+CIPRXGET:'
+  - name: rdsigtimer
+    description: ','
+  - name: rdmuxtimer
+    description: OK
+  examples:
+  - <mode0>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0064
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPSEND
+  trigger_event: the connection number
+  related_command: AT+CIPSEND
+  related_state: ''
+  format: <length>
+  parameters:
+  - name: length
+    description: OK
+  - name: size
+    description: OK
+  - name: n
+    description: ','
+  - name: err
+    description: 'If sending is successful:'
+  examples:
+  - <length>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0065
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPSERVER
+  trigger_event: ''
+  related_command: AT+CIPSERVER
+  related_state: ''
+  format: (0-CLOSE SERVER, 1-OPEN SERVER),(1-65535)
+  parameters:
+  - name: mode
+    description: '[,'
+  - name: port
+    description: ','
+  - name: bearer
+    description: ']'
+  - name: apn
+    description: ','
+  examples:
+  - (0-CLOSE SERVER, 1-OPEN SERVER),(1-65535)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0066
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPSGTXT
+  trigger_event: Result Code
+  related_command: AT+CIPSGTXT
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: err
+    description: Write Command
+  - name: mode
+    description: Parameters
+  - name: cmd_type
+    description: = 2
+  - name: cid
+    description: ','
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0067
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPSHOWTP
+  trigger_event: whether to display
+  related_command: AT+CIPSHOWTP
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: data
+    description: '"'
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0068
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPSPRT
+  trigger_event: whether to echo
+  related_command: AT+CIPSPRT
+  related_state: ''
+  format: (list of supported <send prompt>s)
+  parameters:
+  - name: mode
+    description: '[,'
+  - name: port
+    description: ','
+  - name: bearer
+    description: ']'
+  examples:
+  - (list of supported <send prompt>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0069
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPSRIP
+  trigger_event: ''
+  related_command: AT+CIPSRIP
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: n
+    description: ','
+  - name: interval
+    description: ', list'
+  - name: timer
+    description: )
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0070
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPSTART
+  trigger_event: ''
+  related_command: AT+CIPMUX
+  related_state: ''
+  format: (list of supported <mode>),(<IP address>),(<port>)
+  parameters:
+  - name: mode
+    description: ),(
+  - name: port
+    description: )
+  - name: n
+    description: ),(list of supported
+  - name: err
+    description: Response when connection exists
+  - name: state
+    description: CONNECT FAIL
+  examples:
+  - (list of supported <mode>),(<IP address>),(<port>)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0071
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPSTATUS
+  trigger_event: the connection
+  related_command: AT+CIPSTATUS
+  related_state: ''
+  format: <n>,<bearer>, <TCP/UDP>, <IP address>, <port>,
+  parameters:
+  - name: n
+    description: ','
+  - name: bearer
+    description: ','
+  - name: port
+    description: ','
+  - name: state
+    description: 2) If in multi-connection mode (+CIPMUX=1)
+  examples:
+  - <n>,<bearer>, <TCP/UDP>, <IP address>, <port>,
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0072
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIPUDPMODE
+  trigger_event: the connection
+  related_command: AT+CIPUDPMODE
+  related_state: ''
+  format: (0-2),("(0-255).(0-255).(0-255).(0-255)"),(1-65535)
+  parameters:
+  - name: mode
+    description: '[,'
+  - name: port
+    description: R e m o t e  p o r t
+  examples:
+  - (0-2),("(0-255).(0-255).(0-255).(0-255)"),(1-65535)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0073
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CIURC
+  trigger_event: (0,1)
+  related_command: AT+CIURC
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: mode
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  - name: err
+    description: Write Command
+  - name: oldpwd
+    description: String type(string should be included in quotation marks).
+  - name: newpwd
+    description: String type(string should be included in quotation marks).
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0074
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CLCC
+  trigger_event: ''
+  related_command: AT+CLCC
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: n
+    description: OK
+  - name: id1
+    description: ','
+  - name: dir
+    description: ','
+  - name: stat
+    description: ','
+  - name: mode
+    description: ','
+  - name: mpty
+    description: '[,'
+  - name: number
+    description: ','
+  - name: id2
+    description: ','
+  - name: type
+    description: ','
+  - name: err
+    description: Parameters
+  - name: idx
+    description: 1..7  Call identification number
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0075
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CLCK
+  trigger_event: ''
+  related_command: AT+CLCK
+  related_state: ''
+  format: (list of supported <fac>s)
+  parameters:
+  - name: fac
+    description: s)
+  - name: mode
+    description: =2) the response line for
+  - name: status
+    description: =0) should be returned only if service is not
+  - name: class
+    description: .
+  - name: class1
+    description: '['
+  - name: class2
+    description: '[…]]'
+  - name: err
+    description: AT+CLCK=
+  examples:
+  - (list of supported <fac>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0076
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CLDTMF
+  trigger_event: the duration of all
+  related_command: AT+CLDTMF
+  related_state: ''
+  format: (1-100),(0-9,A,B,C,D,*,#)
+  parameters:
+  - name: n
+    description: A numeric parameter(1-100) which indicates the duration of all
+  examples:
+  - (1-100),(0-9,A,B,C,D,*,#)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0077
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CLIP
+  trigger_event: Result Code
+  related_command: AT+CLIP
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: m
+    description: OK
+  - name: err
+    description: Read Command
+  - name: type
+    description: ) at a mobile terminating call.
+  - name: number
+    description: ','
+  - name: subaddr
+    description: ','
+  - name: satype
+    description: ','
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0078
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CLIR
+  trigger_event: ''
+  related_command: AT+CLIR
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: m
+    description: OK
+  - name: err
+    description: Read Command
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0079
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CLPORT
+  trigger_event: the connection
+  related_command: AT+CLPORT
+  related_state: ''
+  format: ("TCP","UDP"),(0-65535)
+  parameters:
+  - name: port
+    description: 2) For multi IP
+  - name: mode
+    description: ','
+  examples:
+  - ("TCP","UDP"),(0-65535)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0080
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CLTS
+  trigger_event: Result Code
+  related_command: AT+CLTS
+  related_state: ''
+  format: '"yy/MM/dd,hh:mm:ss+/-zz"'
+  parameters:
+  - name: mode
+    description: OK
+  - name: mcc
+    description: '", "'
+  - name: mnc
+    description: '", "'
+  - name: year
+    description: ','
+  - name: month
+    description: ','
+  - name: day
+    description: ','
+  - name: hour
+    description: ','
+  - name: min
+    description: ','
+  - name: sec
+    description: ', "'
+  - name: dst
+    description: '3. Refresh network time zone by network:'
+  examples:
+  - '"yy/MM/dd,hh:mm:ss+/-zz"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0081
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CLVL
+  trigger_event: ''
+  related_command: AT+CLVL
+  related_state: ''
+  format: (list of supported <level>s)
+  parameters:
+  - name: level
+    description: s)
+  - name: err
+    description: Test Command
+  - name: n
+    description: s)
+  examples:
+  - (list of supported <level>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0082
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CME ERROR
+  trigger_event: ''
+  related_command: ''
+  related_state: ''
+  format: <err>
+  parameters:
+  - name: err
+    description: If no dial tone and (parameter setting ATX2 or ATX4)
+  - name: text
+    description: TA switches to data mode.
+  - name: value
+    description: parameter setting with the
+  - name: n
+    description: String of dialing digits and optionally V.25ter modifiers dialing
+  - name: mgsm
+    description: 'String of GSM modifiers:'
+  examples:
+  - <err>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0083
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMEE
+  trigger_event: of an error relating to the functionality of the ME
+  related_command: AT+CMEE
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: err
+    description: as an
+  - name: m
+    description: OK
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0084
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMGD
+  trigger_event: ''
+  related_command: AT+CMGD
+  related_state: ''
+  format: (list of supported <index>s),(list of supported <delflag>s)
+  parameters:
+  - name: index
+    description: s),(list of supported
+  - name: delflag
+    description: s)
+  - name: err
+    description: Parameters
+  examples:
+  - (list of supported <index>s),(list of supported <delflag>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0085
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMGDA
+  trigger_event: ''
+  related_command: AT+CMGDA
+  related_state: ''
+  format: (list of supported <type>s)
+  parameters:
+  - name: type
+    description: s)
+  - name: err
+    description: Test Command
+  examples:
+  - (list of supported <type>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0086
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMGF
+  trigger_event: ''
+  related_command: AT+CMGF
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: stat
+    description: s)
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0087
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMGHEX
+  trigger_event: ''
+  related_command: AT+CMGHEX
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: err
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0088
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMGL
+  trigger_event: ''
+  related_command: AT+CMGL
+  related_state: ''
+  format: (list of supported <stat>s)
+  parameters:
+  - name: stat
+    description: s)
+  - name: mode
+    description: 0   N o r m a l
+  - name: mem1
+    description: to the TE. If status of the message is 'received unread', status
+      in the
+  - name: index
+    description: ','
+  - name: alpha
+    description: '] [,'
+  - name: scts
+    description: ']'
+  - name: length
+    description: ']'
+  - name: data
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  examples:
+  - (list of supported <stat>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0089
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMGR
+  trigger_event: ''
+  related_command: AT+CMGR
+  related_state: ''
+  format: <stat>,<oa>[,<alpha>],<scts>[,<tooa>,<fo>,<pid>,<dcs>
+  parameters:
+  - name: stat
+    description: ','
+  - name: oa
+    description: '[,'
+  - name: alpha
+    description: '],'
+  - name: scts
+    description: '[,'
+  - name: tooa
+    description: ','
+  - name: fo
+    description: ','
+  - name: pid
+    description: ','
+  - name: dcs
+    description: ','
+  - name: sca
+    description: ','
+  - name: tosca
+    description: ','
+  - name: length
+    description: ']'
+  - name: data
+    description: 'for SMS-SUBMIT:'
+  - name: da
+    description: '[,'
+  - name: toda
+    description: ','
+  - name: vp
+    description: ']'
+  examples:
+  - <stat>,<oa>[,<alpha>],<scts>[,<tooa>,<fo>,<pid>,<dcs>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0090
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMGS
+  trigger_event: ''
+  related_command: ''
+  related_state: ''
+  format: <mr>
+  parameters:
+  - name: mr
+    description: OK
+  - name: err
+    description: Parameter
+  - name: mem2
+    description: . Memory location
+  - name: index
+    description: of the
+  - name: stat
+    description: allows also other status values to be given.
+  examples:
+  - <mr>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0091
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMGW
+  trigger_event: ''
+  related_command: AT+CMGW
+  related_state: ''
+  format: <index>
+  parameters:
+  - name: index
+    description: OK
+  - name: err
+    description: Write Command
+  - name: stat
+    description: ']'
+  - name: oa
+    description: GSM 03.40 TP-Originating-Address Address-Value field in
+  - name: tooa
+    description: ''
+  - name: da
+    description: GSM 03.40 TP-Destination-Address Address-Value field in
+  - name: toda
+    description: ''
+  examples:
+  - <index>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0092
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMIC
+  trigger_event: ''
+  related_command: AT+CMIC
+  related_state: ''
+  format: (list of supported <channel>s),(list of supported <gainlevel>s)
+  parameters:
+  - name: channel
+    description: s),(list of supported
+  - name: gainlevel
+    description: s)
+  - name: channel0
+    description: ','
+  - name: gainlevel0
+    description: ),…,(
+  - name: channeln
+    description: ','
+  - name: gainleveln
+    description: )
+  examples:
+  - (list of supported <channel>s),(list of supported <gainlevel>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0093
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMICBIAS
+  trigger_event: GPRS EVENT REPORTING
+  related_command: AT+CMICBIAS
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: mode
+    description: OK
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0094
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSBCC
+  trigger_event: phone number or email
+  related_command: AT+CMMSBCC
+  related_state: ''
+  format: '"ADDRESS"'
+  parameters:
+  - name: addr
+    description: s
+  - name: err
+    description: Write Command
+  examples:
+  - '"ADDRESS"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0095
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSCC
+  trigger_event: phone number or email
+  related_command: AT+CMMSCC
+  related_state: ''
+  format: '"ADDRESS"'
+  parameters:
+  - name: addr
+    description: s
+  - name: err
+    description: Write Command
+  examples:
+  - '"ADDRESS"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0096
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSCID
+  trigger_event: ''
+  related_command: AT+CMMSCID
+  related_state: ''
+  format: (1-3)
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  - name: valid
+    description: ','
+  - name: pri
+    description: ','
+  - name: sendrep
+    description: ','
+  - name: readrep
+    description: ','
+  - name: visible
+    description: ','
+  - name: class
+    description: ','
+  - name: subctrl
+    description: ','
+  - name: notifrspcheck
+    description: ']]]'
+  examples:
+  - (1-3)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0097
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSCURL
+  trigger_event: ''
+  related_command: AT+CMMSCURL
+  related_state: ''
+  format: “URL”
+  parameters:
+  - name: mmscurl
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - “URL”
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0098
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSDELBCC
+  trigger_event: phone number or
+  related_command: AT+CMMSDELBC
+  related_state: ''
+  format: '"ADDRESS"'
+  parameters:
+  - name: err
+    description: Write Command
+  - name: addr
+    description: Parameter
+  - name: index
+    description: )
+  - name: sender
+    description: '","'
+  - name: time
+    description: '","'
+  - name: subject
+    description: '",'
+  - name: size
+    description: ''
+  examples:
+  - '"ADDRESS"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0099
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSDELCC
+  trigger_event: phone number or
+  related_command: AT+CMMSDELCC
+  related_state: ''
+  format: '"ADDRESS"'
+  parameters:
+  - name: err
+    description: Write Command
+  - name: addr
+    description: Parameter
+  examples:
+  - '"ADDRESS"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0100
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSDELRECP
+  trigger_event: phone number or email
+  related_command: AT+CMMSDELRE
+  related_state: ''
+  format: '"ADDRESS"'
+  parameters:
+  - name: err
+    description: Write Command
+  - name: addr
+    description: Parameter
+  examples:
+  - '"ADDRESS"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0101
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSDOWN
+  trigger_event: type of downloaded
+  related_command: AT+CMMSDOWN
+  related_state: ''
+  format: '"PIC", (1-307200), (5000-),"NAME"'
+  parameters:
+  - name: err
+    description: Write Command
+  - name: type
+    description: ','
+  - name: size
+    description: ','
+  - name: name
+    description: ']'
+  - name: time
+    description: Maximum time in milliseconds to download data.
+  - name: m
+    description: .jpg” and the default name for text is
+  - name: n
+    description: .txt”.
+  examples:
+  - '"PIC", (1-307200), (5000-),"NAME"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0102
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSEDIT
+  trigger_event: type of downloaded
+  related_command: AT+CMMSEDIT
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: mode
+    description: OK
+  - name: err
+    description: Parameter
+  - name: type
+    description: ','
+  - name: size
+    description: ','
+  - name: name
+    description: ']'
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0103
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSPROFILE
+  trigger_event: ''
+  related_command: AT+CMMSPROFILE
+  related_state: ''
+  format: '"UserAgentProfile"'
+  parameters:
+  - name: err
+    description: Write Command
+  examples:
+  - '"UserAgentProfile"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0104
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSPROTO
+  trigger_event: ''
+  related_command: AT+CMMSPROTO
+  related_state: ''
+  format: “(0-255).(0-255).(0-255).(0-255)”,(1-65535)
+  parameters:
+  - name: err
+    description: Write Command
+  - name: value
+    description: OK
+  examples:
+  - “(0-255).(0-255).(0-255).(0-255)”,(1-65535)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0105
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSRDPUSH
+  trigger_event: ''
+  related_command: AT+CMMSRDPUS
+  related_state: ''
+  format: (range of <index>)
+  parameters:
+  - name: index
+    description: )
+  - name: sender
+    description: ”,”
+  - name: subject
+    description: ”,”
+  - name: transaction
+    description: ”,”
+  - name: location
+    description: ”,”
+  - name: time
+    description: ”,
+  - name: size
+    description: OK
+  - name: receiver
+    description: ”,”
+  - name: status
+    description: OK
+  - name: err
+    description: Write Command
+  - name: class
+    description: T h e  X - M m s - C l a s s[2] of the received MMS
+  examples:
+  - (range of <index>)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0106
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSREAD
+  trigger_event: ''
+  related_command: AT+CMMSREAD
+  related_state: ''
+  format: <name> <datSize>
+  parameters:
+  - name: name
+    description: ''
+  - name: index
+    description: )
+  - name: sender
+    description: ”,”
+  - name: subject
+    description: ”,”
+  - name: transaction
+    description: ”,”
+  - name: location
+    description: ”,”
+  - name: time
+    description: ”,
+  - name: size
+    description: OK
+  - name: receiver
+    description: ”,”
+  - name: status
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <name> <datSize>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0107
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSRECP
+  trigger_event: phone number or email
+  related_command: AT+CMMSRECP
+  related_state: ''
+  format: '"ADDRESS"'
+  parameters:
+  - name: addr
+    description: s
+  - name: err
+    description: Write Command
+  examples:
+  - '"ADDRESS"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0108
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSRECV
+  trigger_event: ''
+  related_command: AT+CMMSRECV
+  related_state: ''
+  format: (range of <index>)
+  parameters:
+  - name: index
+    description: )
+  - name: sender
+    description: '","'
+  - name: time
+    description: '","'
+  - name: subject
+    description: '",'
+  - name: size
+    description: ''
+  - name: err
+    description: Write Command
+  examples:
+  - (range of <index>)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0109
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSSCONT
+  trigger_event: ''
+  related_command: AT+CMMSSCONT
+  related_state: ''
+  format: <mode>
+  parameters:
+  - name: mode
+    description: '+CMMSCID:'
+  - name: value
+    description: '+CMMSCURL:'
+  - name: mmscurl
+    description: '+CMMSUA:'
+  - name: valid
+    description: ','
+  - name: pri
+    description: ','
+  - name: sendrep
+    description: ','
+  - name: readrep
+    description: ','
+  - name: visible
+    description: ','
+  - name: subctrl
+    description: ','
+  - name: notifyskip
+    description: '+CMMSTIMEOUT:'
+  examples:
+  - <mode>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0110
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSSEND
+  trigger_event: address of recipients
+  related_command: AT+CMMSSEND
+  related_state: ''
+  format: '"ADDRESS"'
+  parameters:
+  - name: err
+    description: Write Command
+  - name: address
+    description: Parameter
+  - name: addr
+    description: s
+  examples:
+  - '"ADDRESS"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0111
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSSENDCFG
+  trigger_event: ''
+  related_command: AT+CMMSSENDCFG
+  related_state: ''
+  format: (0-6), (0-3),(0,1), (0,1),(0-2),(0-4),(1-2),(0,1)
+  parameters:
+  - name: valid
+    description: ','
+  - name: pri
+    description: ','
+  - name: sendrep
+    description: ','
+  - name: readrep
+    description: ','
+  - name: visible
+    description: ','
+  - name: class
+    description: ','
+  - name: subctrl
+    description: ','
+  - name: err
+    description: Write Command
+  - name: notifrspcheck
+    description: ']]]'
+  examples:
+  - (0-6), (0-3),(0,1), (0,1),(0-2),(0-4),(1-2),(0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0112
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSSTATUS
+  trigger_event: ''
+  related_command: AT+CMMSSTATU
+  related_state: ''
+  format: <status>
+  parameters:
+  - name: status
+    description: OK
+  - name: err
+    description: Read Command
+  examples:
+  - <status>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0113
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSTIMEOUT
+  trigger_event: ''
+  related_command: AT+CMMSTIMEOUT
+  related_state: ''
+  format: (10-1000),(10-1000)
+  parameters:
+  - name: err
+    description: Write Command
+  - name: status
+    description: OK
+  examples:
+  - (10-1000),(10-1000)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0114
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSUA
+  trigger_event: ''
+  related_command: AT+CMMSUA
+  related_state: ''
+  format: '"UserAgent"'
+  parameters:
+  - name: err
+    description: Write Command
+  examples:
+  - '"UserAgent"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0115
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMMSVIEW
+  trigger_event: ''
+  related_command: AT+CMMSVIEW
+  related_state: ''
+  format: <mmstype>,"<sender>", "<receipts>", "<ccs>",
+  parameters:
+  - name: mmstype
+    description: ',"'
+  - name: sender
+    description: '", "'
+  - name: receipts
+    description: '", "'
+  - name: ccs
+    description: '",'
+  - name: bccs
+    description: '", "'
+  - name: datetime
+    description: '","'
+  - name: subject
+    description: '",'
+  - name: size
+    description: ''
+  - name: err
+    description: Execution Command
+  examples:
+  - <mmstype>,"<sender>", "<receipts>", "<ccs>",
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0116
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMOD
+  trigger_event: AT+CFGRI  Indicate RI When Using URC
+  related_command: AT+CMOD
+  related_state: ''
+  format: (0)
+  parameters:
+  - name: mode
+    description: OK
+  - name: status
+    description: OK
+  examples:
+  - (0)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0117
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMS ERROR
+  trigger_event: ''
+  related_command: AT+CMGD
+  related_state: ''
+  format: <err>
+  parameters:
+  - name: err
+    description: Parameters
+  - name: index
+    description: Integer type; value in the range of location numbers supported by
+  - name: delflag
+    description: 0   Delete the message specified in
+  - name: mode
+    description: s)
+  examples:
+  - <err>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0118
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMSS
+  trigger_event: ''
+  related_command: AT+CMSS
+  related_state: ''
+  format: <mr>
+  parameters:
+  - name: mr
+    description: OK
+  - name: err
+    description: Parameters
+  - name: index
+    description: Integer type; value in the range of location numbers supported
+  - name: da
+    description: GSM 03.40 TP-Destination-Address Address-Value field in
+  - name: toda
+    description: ''
+  - name: mode
+    description: s),(list of supported
+  - name: mt
+    description: s),(list of
+  - name: bm
+    description: s),(list of supported
+  - name: ds
+    description: s),(list of supported
+  - name: bfr
+    description: s)
+  examples:
+  - <mr>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0119
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMT
+  trigger_event: that new cell broadcast message has been received
+  related_command: ''
+  related_state: ''
+  format: <length><CR><LF><pdu>
+  parameters:
+  - name: length
+    description: ''
+  - name: pdu
+    description: If
+  - name: mt
+    description: '=2 (text mode enabled):'
+  - name: oa
+    description: ','
+  - name: scts
+    description: '[,'
+  - name: tooa
+    description: ','
+  - name: fo
+    description: ','
+  - name: pid
+    description: ','
+  - name: dcs
+    description: ','
+  - name: sca
+    description: ','
+  - name: tosca
+    description: ','
+  - name: data
+    description: 2. Indicates that new cell broadcast message has been received
+  - name: bm
+    description: '=2 (PDU mode enabled):'
+  - name: sn
+    description: ','
+  - name: mid
+    description: ','
+  examples:
+  - <length><CR><LF><pdu>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0120
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMTE
+  trigger_event: s indicating the alert level "1" or "-1" are intended to enable the
+    user to
+  related_command: AT+CMTE
+  related_state: ''
+  format: <mode>,<Temperature>
+  parameters:
+  - name: mode
+    description: ','
+  - name: type
+    description: s)
+  - name: err
+    description: Test Command
+  examples:
+  - <mode>,<Temperature>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0121
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMTI
+  trigger_event: 'result code: +CMT:'
+  related_command: ''
+  related_state: ''
+  format: <mem>,<index>
+  parameters:
+  - name: mem
+    description: ','
+  - name: index
+    description: 2 SMS-DELIVERs (except class 2) are routed directly to
+  - name: alpha
+    description: '],'
+  - name: length
+    description: ''
+  - name: pdu
+    description: '(PDU mode enabled) or +CMT:'
+  - name: oa
+    description: ', ['
+  - name: scts
+    description: '[,'
+  - name: tooa
+    description: ','
+  - name: fo
+    description: ','
+  - name: pid
+    description: ','
+  - name: dcs
+    description: ','
+  - name: sca
+    description: ','
+  - name: tosca
+    description: ','
+  - name: data
+    description: (text mode enabled; about parameters in italics, refer Command Show
+      Text
+  - name: mt
+    description: =1.
+  examples:
+  - <mem>,<index>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0122
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMUT
+  trigger_event: ''
+  related_command: AT+CMUT
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: err
+    description: Read Command
+  - name: currency
+    description: ','
+  - name: ppu
+    description: OK
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0123
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CMUX
+  trigger_event: ''
+  related_command: AT+CMUX
+  related_state: ''
+  format: (0)
+  parameters:
+  - name: mode
+    description: '[,'
+  - name: subset
+    description: '[,'
+  - name: port_speed
+    description: '[,'
+  - name: k
+    description: ']]]]]]]]]'
+  examples:
+  - (0)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0124
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CNMI
+  trigger_event: result codes in the TA
+  related_command: AT+CNMI
+  related_state: ''
+  format: (list of supported <mode>s),(list of supported <mt>s),(list of
+  parameters:
+  - name: mode
+    description: s),(list of supported
+  - name: mt
+    description: s),(list of
+  - name: bm
+    description: s),(list of supported
+  - name: ds
+    description: s),(list of supported
+  - name: bfr
+    description: s)
+  examples:
+  - (list of supported <mode>s),(list of supported <mt>s),(list of
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0125
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CNUM
+  trigger_event: ''
+  related_command: AT+CNUM
+  related_state: ''
+  format: '[<alpha1>],<number1>,<type1>[,<speed>,<service>]'
+  parameters:
+  - name: alpha1
+    description: '],'
+  - name: number1
+    description: ','
+  - name: type1
+    description: '[,'
+  - name: speed
+    description: ','
+  - name: service
+    description: ']'
+  - name: alpha2
+    description: '],'
+  - name: number2
+    description: ','
+  - name: type2
+    description: '[,'
+  - name: err
+    description: Execution
+  - name: alphax
+    description: Optional alphanumeric string associated with
+  - name: numberx
+    description: ;
+  - name: typex
+    description: ''
+  - name: index
+    description: s),(list of supported
+  - name: format
+    description: s)
+  - name: index1
+    description: ','
+  examples:
+  - '[<alpha1>],<number1>,<type1>[,<speed>,<service>]'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0126
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +COLP
+  trigger_event: ''
+  related_command: AT+COLP
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: m
+    description: OK
+  - name: err
+    description: Read Command
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0127
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +COPN
+  trigger_event: ''
+  related_command: AT+COPN
+  related_state: ''
+  format: <numeric1>,<alpha1>
+  parameters:
+  - name: numeric1
+    description: ','
+  - name: alpha1
+    description: '['
+  - name: numeric2
+    description: ','
+  - name: alpha2
+    description: '[…]]'
+  - name: err
+    description: Execution
+  - name: numericn
+    description: 'String type (string should be included in quotation marks):'
+  - name: alphan
+    description: 'String type (string should be included in quotation marks):'
+  - name: fun
+    description: s),(list of supported
+  - name: rst
+    description: s)
+  examples:
+  - <numeric1>,<alpha1>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0128
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +COPS
+  trigger_event: ''
+  related_command: AT+COPS
+  related_state: ''
+  format: (list of supported<stat>,long alphanumeric<oper>,short
+  parameters:
+  - name: stat
+    description: ',long alphanumeric'
+  - name: oper
+    description: ',short'
+  - name: mode
+    description: s),
+  - name: format
+    description: s)]
+  - name: err
+    description: Parameters
+  examples:
+  - (list of supported<stat>,long alphanumeric<oper>,short
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0129
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPAS
+  trigger_event: ''
+  related_command: AT+CPAS
+  related_state: ''
+  format: (list of supported <pas>s)
+  parameters:
+  - name: pas
+    description: s)
+  - name: err
+    description: Execution
+  - name: nlength
+    description: ', maximum length of field'
+  - name: tlength
+    description: OK
+  examples:
+  - (list of supported <pas>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0130
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPBF
+  trigger_event: ''
+  related_command: AT+CPBF
+  related_state: ''
+  format: maximum length of field  <nlength>, maximum length of field
+  parameters:
+  - name: nlength
+    description: ', maximum length of field'
+  - name: tlength
+    description: OK
+  - name: err
+    description: Parameters
+  - name: findtext
+    description: .
+  - name: index1
+    description: ','
+  - name: number
+    description: ','
+  - name: type
+    description: ','
+  - name: text
+    description: ']'
+  - name: index2
+    description: ','
+  examples:
+  - maximum length of field  <nlength>, maximum length of field
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0131
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPBR
+  trigger_event: ''
+  related_command: AT+CPBR
+  related_state: ''
+  format: (list of supported <index>s), <nlength>, <tlength>
+  parameters:
+  - name: index
+    description: s),
+  - name: nlength
+    description: ','
+  - name: tlength
+    description: OK
+  - name: index1
+    description: '...'
+  - name: index2
+    description: from the current phone bo ok memory storage selected with
+  - name: number
+    description: ','
+  - name: type
+    description: ','
+  - name: text
+    description: '[[…]'
+  examples:
+  - (list of supported <index>s), <nlength>, <tlength>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0132
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPBS
+  trigger_event: ''
+  related_command: AT+CPBS
+  related_state: ''
+  format: (list of supported <storage>s)
+  parameters:
+  - name: storage
+    description: s)
+  - name: used
+    description: ','
+  - name: total
+    description: OK
+  examples:
+  - (list of supported <storage>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0133
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPBW
+  trigger_event: ''
+  related_command: AT+CPBW
+  related_state: ''
+  format: ( list of supported <index>s), <nlength>, ( list of supported
+  parameters:
+  - name: index
+    description: s),
+  - name: nlength
+    description: ', ( list of supported'
+  - name: type
+    description: s),
+  - name: tlength
+    description: OK
+  - name: number
+    description: (in the format
+  - name: text
+    description: associated
+  examples:
+  - ( list of supported <index>s), <nlength>, ( list of supported
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0134
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPIN
+  trigger_event: ''
+  related_command: AT+CPIN
+  related_state: ''
+  format: <code>
+  parameters:
+  - name: code
+    description: OK
+  - name: err
+    description: Write Command
+  - name: pin
+    description: '['
+  examples:
+  - <code>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0135
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPMS
+  trigger_event: ''
+  related_command: AT+CPMS
+  related_state: ''
+  format: (list of supported <mem1>s),(list of supported <mem2>s),(list of
+  parameters:
+  - name: mem1
+    description: s),(list of supported
+  - name: mem2
+    description: s),(list of
+  - name: mem3
+    description: s)
+  - name: used1
+    description: ','
+  - name: total1
+    description: ','
+  - name: used2
+    description: ','
+  - name: total2
+    description: ','
+  - name: used3
+    description: ','
+  - name: total3
+    description: OK
+  examples:
+  - (list of supported <mem1>s),(list of supported <mem2>s),(list of
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0136
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPOL
+  trigger_event: whether alphanumeric or numeric
+  related_command: AT+CPOL
+  related_state: ''
+  format: (list of supported <index>s),(list of supported <format>s)
+  parameters:
+  - name: index
+    description: s),(list of supported
+  - name: format
+    description: s)
+  - name: index1
+    description: ','
+  - name: oper1
+    description: '['
+  - name: index2
+    description: ','
+  - name: oper2
+    description: '[…]]'
+  - name: err
+    description: Parameters
+  - name: oper
+    description: 1 Short format alphanumeric
+  examples:
+  - (list of supported <index>s),(list of supported <format>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0137
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPUC
+  trigger_event: ''
+  related_command: AT+CPUC
+  related_state: ''
+  format: <currency>,<ppu>
+  parameters:
+  - name: currency
+    description: ','
+  - name: ppu
+    description: OK
+  - name: err
+    description: AT+CPUC?
+  - name: passwd
+    description: String type (string should be included in quotation marks);
+  - name: mode
+    description: s)
+  examples:
+  - <currency>,<ppu>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0138
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CPWD
+  trigger_event: ''
+  related_command: AT+CPWD
+  related_state: ''
+  format: (list of supported <fac>s, list of supported <pwdlength>s)
+  parameters:
+  - name: fac
+    description: s, list of supported
+  - name: pwdlength
+    description: s)
+  - name: oldpwd
+    description: ','
+  - name: newpwd
+    description: Parameters
+  examples:
+  - (list of supported <fac>s, list of supported <pwdlength>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0139
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CR
+  trigger_event: ''
+  related_command: AT+CR
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: serv
+    description: is
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0140
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CRC
+  trigger_event: is used
+  related_command: AT+CRC
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: type
+    description: instead of the normal RING.
+  - name: n
+    description: s)
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0141
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CREC
+  trigger_event: ''
+  related_command: AT+CREC
+  related_state: ''
+  format: (1-n),(1-10)
+  parameters:
+  - name: status
+    description: OK
+  - name: id
+    description: ']'
+  - name: form
+    description: ',['
+  - name: location
+    description: '],['
+  - name: quality
+    description: '],['
+  - name: inputpath
+    description: ']'
+  - name: time
+    description: ','
+  - name: len
+    description: 3) mode=3,delete record
+  - name: channel
+    description: ','
+  - name: level
+    description: '[,'
+  - name: repeat
+    description: ']'
+  - name: offset
+    description: '+CREC: 6,'
+  - name: data
+    description: OK
+  examples:
+  - (1-n),(1-10)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0142
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CREG
+  trigger_event: result code
+  related_command: AT+CREG
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: stat
+    description: which shows whether the network has currently indicated the registration
+  - name: lac
+    description: and
+  - name: ci
+    description: are returned
+  - name: err
+    description: Write Command
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0143
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CRES
+  trigger_event: ''
+  related_command: AT+CRES
+  related_state: ''
+  format: (list of supported <profile>s)
+  parameters:
+  - name: profile
+    description: s)
+  - name: err
+    description: Max Response
+  examples:
+  - (list of supported <profile>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0144
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CRING
+  trigger_event: incoming call to the TE if
+  related_command: AT+CLIP
+  related_state: ''
+  format: <type> Indicates incoming call to the TE if
+  parameters:
+  - name: type
+    description: Indicates incoming call to the TE if
+  - name: stat
+    description: '[,'
+  - name: lac
+    description: ','
+  - name: ci
+    description: '] There is a change in the MT network'
+  - name: n
+    description: +CCWV Shortly before the ACM (Accumulated
+  - name: mem3
+    description: ','
+  - name: index
+    description: Indicates that new message has been
+  - name: mt
+    description: =1
+  - name: length
+    description: ''
+  - name: pdu
+    description: Indicates that new message has been
+  - name: oa
+    description: ','
+  - name: scts
+    description: '[,'
+  - name: tooa
+    description: ','
+  - name: fo
+    description: ','
+  - name: dcs
+    description: ','
+  examples:
+  - <type> Indicates incoming call to the TE if
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0145
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CRLP
+  trigger_event: ''
+  related_command: AT+CRLP
+  related_state: ''
+  format: ( list of supported <iws>s),(list of supported <mws>s),(list of
+  parameters:
+  - name: iws
+    description: s),(list of supported
+  - name: mws
+    description: s),(list of
+  examples:
+  - ( list of supported <iws>s),(list of supported <mws>s),(list of
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0146
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CRSL
+  trigger_event: ''
+  related_command: AT+CRSL
+  related_state: ''
+  format: (list of supported <level>s)
+  parameters:
+  - name: level
+    description: s)
+  - name: err
+    description: Test Command
+  examples:
+  - (list of supported <level>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0147
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CRSM
+  trigger_event: ''
+  related_command: AT+CRSM
+  related_state: ''
+  format: <sw1>, <sw2> [,<response>]
+  parameters:
+  - name: sw1
+    description: ','
+  - name: sw2
+    description: '[,'
+  - name: response
+    description: ']'
+  - name: err
+    description: Write Command
+  - name: data
+    description: ']]]'
+  examples:
+  - <sw1>, <sw2> [,<response>]
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0148
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSAS
+  trigger_event: ''
+  related_command: AT+CSAS
+  related_state: ''
+  format: (list of supported <profile>s)
+  parameters:
+  - name: profile
+    description: s)
+  - name: err
+    description: Max Response
+  - name: sca
+    description: ','
+  - name: tosca
+    description: '[,'
+  examples:
+  - (list of supported <profile>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0149
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSCA
+  trigger_event: ''
+  related_command: AT+CSCA
+  related_state: ''
+  format: <sca>,<tosca>[,<scaAlpha>]
+  parameters:
+  - name: sca
+    description: ','
+  - name: tosca
+    description: '[,'
+  - name: pdu
+    description: parameter equals zero.
+  - name: err
+    description: Parameters
+  examples:
+  - <sca>,<tosca>[,<scaAlpha>]
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0150
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSCB
+  trigger_event: ''
+  related_command: AT+CSCB
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  - name: mids
+    description: ','
+  - name: dcss
+    description: OK
+  - name: err
+    description: Parameters
+  - name: mid
+    description: )
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0151
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSCLK
+  trigger_event: ''
+  related_command: AT+CSCLK
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: mode
+    description: s),(list of supported
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0152
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSCS
+  trigger_event: ''
+  related_command: AT+CSCS
+  related_state: ''
+  format: (list of supported <chset>s)
+  parameters:
+  - name: chset
+    description: s)
+  - name: err
+    description: Parameter
+  examples:
+  - (list of supported <chset>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0153
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSDH
+  trigger_event: ''
+  related_command: AT+CSDH
+  related_state: ''
+  format: (list of supported <show>s)
+  parameters:
+  - name: show
+    description: s)
+  - name: sca
+    description: ','
+  - name: tosca
+    description: ','
+  - name: fo
+    description: ','
+  - name: vp
+    description: ','
+  - name: pid
+    description: and
+  - name: dcs
+    description: ) nor
+  - name: length
+    description: ','
+  - name: toda
+    description: or
+  - name: tooa
+    description: in +CMT, +CMGL, +CMGR result codes for
+  examples:
+  - (list of supported <show>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0154
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSDT
+  trigger_event: Result Code
+  related_command: AT+CSDT
+  related_state: ''
+  format: (0-1)
+  parameters:
+  - name: mode
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  - name: n
+    description: s)
+  - name: err
+    description: Unsolicited Result Code
+  examples:
+  - (0-1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0155
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSGS
+  trigger_event: ''
+  related_command: AT+CSGS
+  related_state: ''
+  format: (0-1)
+  parameters:
+  - name: mode
+    description: OK
+  examples:
+  - (0-1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0156
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSIM
+  trigger_event: ''
+  related_command: AT+CSIM
+  related_state: ''
+  format: <length>,<response>
+  parameters:
+  - name: length
+    description: ','
+  - name: response
+    description: OK
+  - name: err
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  - name: mode
+    description: s)
+  examples:
+  - <length>,<response>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0157
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSMINS
+  trigger_event: Result Code
+  related_command: AT+CSMINS
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: err
+    description: Unsolicited Result Code
+  - name: mode
+    description: OK
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0158
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSMP
+  trigger_event: ''
+  related_command: AT+CSMP
+  related_state: ''
+  format: (list of supported <fo>s),(list of supported <vp>s),(list of
+  parameters:
+  - name: fo
+    description: s),(list of supported
+  - name: vp
+    description: s),(list of
+  - name: pid
+    description: s),(list of supported
+  - name: dcs
+    description: s)
+  examples:
+  - (list of supported <fo>s),(list of supported <vp>s),(list of
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0159
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSMS
+  trigger_event: ''
+  related_command: AT+CSMS
+  related_state: ''
+  format: (list of supported <service>s)
+  parameters:
+  - name: service
+    description: s)
+  - name: mt
+    description: ','
+  - name: mo
+    description: ','
+  - name: bm
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - (list of supported <service>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0160
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSNS
+  trigger_event: AT+CFGRI  Indicate RI When Using URC
+  related_command: AT+CSNS
+  related_state: ''
+  format: (list of supported <mode>s)
+  parameters:
+  - name: mode
+    description: s)
+  examples:
+  - (list of supported <mode>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0161
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSPN
+  trigger_event: ''
+  related_command: AT+CSPN
+  related_state: ''
+  format: <spn>,<display mode>
+  parameters:
+  - name: spn
+    description: ','
+  - name: err
+    description: Read Command
+  examples:
+  - <spn>,<display mode>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0162
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSQ
+  trigger_event: <rssi>
+  related_command: AT+CSQ
+  related_state: ''
+  format: (list of supported <rssi>s),(list of supported <ber>s)
+  parameters:
+  - name: rssi
+    description: s),(list of supported
+  - name: ber
+    description: s)
+  - name: err
+    description: Execution Command returns received signal strength indication
+  - name: class
+    description: s)
+  examples:
+  - (list of supported <rssi>s),(list of supported <ber>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0163
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSQN
+  trigger_event: '>[<dcs>]]'
+  related_command: AT+CPIN
+  related_state: ''
+  format: <rssi>,<ber>
+  parameters:
+  - name: rssi
+    description: ','
+  - name: ber
+    description: Displays signal strength and channel bit
+  - name: serv
+    description: An intermediate result code is
+  - name: m
+    description: '['
+  - name: str_urc
+    description: '['
+  - name: dcs
+    description: ']]'
+  - name: n
+    description: The module temperature is abnormal.
+  examples:
+  - <rssi>,<ber>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0164
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSSI
+  trigger_event: whether to show the
+  related_command: AT+CSSN
+  related_state: ''
+  format: <code1>[,<index>] result code presentation status after a mobile
+  parameters:
+  - name: code1
+    description: '[,'
+  - name: index
+    description: '] result code presentation status after a mobile'
+  - name: m
+    description: A numeric parameter which indicates whether to show the
+  - name: code2
+    description: result code presentation status during a mobile
+  examples:
+  - <code1>[,<index>] result code presentation status after a mobile
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0165
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSSN
+  trigger_event: whether to show the
+  related_command: AT+CSSN
+  related_state: ''
+  format: (list of supported <n>s),(list of supported <m>s)
+  parameters:
+  - name: n
+    description: s),(list of supported
+  - name: m
+    description: s)
+  - name: err
+    description: Write Command
+  - name: code1
+    description: '[,'
+  - name: index
+    description: '] result code presentation status after a mobile'
+  - name: code2
+    description: result code presentation status during a mobile
+  examples:
+  - (list of supported <n>s),(list of supported <m>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0166
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSSU
+  trigger_event: ''
+  related_command: AT+CSSN
+  related_state: ''
+  format: <code2> result code presentation status during a mobile
+  parameters:
+  - name: code2
+    description: result code presentation status during a mobile
+  - name: code1
+    description: 0   Unconditional call forwarding is active
+  - name: index
+    description: present)
+  examples:
+  - <code2> result code presentation status during a mobile
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0167
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSTA
+  trigger_event: ''
+  related_command: AT+CSTA
+  related_state: ''
+  format: (list of supported <type>s)
+  parameters:
+  - name: type
+    description: s)
+  - name: n
+    description: s)
+  examples:
+  - (list of supported <type>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0168
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CSTT
+  trigger_event: the GPRS access point
+  related_command: AT+CSTT
+  related_state: ''
+  format: '"APN","USER","PWD"'
+  parameters:
+  - name: apn
+    description: ','
+  - name: password
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  examples:
+  - '"APN","USER","PWD"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0169
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CTTS
+  trigger_event: ''
+  related_command: AT+CTTS
+  related_state: ''
+  format: <status>
+  parameters:
+  - name: status
+    description: OK
+  - name: mode
+    description: =0，response：
+  - name: err
+    description: Write Command
+  - name: text
+    description: ']'
+  examples:
+  - <status>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0170
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CTTSPARAM
+  trigger_event: ''
+  related_command: AT+CTTSPARAM
+  related_state: ''
+  format: (0-100),(0-3),(1-100),(1-100),(0,1)
+  parameters:
+  - name: volume
+    description: ','
+  - name: mode
+    description: ','
+  - name: pitch
+    description: ','
+  - name: speed
+    description: ','
+  - name: channel
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - (0-100),(0-3),(1-100),(1-100),(0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0171
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CTZV
+  trigger_event: whether to add CI
+  related_command: AT+CCLK
+  related_state: ''
+  format: '"<time zone>"'
+  parameters:
+  - name: dst
+    description: Write Command
+  - name: mode
+    description: Parameters
+  - name: mnc
+    description: String type; mobile network code
+  - name: month
+    description: Month (f
+  examples:
+  - '"<time zone>"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0172
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CUSD
+  trigger_event: control of the unstructured
+  related_command: AT+CUSD
+  related_state: ''
+  format: (list of supported <n>s)
+  parameters:
+  - name: n
+    description: s)
+  - name: err
+    description: Write Command
+  - name: str
+    description: '[,'
+  - name: dcs
+    description: ']]'
+  - name: m
+    description: s)
+  examples:
+  - (list of supported <n>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0173
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +CWHITELIST
+  trigger_event: ''
+  related_command: AT+CWHITELIST
+  related_state: ''
+  format: (0,1)
+  parameters:
+  - name: mode
+    description: '[,'
+  - name: index
+    description: 'The index of phone number, scope: 1-30'
+  examples:
+  - (0,1)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0174
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPCID
+  trigger_event: ''
+  related_command: AT+FTPCID
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0175
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPDELE
+  trigger_event: ''
+  related_command: AT+FTPDELE
+  related_state: ''
+  format: 1,0
+  parameters:
+  - name: error
+    description: 'If error is related to ME functionality:'
+  - name: err
+    description: Execution
+  - name: size
+    description: 'If failed:'
+  examples:
+  - 1,0
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0176
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPEXTPUT
+  trigger_event: ''
+  related_command: AT+FTPEXTPUT
+  related_state: ''
+  format: <address>,<len>
+  parameters:
+  - name: address
+    description: ','
+  - name: len
+    description: 'If error is related to ME functionality:'
+  - name: err
+    description: Write Command
+  - name: mode
+    description: '[,'
+  - name: pos
+    description: ','
+  - name: timeout
+    description: ']'
+  - name: error
+    description: ”,
+  examples:
+  - <address>,<len>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0177
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPGET
+  trigger_event: that no data can be read
+  related_command: AT+FTPGET
+  related_state: ''
+  format: 1,1
+  parameters:
+  - name: error
+    description: 'If mode is 2:'
+  - name: cnflength
+    description: 012345678…
+  - name: err
+    description: Write Command
+  - name: mode
+    description: 1  For opening FTP get session
+  - name: reqlength
+    description: Requested number of data bytes (1-1460)to be read
+  - name: length
+    description: . 0 indicates that no data can be read.
+  examples:
+  - 1,1
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0178
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPGETNAME
+  trigger_event: ''
+  related_command: AT+FTPGETNA
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0179
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPGETPATH
+  trigger_event: ''
+  related_command: AT+FTPGETPA
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0180
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPLIST
+  trigger_event: that no data can be read
+  related_command: AT+FTPLIST
+  related_state: ''
+  format: 1,1
+  parameters:
+  - name: error
+    description: 'If mode is 2:'
+  - name: cnflength
+    description: 012345678…
+  - name: err
+    description: Parameter
+  - name: reqlength
+    description: Requested number of data bytes (1-1460) to be read
+  examples:
+  - 1,1
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0181
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPMKD
+  trigger_event: ''
+  related_command: AT+FTPMKD
+  related_state: ''
+  format: 1,0
+  parameters:
+  - name: error
+    description: 'If error is related to ME functionality:'
+  - name: err
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  examples:
+  - 1,0
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0182
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPMODE
+  trigger_event: ''
+  related_command: AT+FTPMOD
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0183
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPPORT
+  trigger_event: ''
+  related_command: AT+FTPPORT
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0184
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPPUT
+  trigger_event: ''
+  related_command: AT+FTPPUT
+  related_state: ''
+  format: 1,1,<maxlength>
+  parameters:
+  - name: maxlength
+    description: 'If mode is 1 and it is a failed FTP get session:'
+  - name: error
+    description: If mode is 2 and
+  - name: reqlength
+    description: is not 0
+  - name: cnflength
+    description: ……       //Input data
+  - name: err
+    description: Write Command
+  - name: mode
+    description: 1  For opening FTP put session
+  examples:
+  - 1,1,<maxlength>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0185
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPPUTNAME
+  trigger_event: ''
+  related_command: AT+FTPPUTNA
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0186
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPPUTOPT
+  trigger_event: ''
+  related_command: AT+FTPPUTOP
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0187
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPPUTPATH
+  trigger_event: ''
+  related_command: AT+FTPPUTPA
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  - name: error
+    description: 'If mode is 2:'
+  - name: cnflength
+    description: 012345678…
+  - name: mode
+    description: 1  For opening FTP get session
+  - name: reqlength
+    description: Requested number of data bytes (1-1460)to be read
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0188
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPPW
+  trigger_event: ''
+  related_command: AT+FTPPW
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0189
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPREST
+  trigger_event: ''
+  related_command: AT+FTPREST
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0190
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPRMD
+  trigger_event: ''
+  related_command: AT+FTPRMD
+  related_state: ''
+  format: 1,0
+  parameters:
+  - name: error
+    description: 'If error is related to ME functionality:'
+  - name: err
+    description: Execution
+  - name: reqlength
+    description: ']'
+  - name: cnflength
+    description: 012345678…
+  examples:
+  - 1,0
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0191
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPSCONT
+  trigger_event: ''
+  related_command: AT+FTPSCONT
+  related_state: ''
+  format: <mode>
+  parameters:
+  - name: mode
+    description: '+FTPSERV:'
+  - name: value
+    description: '+FTPPORT:'
+  - name: error
+    description: If error is related
+  examples:
+  - <mode>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0192
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPSERV
+  trigger_event: ''
+  related_command: AT+FTPSERV
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0193
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPSIZE
+  trigger_event: ''
+  related_command: AT+FTPSIZE
+  related_state: ''
+  format: 1,0,<size>
+  parameters:
+  - name: size
+    description: 'If failed:'
+  - name: error
+    description: ','
+  - name: err
+    description: Parameter
+  - name: state
+    description: OK
+  - name: address
+    description: ','
+  - name: len
+    description: If error is related to ME
+  examples:
+  - 1,0,<size>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0194
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPSTATE
+  trigger_event: ''
+  related_command: AT+FTPSTATE
+  related_state: ''
+  format: <state>
+  parameters:
+  - name: state
+    description: OK
+  - name: err
+    description: Execution
+  - name: address
+    description: ','
+  - name: len
+    description: 'If error is related to ME functionality:'
+  - name: mode
+    description: '[,'
+  - name: pos
+    description: ','
+  - name: timeout
+    description: ']'
+  examples:
+  - <state>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0195
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPTIMEOUT
+  trigger_event: ''
+  related_command: AT+FTPSCONT
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: mode
+    description: 0  Saved, the value from NVRAM
+  - name: error
+    description: 'If error is related to ME functionality:'
+  - name: err
+    description: Execution
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0196
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPTYPE
+  trigger_event: ''
+  related_command: AT+FTPTYPE
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: OK
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0197
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +FTPUN
+  trigger_event: ''
+  related_command: AT+FTPUN
+  related_state: ''
+  format: <value>
+  parameters:
+  - name: value
+    description: S m a r t  M a c h i n e  S m a r t  D e c i s i o n
+  - name: err
+    description: Write Command
+  examples:
+  - <value>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0198
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +HTTPACTION
+  trigger_event: Result Code
+  related_command: AT+HTTPACTION
+  related_state: ''
+  format: (0-2)
+  parameters:
+  - name: err
+    description: Unsolicited Result Code
+  examples:
+  - (0-2)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0199
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +HTTPDATA
+  trigger_event: Result Code
+  related_command: AT+HTTPDATA
+  related_state: ''
+  format: (list of supported <size>s),(list of supported <time>s)
+  parameters:
+  - name: size
+    description: s),(list of supported
+  - name: time
+    description: s)
+  - name: err
+    description: Write Command
+  examples:
+  - (list of supported <size>s),(list of supported <time>s)
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0200
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +HTTPPARA
+  trigger_event: ''
+  related_command: AT+HTTPPARA
+  related_state: ''
+  format: '"HTTPParamTag","HTTPParmValue"'
+  parameters:
+  - name: err
+    description: Write Command
+  examples:
+  - '"HTTPParamTag","HTTPParmValue"'
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0201
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +HTTPREAD
+  trigger_event: ''
+  related_command: AT+HTTPREAD
+  related_state: ''
+  format: ( list of supported <start_address>s),(list of supported <
+  parameters:
+  - name: start_address
+    description: s),(list of supported
+  - name: date_len
+    description: ''
+  - name: data
+    description: OK
+  - name: byte_size
+    description: is bigger than the data size received, module will only return
+  - name: err
+    description: Write Command
+  - name: data_len
+    description: The actual length for data output.
+  examples:
+  - ( list of supported <start_address>s),(list of supported <
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0202
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +HTTPSCONT
+  trigger_event: ''
+  related_command: AT+HTTPSCONT
+  related_state: ''
+  format: <mode>
+  parameters:
+  - name: mode
+    description: 'CID:'
+  - name: value
+    description: 'URL:'
+  - name: err
+    description: Execution
+  - name: status
+    description: ','
+  - name: finish
+    description: ','
+  - name: remain
+    description: OK
+  examples:
+  - <mode>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high
+- id: dat_02_0203
+  category: URC
+  source:
+    name: SIM800 Series AT Command Manual
+    version: V1.01
+    date: '2013-09-15'
+  source_type: primary
+  confidence: 0.7
+  status: complete
+  conflicts: []
+  notes: ''
+  tags: []
+  applicable_models:
+  - SIM800L
+  created_at: '2026-10-10T17:30:26Z'
+  updated_at: '2026-10-10T17:30:26Z'
+  urc_string: +HTTPSTATUS
+  trigger_event: ''
+  related_command: AT+HTTPSTAT
+  related_state: ''
+  format: <mode>,<status>,<finish>,<remain>
+  parameters:
+  - name: mode
+    description: ','
+  - name: status
+    description: ','
+  - name: finish
+    description: ','
+  - name: remain
+    description: OK
+  - name: err
+    description: Read Command
+  examples:
+  - <mode>,<status>,<finish>,<remain>
+  timing: ''
+  suppression_method: ''
+  coverage_estimate: high

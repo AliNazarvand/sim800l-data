@@ -1,0 +1,2293 @@
+
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+SIM800L_Hardware_Design_V1.00 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+===== PAGE 2 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      2                                       2013-08-20  
+ 
+Document Title SIM800L Hardware Design 
+Version 1.00 
+Date 2013-08-20 
+Status Release 
+Document Control ID SIM800L_Hardware_Design_V1.00 
+ 
+ 
+General Notes 
+SIMCom offers this information as a service to its customers, to support application and engineering efforts that 
+use the products designed by SIMCom. The information provided is based upon requirements specifically 
+provided to SIMCom by the customers. SIMCom has not undertaken any independent search for additional 
+relevant information, including any information that may be in the customer’s possession. Furthermore, system 
+validation of this product designed by SIMCom within a larger electronic system remains the responsibility of the 
+customer or the customer’s system integrator. All specifications supplied herein are subject to change.   
+ 
+Copyright 
+This document contains proprietary technical information which is the property of SIMCom Limited, copying of 
+this document and giving it to others and the using or communication of the contents thereof, are forbidden 
+without express authority. Offenders are liable to the payment of damages. All rights reserved in the event of grant 
+of a patent or the registration of a utility model or desi gn. All specification supplied herein are subject to change 
+without notice at any time.  
+ 
+Copyright © Shanghai SIMCom Wireless Solutions Ltd. 2013 
+===== PAGE 3 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      3                                       2013-08-20  
+Contents 
+Version History.......................................................................................................... 10 
+1. Introduction........................................................................................................ 11 
+2. SIM800L Overview............................................................................................ 11 
+2.1. SIM800L Key Features....................................................................................................... 11 
+2.2. Operating Mode ..................................................................................................................13 
+2.3. Functional Diagram.............................................................................................................14 
+3. Package Information ......................................................................................... 15 
+3.1. Pin out Diagram ..................................................................................................................15 
+3.2. Pin Description....................................................................................................................16 
+3.3. Package Dimensions ...........................................................................................................19 
+4. Application Interface......................................................................................... 21 
+4.1. Power Supply ......................................................................................................................21 
+4.1.1. Power supply pin............................................................................................................................... .. 22 
+4.1.2. Monitoring Power Supply ................................................................................................................... 23 
+4.2. Power on/down Scenarios...................................................................................................23 
+4.2.1. Power on SIM800L............................................................................................................................. 23  
+4.2.2. Power down SIM800L ........................................................................................................................ 24 
+4.2.3. Reset Function............................................................................................................................... ...... 26 
+4.3. Power Saving Mode............................................................................................................27 
+4.3.1. Minimum Functionality Mode ............................................................................................................ 27 
+4.3.2. Sleep Mode (AT+CSCLK=1) ............................................................................................................. 28 
+4.3.3. Wake Up SIM800L from Sleep Mode (AT+CSCLK=1).................................................................... 28 
+4.4. RTC Backup........................................................................................................................28 
+4.5. Serial Port and USB Interface.............................................................................................29 
+4.5.1 Function of Serial Port ........................................................................................................................ 30 
+4.5.2 Serial Interfaces............................................................................................................................... .... 30 
+4.5.3 Debug Interface............................................................................................................................... .... 33 
+4.5.4 Software Upgrade and Debug ............................................................................................................. 33 
+4.5.5 Multiplexing function of serial port .................................................................................................... 34 
+4.6. RI Behaviors .......................................................................................................................35 
+4.7. Audio Interfaces..................................................................................................................36 
+4.7.1. Speaker Interfaces Configuration........................................................................................................ 37 
+4.7.2. Microphone Interfaces Configuration ................................................................................................. 37 
+4.7.3. Audio Electronic Characteristic .......................................................................................................... 38 
+4.7.4. TDD ............................................................................................................................... ..................... 38 
+4.8. SIM Card Interface..............................................................................................................38 
+4.8.1. SIM Card Application......................................................................................................................... 39 
+4.8.2. SIM Card Design Guide...................................................................................................................... 40 
+===== PAGE 4 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      4                                       2013-08-20  
+4.8.3. Design Considerations for SIM Card Holder...................................................................................... 40 
+4.9. PCM Interface.....................................................................................................................42 
+4.9.1. PCM Multiplexing Function ............................................................................................................... 43 
+4.9.2. PCM Interface ............................................................................................................................... ...... 43 
+4.9.3. LCD Display/SPI Interface ................................................................................................................. 44 
+4.9.4. SD Card Interface............................................................................................................................... . 44 
+4.10. Keypad Interface.................................................................................................................45 
+4.10.1. Keypad Multiplexing Function........................................................................................................ 47 
+4.11. I2C Bus ...............................................................................................................................47 
+4.11.1. I2C Multiplexing Function .............................................................................................................. 48 
+4.12. General Purpose Input/Output (GPIO) ...............................................................................48 
+4.13. ADC ....................................................................................................................................48 
+4.14. PWM ...................................................................................................................................48 
+4.14.1. PWM Multiplexing Function........................................................................................................... 49 
+4.15. Network Status Indication...................................................................................................49 
+4.15.1. NETLIGHT Multiplexing Function................................................................................................. 50 
+4.16. Operating Status Indication.................................................................................................50 
+4.16.1. STATUS Multiplexing Function...................................................................................................... 51 
+4.17. LED Interface......................................................................................................................51 
+4.18. RF Synchronization Signal .................................................................................................51 
+4.19. Antenna Interface................................................................................................................52 
+4.19.1. GSM Antenna Interface................................................................................................................... 52 
+4.19.2. FM Antenna Interface...................................................................................................................... 53 
+5. PCB Layout ........................................................................................................ 55 
+5.1 Pin Assignment ...................................................................................................................55 
+5.2 Principle of PCB layout ......................................................................................................56 
+5.2.1 Antenna Interface............................................................................................................................... . 56 
+5.2.2. Power Supply ............................................................................................................................... ....... 56 
+5.2.3 SIM Card Interface.............................................................................................................................. 5 6 
+5.2.4 Audio Interface............................................................................................................................... ..... 56 
+5.2.5 Others............................................................................................................................... ................... 56 
+5.3 Recommended PCB Layout................................................................................................57  
+6. Electrical, Reliability and Radio Characteristics ........................................... 58 
+6.1 Absolute Maximum Ratings ...............................................................................................58 
+6.2 Recommended Operating Conditions .................................................................................58 
+6.3 Digital Interface Characteristics..........................................................................................58 
+6.4 SIM Card Interface Characteristics.....................................................................................59 
+6.5 SIM_VDD Characteristics ..................................................................................................59 
+6.6 VDD_EXT Characteristics .................................................................................................59 
+6.7 VRTC Characteristics .........................................................................................................59 
+6.8 Current Consumption (VBAT=3.8V) .................................................................................60 
+6.9 Electro-Static Discharge .....................................................................................................61 
+6.10 Radio Characteristics ..........................................................................................................61 
+6.10.1. Module RF Output Power................................................................................................................ 61 
+6.11 Module RF Receive Sensitivity ..........................................................................................62 
+===== PAGE 5 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      5                                       2013-08-20  
+6.12 Module Operating Frequencies...........................................................................................62 
+7. Manufacturing ................................................................................................... 63 
+7.1. Top and Bottom View of SIM800L....................................................................................63 
+7.2. Typical Solder Reflow Profile ............................................................................................63 
+7.3. The Moisture Sensitivity Level...........................................................................................63 
+7.4. Baking Requirements..........................................................................................................64 
+8. Appendix............................................................................................................. 65 
+I. Related Documents .............................................................................................................65 
+II. Multiplexing Function.........................................................................................................66 
+III. Terms and Abbreviations....................................................................................................67 
+IV . Safety Caution.....................................................................................................................69 
+ 
+===== PAGE 6 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      6                                       2013-08-20  
+ 
+Table Index 
+Table 1: SIM800L key features....................................................................................................... 11 
+Table 2: Coding schemes and maximum net data rates over air interface......................................13  
+Table 3: Overview of operating modes ...........................................................................................13 
+Table 4: Pin description...................................................................................................................16 
+Table 5: Recommended Zener diode ..............................................................................................21 
+Table 6: Electronic characteristic of the RESET pin ......................................................................27 
+Table 7: The current consumption of Minimum Functionality Mode (BS-PA-MFRMS=9) ..........27 
+Table 8: Serial port and USB pin definition.................................................................................... 29 
+Table 9: Serial port characteristics ..................................................................................................30 
+Table 10: VBUS operation voltage .................................................................................................33 
+Table 11: Multiplexing function of serial port ................................................................................34 
+Table 12: RI behaviors ....................................................................................................................35 
+Table 13: Audio interface definition ...............................................................................................36 
+Table 14: Performance of audio amplifier ......................................................................................36 
+Table 15: Microphone input characteristics....................................................................................3 8 
+Table 16: Audio output characteristics............................................................................................38 
+Table 17: SIM pin definition...........................................................................................................39 
+Table 18: Pin description (Molex SIM card holder) .......................................................................41 
+Table 19: Pin description (Amphenol SIM card holder).................................................................42 
+Table 20: PCM Pin definition .........................................................................................................42 
+Table 21: PCM specification...........................................................................................................43 
+Table 22: PCM multiplexing function ............................................................................................43 
+Table 23: Pin definition of the keypad interface .............................................................................47 
+Table 24: Keypad multiplexing function ........................................................................................47 
+Table 25: Pin definition of the I2C..................................................................................................47 
+Table 26: I2C multiplexing function...............................................................................................48 
+Table 27: Pin definition of the GPIO ..............................................................................................48 
+Table 28: Pin definition of the ADC ...............................................................................................48 
+Table 29: ADC specification...........................................................................................................48 
+Table 30: Pin definition of the PWM ..............................................................................................48 
+Table 31: Buzzer output characteristics ..........................................................................................49 
+Table 32: PWM multiplexing function ...........................................................................................49 
+Table 33: Pin definition of the NETLIGHT....................................................................................49 
+Table 34: Status of the NETLIGHT pin..........................................................................................50 
+Table 35: NETLIGHT multiplexing function .................................................................................50 
+Table 36: Pin definition of the STATUS .........................................................................................50 
+Table 37: STATUS multiplexing function.......................................................................................51 
+Table 38: Pin definition of the LED................................................................................................51 
+Table 39: LED specification ...........................................................................................................51 
+Table 40: Definition of the BPI_BUS1 pin.....................................................................................52 
+Table 41: Absolute maximum ratings .............................................................................................58 
+Table 42: Recommended operating conditions...............................................................................58 
+Table 43: Digital interface characteristics.......................................................................................58 
+Table 44: SIM card interface characteristics...................................................................................59 
+Table 45: SIM_VDD characteristics...............................................................................................59  
+===== PAGE 7 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      7                                       2013-08-20  
+Table 46: VDD_EXT characteristics ..............................................................................................59 
+Table 47: VRTC characteristics ......................................................................................................59 
+Table 48: Current consumption.......................................................................................................60 
+Table 49: The ESD characteristics (Temperature: 25℃, Humidity: 45 %) ....................................61 
+Table 50: GSM850 and EGSM900 conducted RF output power....................................................61 
+Table 51: DCS1800 and PCS1900 conducted RF output power ....................................................62 
+Table 52: Conducted RF receive sensitivity ...................................................................................62 
+Table 53: Operating frequencies .....................................................................................................62 
+Table 54: Moisture sensitivity level and floor life ..........................................................................64 
+Table 55: Baking requirements .......................................................................................................64 
+Table 56: Related documents ..........................................................................................................65 
+Table 57: Multiplexing function .....................................................................................................66 
+Table 58: Terms and abbreviations .................................................................................................67 
+Table 59: Safety caution..................................................................................................................69 
+ 
+===== PAGE 8 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      8                                       2013-08-20  
+Figure Index 
+Figure 1: SIM800L functional diagram ..........................................................................................14 
+Figure 2: SIM800L pin out diagram (Top view).............................................................................15 
+Figure 3: Dimensions of SIM800L (Unit: mm) ..............................................................................19 
+Figure 4: Recommended PCB footprint outline (Unit: mm) ..........................................................20 
+Figure 5: Reference circuit of the VBAT input...............................................................................21 
+Figure 6: Reference circuit of the LDO power supply....................................................................21 
+Figure 7: Reference circuit of the DC-DC power supply ...............................................................22 
+Figure 8: VBAT voltage drop during transmit burst .......................................................................22 
+Figure 9: The minimal VBAT voltage requirement at VBAT drop.................................................23 
+Figure 10: Powered on/down module using transistor ...................................................................23 
+Figure 11: Powered on/down module using button ........................................................................23 
+Figure 12: Timing of power on module ..........................................................................................24 
+Figure 13: Timing of power down SIM800L by PWRKEY...........................................................25 
+Figure 14: Reset circuit...................................................................................................................26 
+Figure 15: Reset timing sequence ...................................................................................................27 
+Figure 16: RTC supply from capacitor ...........................................................................................28 
+Figure 17: RTC supply from non-chargeable battery .....................................................................29 
+Figure 18: RTC supply from rechargeable battery..........................................................................29 
+Figure 19: Connection of the serial interfaces ................................................................................31 
+Figure 20: Resistor matching circuit...............................................................................................31 
+Figure 21 : Diode isolation circuit ..................................................................................................32 
+Figure 22: TX level matching circuit..............................................................................................32 
+Figure 23: RX level matching circuit..............................................................................................32 
+Figure 24: USB reference circuit ....................................................................................................33 
+Figure 25: Connection for software upgrading and debugging ......................................................34 
+Figure 26: RI behaviour of voice calling as a receiver ...................................................................35 
+Figure 27: RI behaviour of data calling as a receiver .....................................................................35 
+Figure 28: RI behaviour of URC or receive SMS...........................................................................36 
+Figure 29: RI behaviour as a caller .................................................................................................36 
+Figure 30: Speaker reference circuit ...............................................................................................37 
+Figure 31: Speaker with amplifier reference circuit .......................................................................37 
+Figure 32: Reference circuit of the 8-pin SIM card holder.............................................................39  
+Figure 33: Reference circuit of the 6-pin SIM card holder.............................................................40  
+Figure 34: Molex 91228 SIM card holder ......................................................................................41 
+Figure 35: Amphenol C707 10M006 5122 SIM card holder..........................................................42  
+Figure 36: PCM reference circuit ...................................................................................................44 
+Figure 37: LCD reference circuit....................................................................................................44 
+Figure 38: SD reference circuit.......................................................................................................44 
+Figure 39: 25 keys reference circuit................................................................................................45 
+Figure 40: 50 keys reference circuit................................................................................................46 
+Figure 41: Keypad reference circuit................................................................................................46 
+Figure 42: Keypad detected ............................................................................................................46 
+Figure 43: Reference circuit of PWM driver buzzer.......................................................................49 
+Figure 44: Reference circuit of NETLIGHT...................................................................................50 
+Figure 45: LED driver reference circuit..........................................................................................51 
+Figure 46: BPI_BUS1 signal during transmit burst........................................................................52  
+===== PAGE 9 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      9                                       2013-08-20  
+Figure 47: GSM antenna matching circuit......................................................................................53  
+Figure 48: GSM simple antenna matching circuit ..........................................................................53 
+Figure 49: FM antenna matching circuit......................................................................................... 54 
+Figure 50: GND pin of the earphone use to be the FM antenna interface ......................................54 
+Figure 51: Pin assignment...............................................................................................................55 
+Figure 52: Recommended PCB layout ...........................................................................................57 
+Figure 53: Top and bottom view of SIM800L ................................................................................63 
+Figure 54: Typical solder reflow profile .........................................................................................63 
+ 
+===== PAGE 10 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      1 0                                       2013-08-20  
+ 
+Version History 
+Date Version Description of change Author 
+2013-08-20 1.00 Origin Jialin.song; Ya.li 
+ 
+ 
+===== PAGE 11 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      1 1                                       2013-08-20  
+ 
+1. Introduction 
+This document describes SIM800L hardware interface in great detail.  
+This document can help user to quickly understand SI M800L interface specifications, electrical and mechanical 
+details. With the help of this document and other SIM800L application notes, user guide, users can use SIM800L 
+to design various applications quickly. 
+ 
+2. SIM800L Overview 
+SIM800L is a quad-band GSM/GPRS module, that works on frequencies GSM850MHz, EGSM900MHz, 
+DCS1800MHz and PCS1900MHz. SIM800L features GPRS multi-slot class 12/ class 10 (optional) and supports 
+the GPRS coding schemes CS-1, CS-2, CS-3 and CS-4. 
+ 
+With a tiny configuration of 15.8*17.8*2.4mm, SIM800L can meet almost all the space requirements in user 
+applications, such as smart phone, PDA and other mobile devices. 
+ 
+SIM800L has 88pin pads of LGA packaging, and provides all hardware interfaces between the module and 
+customers’ boards. 
+z Support 5*5*2 keypads 
+z One full modem serial port, user can configure two serial ports 
+z One USB, the USB interfaces can debug, download software 
+z Audio channel which includes two microphone input; a receiver output and a speaker output 
+z Programmable general purpose input and output. 
+z A SIM card interface 
+z Support FM 
+z Support one PWM 
+ 
+SIM800L is designed with power saving technique so that the current consumption is as low as 0.7mA in sleep 
+mode.  
+ 
+2.1. SIM800L Key Features 
+Table 1: SIM800L key features 
+Feature Implementation 
+Power supply 3.4V ~4.4V 
+Power saving typical power consumption in sleep mode is 0.7mA (AT+CFUN=0 ) 
+Frequency bands z Quad-band: GSM 850, EGSM 900, DCS 1800, PCS 1900. SIM800L can 
+search the 4 frequency bands automatically. The frequency bands can also be 
+set by AT command “AT+CBAND”. For details, please refer to document [1]. 
+z Compliant to GSM Phase 2/2+ 
+Transmitting power  z Class 4 (2W) at GSM 850 and EGSM 900 z Class 1 (1W) at DCS 1800 and PCS 1900 
+GPRS connectivity z GPRS multi-slot class 12（default） z GPRS multi-slot class 1~12 (option) 
+Temperature range  z Normal operation: -40°C ~ +85°C 
+===== PAGE 12 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      1 2                                       2013-08-20  
+z Storage temperature -45°C ~ +90°C 
+Data GPRS  
+ 
+ 
+ 
+ 
+z GPRS data downlink transfer: max. 85.6 kbps  
+z GPRS data uplink transfer: max. 85.6 kbps   
+z Coding scheme: CS-1, CS-2, CS-3 and CS-4 
+z PAP protocol for PPP connect 
+z Integrate the TCP/IP protocol. 
+z Support Packet Broadcast Control Channel (PBCCH) 
+z CSD transmission rates：2.4，4.8，9.6，14.4 kbps 
+CSD z Support CSD transmission 
+USSD z Unstructured Supplementary Services Data (USSD) support 
+SMS z MT, MO, CB, Text and PDU mode z SMS storage: SIM card 
+SIM interface Support SIM card: 1.8V, 3V 
+External antenna Antenna pad 
+Audio features 
+Speech codec modes: 
+z Half Rate (ETS 06.20) 
+z Full Rate (ETS 06.10) 
+z Enhanced Full Rate (ETS 06.50 / 06.60 / 06.80) 
+z Adaptive multi rate (AMR) 
+z Echo Cancellation 
+z Noise Suppression 
+Serial port and  
+debug port 
+Serial port: 
+z Full modem interface with status and control lines, unbalanced, asynchronous.
+z 1200bps to 115200bps. 
+z Can be used for AT commands or data stream.  
+z Support RTS/CTS hardware handshake and software ON/OFF flow control. 
+z Multiplex ability according to GSM 07.10 Multiplexer Protocol. 
+z Autobauding supports baud rate from 1200 bps to 57600bps. 
+z upgrading firmware 
+Debug port: 
+z USB_DM and USB_DP 
+z Can be used for debugging and upgrading firmware. 
+Phonebook management Support phonebook types: SM, FD, LD, RC, ON, MC. 
+SIM application toolkit GSM 11.14 Release 99 
+Real time clock Support RTC 
+Timing functions Use AT command set 
+Physical characteristics Size:15.8*17.8*2.4mm Weight:1.35g 
+Firmware upgrade Main serial port or USB port. 
+ 
+ 
+ 
+ 
+ 
+ 
+===== PAGE 13 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      1 3                                       2013-08-20  
+Table 2: Coding schemes and maximum net data rates over air interface 
+Coding scheme 1 timeslot 2 timeslot 4 timeslot 
+CS-1 9.05kbps 18.1kbps 36.2kbps 
+CS-2 13.4kbps 26.8kbps 53.6kbps 
+CS-3 15.6kbps 31.2kbps 62.4kbps 
+CS-4 21.4kbps 42.8kbps 85.6kbps 
+ 
+2.2. Operating Mode 
+ 
+The table below summarizes the various operating modes of SIM800L. 
+Table 3: Overview of operating modes 
+Mode Function 
+GSM/GPRS 
+SLEEP 
+Module will automatically go into sleep mode if the conditions of sleep 
+mode are enabling and there is no on air and no hardware interrupt (such as 
+GPIO interrupt or data on serial port).  
+In this case, the current consumption of module will reduce to the minimal 
+level. 
+In sleep mode, the module can still receive paging message and SMS. 
+GSM 
+IDLE 
+Software is active. Module is registered to the GSM network, and the 
+module is ready to communicate. 
+GSM 
+TALK 
+Connection between two subscribers is in progress. In this case, the power 
+consumption depends on network settings such as DTX off/on, 
+FR/EFR/HR, hopping sequences, antenna. 
+GPRS 
+STANDBY 
+Module is ready for GPRS data transfer, but no data is currently sent or 
+received. In this case, power consumption depends on network settings and 
+GPRS configuration. 
+Normal 
+operation 
+GPRS 
+DATA 
+There is GPRS data transfer (PPP or TCP or UDP) in progress. In this case, 
+power consumption is related with network settings (e.g. power control 
+level); uplink/downlink data rates and GPRS configuration (e.g. used 
+multi-slot settings). 
+Power down 
+Normal power down by sending AT command “AT+CPOWD=1” or using the PWRKEY. 
+The power management unit shuts down the power supply for the baseband part of the 
+module, and only the power supply for the RTC is remained. Software is not active. The 
+serial port is not accessible. Power supply (connected to VBAT) remains applied. 
+Minimum 
+functionality 
+mode 
+AT command “AT+CFUN” can be used to set the module to a minimum functionality mode 
+without removing the power supply. In this mode, the RF part of the module will not work 
+or the SIM card will not be accessible, or bot h RF part and SIM card will be closed, and the 
+serial port is still accessible. The power consumption in this mode is lower than normal 
+mode. 
+ 
+ 
+===== PAGE 14 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+2.3. Functional Diagram 
+The following figure shows a functional diagram of SIM800L: 
+z GSM baseband 
+z GSM RF 
+z Antenna interface 
+z Other interface 
+ 
+ 
+Figure 1: SIM800L functional diagram 
+ 
+SIM800L_Hardware_Design_V1.00                      1 4                                       2013-08-20  
+===== PAGE 15 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+3. Package Information 
+ 
+3.1. Pin out Diagram 
+ 
+Figure 2: SIM800L pin out diagram (Top view) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SIM800L_Hardware_Design_V1.00                      1 5                                       2013-08-20  
+===== PAGE 16 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      1 6                                       2013-08-20  
+3.2. Pin Description 
+Table 4: Pin description 
+Pin name Pin number I/O Description Comment 
+Power supply 
+VBAT 1,42  I Power supply  
+VRTC 56 I/O Power supply for RTC 
+It is recommended to 
+connect with a battery or a 
+capacitor (e.g. 4.7uF). 
+VEXT 18 O 2.8V power output 
+If these pins are unused, 
+keep open. 
+GND 
+2,6,8,35,37,38,39,
+41,43,44,45,58,67
+,71,72,73,76,77,7
+8,79,80,81,82,83,
+84,85,86,87,88 
+ Ground GND for VBAT recommend to use 2,43,44,45pin 
+Power on/down 
+PWRKEY 48 I 
+PWRKEY should be pulled low at 
+least 1 second and then released to 
+power on/down the module.  
+Internally pulled up to 
+VBAT. 
+Audio interfaces 
+MIC1P 52 
+MIC1N 12 
+I Differential audio input 
+SPK1P 53 
+SPK1N 13 
+O Differential audio output 
+MIC2P 9 
+MIC2N 10 
+I Differential audio input 
+SPK2P 51 
+SPK2N 11 
+O Differential audio output 
+If these pins are unused, 
+keep open. 
+PCM interface 
+PCMCLK 29 O 
+PCMOUT 30 O 
+PCMSYNC 65 O 
+PCMIN 66 I 
+PCM interface for audio If these pins are unused, keep open. 
+Keypads interface 
+COL4 24 I 
+COL3 21 I 
+COL2 22 I 
+COL1 25 I 
+COL0 20 I 
+ROW4 63 O 
+ROW3 23 O 
+Support up to 50 buttons (5*5*2)  If these pins are unused, 
+keep open.（Pin number 20 
+external cannot be pulled 
+down） 
+===== PAGE 17 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      1 7                                       2013-08-20  
+ROW2 61 O 
+ROW1 60 O 
+ROW0 62 O 
+GPIO 
+GPIO1 3 I/O 
+GPIO2 27 I/O 
+GPIO3 28 I/O 
+Programmable general purpose input 
+and output  
+NETLIGHT 64 O Network status  
+STATUS 4 O Power on status  
+Serial port 
+UART_DTR 69 I Data terminal ready 
+UART_RI 68 O Ring indicator 
+UART_DCD 70 O Data carrier detect 
+CTS 34 O Request to send 
+RTS 33 I Clear to send 
+TXD 32 O Transmit data 
+RXD 31 I Receive data 
+  
+If these pins are unused, 
+keep open. 
+Debug interface 
+VBUS 7 I 
+USB_DP 59 I/O 
+USB_DM 19 I/O 
+Debug and download If these pins are unused, keep open. 
+ADC 
+ADC 50 I 10bit general analog to digital converter If these pins are unused, keep open. 
+PWM 
+PWM 26 O Pulse-width modulation If these pins are unused, keep open. 
+I2C 
+SDA 75 I/O I2C serial bus data 
+SCL 74 O I2C serial bus clock Need external pulled up 
+SIM card interface 
+VSIM 16 O V oltage supply for SIM card. Support 1.8V or 3V SIM card 
+SIM_DATA 14 I/O SIM data input/output 
+SIM_CLK 55 O SIM clock 
+SIM_RST 15 O SIM reset 
+All signals of SIM interface 
+should be protected 
+against ESD with a 
+TVS diode array. 
+SIMPRE 54 I SIM card detection Reservation function 
+Antenna interface 
+ANT 40 I/O Connect GSM antenna  
+FM_ANT_P 17 I 
+FM_ANT_N 57 I 
+Differential antenna for FM  
+Synchronizing signal of RF 
+===== PAGE 18 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      1 8                                       2013-08-20  
+BPI_BUS1 5 O Synchronizing signal of RF  
+Other  
+RESET 49 I Reset input(Active low)  
+ISINK1 46 I Drive keypad backlight  
+ISINK0 47 I Drive LCD backlight  
+NC 
+NC 36    
+ 
+===== PAGE 19 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+3.3. Package Dimensions 
+ 
+Figure 3: Dimensions of SIM800L (Unit: mm) 
+ 
+SIM800L_Hardware_Design_V1.00                      1 9                                       2013-08-20  
+===== PAGE 20 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      2 0                                       2013-08-20  
+ 
+ 
+Figure 4: Recommended PCB footprint outline (Unit: mm) 
+ 
+===== PAGE 21 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+4. Application Interface 
+ 
+4.1. Power Supply 
+ 
+The power supply range of SIM800L is from 3.4V to 4.4V .Recommended voltage is 4.0V .The transmitting burst 
+will cause voltage drop and the power supply must be able to provide sufficient current up to 2A. For the VBAT 
+input, a bypass capacitor (low ESR) such as a 100 µF is strongly recommended. 
+ 
+Increase the 33PF and 10PF capacitors can effectivel y eliminate the high frequency interference. A 
+5.1V/500mW Zener diode is strongly recommended, the diode can prevent chip from damaging by the voltage 
+surge. These capacitors and Zener diode should be placed as close as possible to SIM800L VBAT pins.  
+ 
+Figure 5: Reference circuit of the VBAT input 
+Table 5: Recommended Zener diode 
+ Vendor Part number Power(watts) Packages 
+1 On semi MMSZ5231BT1G 500mW SOD123 
+2 Prisemi PZ3D4V2H 500mW SOD323 
+3 Prisemi PZ5D4V2H 500mW SOD523 
+4 Vishay MMSZ4689-V 500mW SOD123 
+5 Crownpo CDZ55C5V1SM 500mW 0805 
+ 
+The following figure is  the reference design of +5V input power supply. The designed output for the power 
+supply is 4.1V , thus a linear regulator can be used. 
+ 
+Figure 6: Reference circuit of the LDO power supply 
+SIM800L_Hardware_Design_V1.00                      2 1                                       2013-08-20  
+===== PAGE 22 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+If there is a high drop-out between the input and the de sired output (VBAT), a DC -DC power supply will be 
+preferable because of its better effici ency especially with the 2A peak current in burst mode of the module. The 
+following figure is the reference circuit. 
+ 
+ 
+Figure 7: Reference circuit of the DC-DC power supply 
+The single 3.7V Li-ion cell battery can be connected to SIM800L VBAT pins directly. But the Ni-Cd or Ni-MH 
+battery must be used carefully, since their maximum voltage can rise over the absolute maximum voltage of the 
+module and damage it 
+ 
+When battery is used, the total impedance between battery and VBAT pins should be less than 150mΩ. 
+The following figure shows the VBAT voltage drop at the maximum power transmit phase, and the test condition 
+is as following: 
+ VBAT=4.0V,  
+A VBAT bypass capacitor CA=100µF tantalum capacitor (ESR=0.7Ω), 
+Another VBAT bypass capacitor CB=1µF.  
+ 
+  
+Figure 8: VBAT voltage drop during transmit burst 
+ 
+4.1.1. Power supply pin 
+ 
+Pin 1 and Pin 42 are VBAT input, Pi ns 2,43,44,45 are GND of power supply, VRTC pin is power supply of the 
+RTC cicuit in the module.VDD_EXT output 2.8V when module is in normal operation mode.  
+  
+When designing the power supply in user’s application, pay special attention to powe r losses. Ensure that the 
+input voltage never drops below 3.0V even when current consumption rises to 2A in the transmit burst. If the 
+power voltage drops below 3.0V , the module may be shut down automatically. The PCB traces from the VBAT 
+pins to the power supply must be wide enough (at least 60mil) to decrease voltage drops in the transmit burst. 
+The power IC and the bypass capacitor should be placed to the module as close as possible. 
+ 
+SIM800L_Hardware_Design_V1.00                      2 2                                       2013-08-20  
+===== PAGE 23 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+Figure 9: The minimal VBAT voltage requirement at VBAT drop 
+ 
+4.1.2. Monitoring Power Supply 
+ 
+AT command “AT+CBC” can be used to monitor the VBAT voltage. For detail, please refer to document [1]. 
+ 
+4.2. Power on/down Scenarios 
+ 
+4.2.1. Power on SIM800L 
+ 
+User can power on SIM800L by pulling down the PWRKEY pin for at least 1 second and release. This pin is 
+already pulled up to VBAT in the module internal, so external pull up is not necessary. Reference circuit is shown 
+as below. 
+ 
+ 
+Figure 10: Powered on/down module using transistor 
+ 
+ 
+Figure 11: Powered on/down module using button 
+ 
+The power on timing is illustrated as in the following figure. 
+SIM800L_Hardware_Design_V1.00                      2 3                                       2013-08-20  
+===== PAGE 24 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+Figure 12: Timing of power on module 
+ 
+When power on procedure is completed, SIM800L will send following URC to indicate that the module is ready 
+to operate at fixed baud rate. 
+RDY 
+This URC does not appear when autobauding function is active. 
+ 
+Note: User can use AT command “AT+IPR=x” to set a fixed baud rate and save  the configuration to 
+non-volatile flash memory. After the configuration is saved as fixed baud rate, the Code “RDY” should be 
+received from the serial port every time when SIM800L is powered on. For details, please refer to the chapter 
+“AT+IPR” in document [1]. 
+ 
+4.2.2. Power down SIM800L 
+ 
+SIM800L will be powered down in the following situations： 
+z Normal power down procedure: power down SIM800L by the PWRKEY pin.  
+z Normal power down procedure: power down SIM800L by AT command “AT+CPOWD=1”.  
+z Abnormal power down: over-voltage or under-voltage automatic power down. 
+z Abnormal power down: over-temperature or under-temperature automatic power down. 
+4.2.2.1. Power down SIM800L by the PWRKEY Pin 
+User can power down SIM800L by pulling down the PWRKEY pin for at least 1 second and release. Please refer 
+to the power on circuit. The power down timing is illustrated in the following figure. 
+SIM800L_Hardware_Design_V1.00                      2 4                                       2013-08-20  
+===== PAGE 25 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+Figure 13: Timing of power down SIM800L by PWRKEY 
+This procedure makes the module log off from the network an d allows the software to enter into a secure state to 
+save data before completely shut down. 
+ 
+Before the completion of the power down procedure, the module will send URC: 
+NORMAL POWER DOWN 
+At this moment, AT commands can not be executed any more, and only the RTC is still active. Power down mode 
+can also be indicated by STATUS pin, which is at low level at this time. 
+ 
+4.2.2.2. Power down SIM800L by AT Command 
+ 
+SIM800L can be powered down by AT command “AT+CPOWD=1”. This procedure makes the module log off 
+from the network and allows the software to enter into a secure state to save data before completely shut down. 
+ 
+Before the completion of the power down procedure, the module will send URC: 
+NORMAL POWER DOWN 
+At this moment, AT commands can not be executed any more, and only the RTC is still active. Power down mode 
+can also be indicated by STATUS pin, which is at low level at this time. 
+ 
+For detail about AT command “AT+CPOWD”, please refer to document [1]. 
+ 
+4.2.2.3. Over-voltage or Under-voltage Power down 
+ 
+The module software monitors the VBAT voltage constantly. 
+If the voltage ≤ 3.5V , the following URC will be reported: 
+UNDER-VOLTAGE WARNNING 
+If the voltage ≥ 4.3V , the following URC will be reported: 
+OVER-VOLTAGE WARNNING 
+If the voltage < 3.4V , the following URC will be reported, and the module will be automatically powered down. 
+UNDER-VOLTAGE POWER DOWN 
+If the voltage > 4.4V , the following URC will be reported, and the module will be automatically powered down. 
+OVER-VOLTAGE POWER DOWN 
+At this moment, AT commands can not be executed any more, and only the RTC is still active. Power down mode 
+can also be indicated by STATUS pin, which is at low level at this time. 
+ 
+SIM800L_Hardware_Design_V1.00                      2 5                                       2013-08-20  
+===== PAGE 26 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+4.2.2.4. Over-temperature or Under-temperature Power down 
+ 
+The module will constantly monitor the temperature of the module,  
+If the temperature > +80℃, the following URC will be reported: 
++CMTE: 1 
+If the temperature < -30℃, the following URC will be reported: 
++CMTE:-1 
+If the temperature > +85 ℃, the following URC will be reported, and the module will be automatically powered 
+down. 
++CMTE: 2 
+If the temperature <  -40℃, the following URC will be reported, and the module will be automatically powered 
+down. 
++CMTE:-2 
+At this moment, AT commands can not be executed any more, and only the RTC is still active. Power down 
+mode can also be indicated by STATUS pin, which is at low level at this time. 
+ 
+Note：The default temperature detect is disable, AT  command “AT+CMTE” could be used to read the 
+temperature when the module is running.For details please refer to document [1]. 
+ 
+4.2.3. Reset Function 
+ 
+SIM800L also has a RESET pin (pin 49) used to reset the module. This function is used as an emergency reset 
+only when AT command “AT+CPOWD=1” and the POWER_ON pin has no effect. User can pull the RESET pin 
+to ground, then the module will reset. 
+ 
+This pin is already isolated in the module, so the external isolation is not necessary. Following figure is internal 
+circuit of the RESET pin. 
+ 
+ 
+Figure 14: Reset circuit 
+ 
+The typical value of RESET pin at High level is 2.8V , so for the 3V or 3.3V , customer could use MCU’s GPIO to 
+driver this pin directly, cascading some resistors could enhance the ESD performance but the value should not be 
+too big; otherwise the level of RESET could be lower than threshold value; RESE T hardware parameters can 
+refer to the table below: 
+SIM800L_Hardware_Design_V1.00                      2 6                                       2013-08-20  
+===== PAGE 27 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+Table 6: Electronic characteristic of the RESET pin 
+Pin name Symbol Min Typ Max Unit 
+VIH 2.7 2.8 2.9 V 
+VIL - - 0.6 V RESET 
+Low power time 105  - ms 
+ 
+The reset scenarios are illustrated in the following figures.  
+ 
+Figure 15: Reset timing sequence 
+ 
+4.3. Power Saving Mode 
+ 
+SIM800L has two power saving modes: Minimum functionality mode and sleep mode. AT command 
+“AT+CSCLK=1”can be used to set SIM800L into sleep mode. AT command “AT+CFUN=<fun>“ can be used to 
+set SIM800L into minimum functionality. When SIM800L is in sleep mode and minimum functionality mode, 
+the current of module is lowest. 
+ 
+4.3.1. Minimum Functionality Mode 
+ 
+There are three functionality modes, which could be set by AT command “AT+CFUN=<fun>“. The command 
+provides the choice of the functionality levels <fun>=0,1,4. 
+z AT+CFUN=0： Minimum functionality. 
+z AT+CFUN=1： Full functionality (default). 
+z AT+CFUN=4： Flight mode (disable RF function). 
+Table 7: The current consumption of Minimum Functionality Mode (BS-PA-MFRMS=9) 
+<fun> Current consumption(mA) (sleep mode) 
+0 0.796 
+1 1.02 
+4 0.892 
+ 
+SIM800L_Hardware_Design_V1.00                      2 7                                       2013-08-20  
+===== PAGE 28 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+Minimum functionality mode minimizes the current consumption to the lowest level. If SIM800L is set to 
+minimum functionality by “AT+CFUN=0”, the RF function and SIM card function will be disabled. In this 
+case, the serial port is still accessible, but all AT comm ands correlative to RF fu nction and SIM card function 
+will not be accessible.  
+ 
+For detailed information about AT command “AT+CFUN=<fun>“, please refer to document [1]. 
+ 
+4.3.2. Sleep Mode (AT+CSCLK=1) 
+ 
+User can control SIM800L module to enter or exit the sleep mode (AT+CSCLK=1) by DTR signal. When 
+DTR is in high level and without interrupt (on air and hard ware such as GPIO interrupt or data in serial port), 
+SIM800L will enter sleep mode automatically. In this mode, SIM800L can still receive paging or SMS from 
+network but the serial port is not accessible. 
+ 
+Note: Autobauding is default. It cannot enter sleep mode in the absence of synchronous serial port baud rate 
+after module power on.  
+ 
+4.3.3. Wake Up SIM800L from Sleep Mode (AT+CSCLK=1) 
+ 
+When SIM800L is in sleep mode (AT+CSCLK=1), the following methods can wake up the module: 
+z Pull down DTR pin. 
+    The serial port will be active after DTR pin is pulled to low level for about 50ms. 
+z Receive a voice or data call from network. 
+z Receive a SMS from network. 
+z Receive external interrupt 
+ 
+4.4. RTC Backup 
+ 
+Current input for RTC when the VBAT is not supplied for the system. Current output for backup battery when 
+the VBAT power supply is in present and the backup battery is in low voltage state. The RTC power supply of 
+module can be provided by an external capacitor or a battery (non-chargeable or rechargeable) through the VRTC. 
+The following figures show various reference circuits for RTC back up. 
+ 
+z External capacitor backup 
+ 
+Figure 16: RTC supply from capacitor 
+z Non-chargeable battery backup 
+SIM800L_Hardware_Design_V1.00                      2 8                                       2013-08-20  
+===== PAGE 29 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+  
+Figure 17: RTC supply from non-chargeable battery 
+z Rechargeable battery backup 
+ 
+Figure 18: RTC supply from rechargeable battery 
+ 
+4.5. Serial Port and USB Interface 
+ 
+SIM800L provides one unbalanced asynchronous serial ports. The module is designed as a DCE (Data 
+Communication Equipment). The following figure shows the connection between module and client (DTE). 
+Table 8: Serial port and USB pin definition 
+ Pin name Pin number Function 
+UART_DTR 69 Data terminal ready 
+UART_RI 68 Ring indicator 
+UART_DCD 70 Data carrier detect 
+CTS 34 Request to send 
+RTS 33 Clear to send 
+TXD 32 Transmit data 
+Serial port 
+RXD 31 Receive data 
+VBUS 7 USB power supply 
+USB_DP 59  Debug port 
+USB_DM 19  
+ 
+Note: Hardware flow control is disable by default. AT command “AT+IFC=2,2”can enable hardware flow 
+control. AT command “AT+IFC=0,0”can disable hardware flow control. For more details please refer to 
+SIM800L_Hardware_Design_V1.00                      2 9                                       2013-08-20  
+===== PAGE 30 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      3 0                                       2013-08-20  
+document [1] 
+Table 9: Serial port characteristics 
+Symbol Min Max Unit 
+VIL 0 0.3 V 
+VIH 2.5 2.8  V 
+VOL 0 0.1 V 
+VOH 2.7 2.8 V 
+4.5.1 Function of Serial Port 
+Serial port: 
+z Full modem device. 
+z Contains data lines TXD and RXD, hardware flow control lines RTS and CTS, status lines DTR, DCD and 
+RI. 
+z Serial port can be used for CSD FAX, GPRS service and AT communication. It can also be used for 
+multiplexing function. For details about multiplexing function, please refer to table 11. 
+z Serial port supports the following baud rates: 
+1200, 2400, 4800, 9600, 19200, 38400, 57600 and 115200bps 
+z Autobauding only supports the following baud rates: 
+1200, 2400, 4800, 9600, 19200, 38400 and 57600bps 
+z The default setting is autobauding. 
+ 
+Autobauding allows SIM800L to automatically detect the baud rate of the host device. Pay more attention to the 
+following requirements: 
+z Synchronization between DTE and DCE: 
+When DCE powers on with autobauding enabled, it is recommended to send "AT" or "at" or "aT" or "At" 
+to synchronize the baud rate, until DTE receives the "OK" response, which means DTE and DCE are 
+correctly synchronized. For more information please refer to AT command "AT+IPR". 
+ 
+z Restrictions of autobauding operation: 
+The DTE serial port must be set at 8 data bits, no parity and 1 stop bit. 
+The URC such as "RDY", "+CFUN: 1" and "+CPIN: READY” will not be reported. 
+ 
+Note: User can use AT command “AT+IPR=x” to set a fixed baud rate and the setting will be saved to 
+non-volatile flash memory automatically. After the configuration is set as fixed baud rate, the URC such as 
+"RDY", "+CFUN: 1" and "+CPIN: READY” will be reported when SIM800L is powered on. 
+ 
+4.5.2 Serial Interfaces 
+ 
+The following figure shows the connection between module and client (DTE). 
+ 
+===== PAGE 31 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+TXD
+RXD
+RTS
+CTS
+UART _DTR
+UART _ DCD
+UART 1_RI
+TXD
+RXD
+RTS
+CTS
+DTR
+DCD
+RING
+MODULE (DCE ) CUSTOMER (DTE)
+Serial portSerial port
+ 
+Figure 19: Connection of the serial interfaces 
+ 
+If the voltage of UART is 3.3V , the following reference circuits are recommended. If the voltage is 3.0V , please 
+change the resistors in the following figure from 5.6K to 14K. 
+ 
+Figure 20: Resistor matching circuit 
+If the voltage of UART is 3V or3.3V , the following reference circuits are recommended: 
+SIM800L_Hardware_Design_V1.00                      3 1                                       2013-08-20  
+===== PAGE 32 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+TXD RXD
+MODULE DTE
+TXDRXD
+10K
+10K
+ 
+Figure 21 : Diode isolation circuit 
+Note: please make sure the minimum of client high limit should be less than 2.8V minus the diode drop. 
+ 
+If the voltage of UART is 5V , the following reference circuits are recommended: 
+ 
+Figure 22: TX level matching circuit 
+ 
+ 
+Figure 23: RX level matching circuit 
+Note: When Fig 22 and Fig 23are used for electrical level isolation, if customers use serial port to upgrade 
+SW, please note VDDEXT has no voltage output during the upgrading process, LDO output could be used as 
+VDDEXT in the figure, upgrading through USB port is recommended. 
+ 
+SIM800L_Hardware_Design_V1.00                      3 2                                       2013-08-20  
+===== PAGE 33 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+4.5.3 Debug Interface 
+ 
+SIM800L could achieve software debug function through USB interface. When powering on the module, connect 
+VBUS,USB_DP,USB_DM, and GND to PC, then install the driver following the prompts, a UART port could be 
+recognized by PC, customer could achieve the software Debug with this UART port. 
+SIMcom recommendeds the following connected diagram: 
+ 
+Figure 24: USB reference circuit 
+The TVS on USB data line should be less than 5pf, and traced by differential forms. 
+ 
+Note: please reserve the USB interface or test point for the further debugging 
+Table 10: VBUS operation voltage 
+Pin  Min Typ Max Unit 
+VBUS 4.3 5 7 V 
+ 
+ 
+4.5.4 Software Upgrade and Debug 
+ 
+Customer could upgrade module’s firmware through USB or UART interface. 
+ 
+If upgrading through USB port, it is necessary to power on SIM800L first, then connect VBUS, USB_DP, 
+USB_DM, and GND to PC. There is no need to operate PWRKEY pin in the whole procedure, when SIM800L 
+detects VBUS and could communicate normally with USB_DP and USB_DM, it will enter USB download mode 
+automatically. 
+ 
+Note: When only USB_DP and USB_DM are connected, no VBUS, customer need to pull down COL0(pin20) 
+before power on the module, then press the PWRKEY button, the module will enter download mode;  
+ 
+If customer upgrades the software through UART port, it is strongly recommended to lead the UART1_TXD, 
+UART1_RXD, GND and PWRKEY pin to IO connector for the upgrading, and PWRKEY pin should connect to 
+GND while upgrading. Refer to the following figure for debugging and upgrading software. 
+SIM800L_Hardware_Design_V1.00                      3 3                                       2013-08-20  
+===== PAGE 34 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+ 
+TXD
+RXD
+TXD
+RXD
+MODULE (DCE )
+Serial port
+GND
+I/O Connector
+GND
+PWRKEY PWRKEY
+ 
+Figure 25: Connection for software upgrading and debugging 
+The serial port and the debug port support the CMOS level. If user connects the module to the computer, the 
+level shifter should be added between the DCE and DTE. 
+ 
+4.5.5 Multiplexing function of serial port 
+ 
+If full modem is not necessary, it could be multiplexed into two serial ports without flow control, the details 
+could be found in the following table: 
+Table 11: Multiplexing function of serial port 
+Pin name Pin number Mode 0(default) Mode 1 
+UART_DTR 69 UART_DTR GPIO22 
+UART_RI 68 UART_RI GPIO23 
+UART_DCD 70 UART_DCD GPIO24 
+CTS 34 CTS URXD2(IN) 
+RTS 33 RTS UTXD2(OUT) 
+TXD 32 TXD UTXD1(OUT) 
+RXD 31 RXD URXD1(IN) 
+Note: Multiplexing function need different software supply. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SIM800L_Hardware_Design_V1.00                      3 4                                       2013-08-20  
+===== PAGE 35 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+4.6. RI Behaviors 
+ 
+Table 12: RI behaviors 
+State RI response 
+Standby High 
+V oice call 
+The pin is changed to low. When any of the following events occur, the pin will be changed 
+to high: 
+（1）Establish the call 
+（2）Hang up the call 
+Data call 
+The pin is changed to low. When any of the following events occur, the pin will be changed 
+to high: 
+（1）Establish the call 
+（2）Hang up the call 
+SMS The pin is changed to low, and kept low for 120ms when a SMS is received. Then it is changed to high. 
+URC The pin is changed to low, and kept low for 120ms when some URCs are reported. Then it is changed to high. For more details, please refer to document [10]. 
+   
+The behavior of the RI pin is shown in the following figure when the module is used as a receiver. 
+ 
+  
+Figure 26: RI behaviour of voice calling as a receiver 
+HIGH
+LOW
+Idle Ring
+Hang up the call
+Establish the call
+RI
+ 
+Figure 27: RI behaviour of data calling as a receiver 
+ 
+SIM800L_Hardware_Design_V1.00                      3 5                                       2013-08-20  
+===== PAGE 36 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+Figure 28: RI behaviour of URC or receive SMS 
+ 
+However, if the module is used as caller, the RI will remain high. Please refer to the following figure. 
+ 
+ 
+Figure 29: RI behaviour as a caller 
+ 
+4.7. Audio Interfaces 
+ 
+SIM800L provides two analog inputs (MIC1P/1N; MIC2P/2N), which could be used for electret microphone. 
+The module also provides two analog outputs (SPK1P/1N; SPK2P/2N). 
+Table 13: Audio interface definition 
+ Pin Name Pin number Function 
+MIC1P 52 Main Audio input positive 
+MIC1N 12 Main Audio input negative 
+SPK1P 53 Main Audio output positive 
+Main 
+SPK1N 13 Main Audio output negative 
+MIC2P 9 Secondary Audio input positive 
+MIC2N 10 Secondary Audio input negative 
+SPK2P 51 Secondary Audio output positive 
+Secondary 
+SPK2N 11 Secondary Audio output negative 
+ 
+SPK1P/1N output can directly drive 32Ω receiver, SIM800L internal has class-AB audio amplifier, the following 
+table is class-AB performance: 
+Table 14: Performance of audio amplifier 
+Conditions Class-AB AMP 
+4.2V 8Ohm THD+N=1% 0.87W 
+3.4V 8Ohm THD+N=1% 0.53W 
+4.2V 8Ohm THD+N=10% 1.08W 
+3.4V 8Ohm THD+N=10% 0.65W 
+ 
+SPK2P/2N output can directly drive 8Ω speaker. 
+ 
+AT command “AT+CMIC” is used to adjust the input gain level of microphone. AT command “AT+SIDET” 
+SIM800L_Hardware_Design_V1.00                      3 6                                       2013-08-20  
+===== PAGE 37 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+is used to set the side-tone level. In addition, AT command “AT+CLVL” is used to adjust the output gain level. 
+For more details, please refer to document [1]. 
+ 
+In order to improve audio performance, the following reference circuits are recommended. The audio signals 
+have to be layout according to differential signal layout rules as shown in following figures.  
+ 
+4.7.1. Speaker Interfaces Configuration 
+ 
+ 
+Figure 30: Speaker reference circuit 
+ 
+4.7.2. Microphone Interfaces Configuration 
+ 
+10pF 33pF
+33pF
+33pF
+SIM800L_Hardware_Design_V1.00                      3 7                                       2013-08-20  
+MIC1P/2P
+MIC1N/2N
+Electret 
+Microphone
+10pF
+10pFESD 
+ANTI
+ESD
+ANTI
+The lines in bold type should 
+be accorded to differential 
+signal layout rules
+These components 
+should be placed to 
+microphone as close as 
+possible
+MODULE
+ 
+Figure 31: Speaker with amplifier reference circuit 
+ 
+ 
+===== PAGE 38 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      3 8                                       2013-08-20  
+4.7.3. Audio Electronic Characteristic 
+ 
+Table 15: Microphone input characteristics 
+Parameter  Min Typ Max Unit 
+Microphone biasing voltage  1.9 2.2 V 
+Working current   2 mA 
+Input impedance(differential) 13 20 27 KΩ 
+Idle channel noise   -67 dBm0 
+Input level:-40dBm0 29   dB SINAD 
+Input level:0dBm0  69  dB 
+Table 16: Audio output characteristics 
+Parameter Conditions Min Typ Max Unit 
+RL=32 Ohm receiver - 90 - mW Normal output 
+RL=8 Ohm speaker - - 1080 mW 
+ 
+4.7.4. TDD 
+ 
+GSM signal could interfere audio by coupling or conducting. Coupling noise could be filtered by adding 33pF 
+and 10pF capacitor over audio lines. 33pF capacitor could eliminate noise from GSM850/EGSM900MHz, while 
+10pF capacitor could eliminate noise from DCS1800/PCS1900Mhz frequency. Coupling noise should have 
+something to do with PCB layout. Under some scenarios, TDD noise from GSM850/EGSM900MHz frequency 
+affects heavily, but some different story is from DCS1800/PCS1900Mhz frequency, so customer should develop 
+this filter solution according to field test result. 
+ 
+GSM antenna is the key coupling interfering source of TDD noise. Thereat, pay attention to the layout of audio 
+lines which should be far away from RF cable and an tenna and VBAT pin. The bypass capacitor for filtering 
+should be placed near module and another group need to be placed near to connector. 
+ 
+Conducting noise is mainly caused by the VBAT drop.  If audio PA was powered by VBAT directly, then there 
+will be some cheep noise from speaker output easily. So it is better to put big capacitor and ferrite bead near 
+audio PA input. 
+ 
+TDD noise has something to do with GND signal surely. If GND signal issued is not good, lots of 
+high-frequency noises will interfere microphone and speaker over bypass capacitor. So care of good GND during 
+PCB layout need to be taken.   
+ 
+4.8. SIM Card Interface 
+ 
+The SIM interface complies with the GSM Phase 1 specification and the new GSM Phase 2+ specification for 
+FAST 64 kbps SIM card. Both 1.8V and 3.0V SIM card are supported. The SIM inte rface is powered from an 
+internal regulator in the module. 
+ 
+===== PAGE 39 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+4.8.1. SIM Card Application 
+ 
+ 
+Table 17: SIM pin definition 
+Pin name Pin number Function 
+VSIM 16 V oltage supply for SIM card. Support 1.8V or 3V SIM card 
+SIM_DATA 14 SIM data input/output 
+SIM_CLK 55 SIM clock 
+SIM_RST 15 SIM reset 
+SIM_PRE 54 SIM card detection 
+ 
+It is recommended to use an ESD protection component such as ST (www.st.com ) ESDA6V1W5 or ON SEMI 
+(www.onsemi.com ) SMF05C. That the SIM peripheral circuit sh ould be close to the SIM card socket. The 
+reference circuit of the 8-pin SIM card holder is illustrated in the following figure. 
+ 
+Figure 32: Reference circuit of the 8-pin SIM card holder 
+ 
+The SIM_PRESENCE pin is used for detection of the SIM card hot plug in. User can select the 8-pin SIM card 
+holder to implement SIM card detection function. AT command “AT+CSDT” is used to enable or disable SIM 
+card detection function. For details of this AT command, please refer to document [1]. 
+ 
+If the SIM card detection function is not used,  user can keep the SIM_PRESENCE pin open. The reference 
+circuit of 6-pin SIM card holder is illustrated in the following figure. 
+SIM800L_Hardware_Design_V1.00                      3 9                                       2013-08-20  
+===== PAGE 40 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+Figure 33: Reference circuit of the 6-pin SIM card holder 
+4.8.2. SIM Card Design Guide 
+ 
+SIM card circuit is susceptible to interference, causing the SIM card failures or some other situations, it is 
+strongly recommended to follow these guidelines while designing: 
+ 
+z Make sure that SIM card holder should far away from GSM antenna while in PCB layout. 
+z SIM traces should keep away from RF lines, VBAT and high-speed signal lines.  
+z The traces should be as short as possible. 
+z Keep SIM holder’s GND connect to main ground directly. 
+z Shielding the SIM card signal by ground well.  
+z Recommended to place a 1uF capacitor on VSIM line and keep close to the holder. 
+z Add some TVS and the parasitic capacitance should not exceed 50pF, and 22Ohm resistor in serials the 
+SIM signal could enhance ESD protection. 
+ 
+4.8.3. Design Considerations for SIM Card Holder 
+ 
+For 8 pins SIM card holder, SIMCom recommends to use Molex 91228.User can visit http://www.molex.com 
+for more information about the holder. 
+SIM800L_Hardware_Design_V1.00                      4 0                                       2013-08-20  
+===== PAGE 41 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      4 1                                       2013-08-20  
+ 
+Figure 34: Molex 91228 SIM card holder 
+ 
+ 
+ 
+ 
+ 
+Table 18: Pin description (Molex SIM card holder) 
+Pin name Signal Description 
+C1 VSIM SIM card power supply 
+C2 SIM_RST SIM card reset 
+C3 SIM_CLK SIM card clock 
+C3 GND Connect to GND 
+C5 GND Connect to GND 
+C6 VPP Not connect 
+C7 SIM_DATA SIM card data I/O 
+C8 SIM_PRE Detect SIM card presence 
+ 
+For 6-pin SIM card holder, SIMCom recommends to use Amphenol C707 10M006 5122 .User can visit 
+http://www.amphenol.com for more information about the holder. 
+ 
+===== PAGE 42 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      4 2                                       2013-08-20  
+ 
+Figure 35: Amphenol C707 10M006 5122 SIM card holder 
+ 
+ 
+ 
+ 
+ 
+Table 19: Pin description (Amphenol SIM card holder) 
+Pin name Signal Description 
+C1 VSIM SIM card power supply 
+C2 SIM_RST SIM card reset 
+C3 SIM_CLK SIM card clock 
+C5 GND Connect to GND 
+C6 VPP Not connect 
+C7 SIM_DATA SIM card data I/O 
+ 
+4.9. PCM Interface 
+ 
+SIM800L provides a hardware PCM interface: 
+Table 20: PCM Pin definition 
+===== PAGE 43 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+Pin name  Pin number Description 
+PCMCLK 29 PCM clock 
+PCMOUT 30 PCM data output 
+PCMSYNC 65 PCM synchrony 
+PCMIN 66 PCM data input 
+ 
+SIM800L PCM interface only supply master mode, data length is 16 bits (linear)，PCM clock rate is 256KHz. 
+Table 21: PCM specification 
+Parameter Specification 
+Line Interface Format Linear(Fixed) 
+Data length 16bits(Fixed) 
+PCM Clock/Sync Source Master Mode(Fixed) 
+PCM Clock Rate 256Khz(Fixed) 
+PCM Sync Format Short sync/Long sync both support 
+Zero Padding/Sign extension Zero Padding(Fixed) 
+Data Ordering MSB/LSB both support 
+ 
+Note: User can use AT command control PCM interface. For detail ,please refer to document[1]. 
+ 
+4.9.1. PCM Multiplexing Function 
+ 
+With GPIO17 and GPIO19, PCM interface can be configured as SPI or SD interface, the following table shows 
+the detailed multiplexing function. 
+ 
+ 
+ 
+ 
+Table 22: PCM multiplexing function 
+Pin name  Pin number Mode 0(default) Mode 1 Mode 2 Mode 3 
+PCMCLK 29 PCMCLK DISP_RSTB MC3CM0 GPIO18 
+PCMOUT 30 PCMOUT DISP_DI MC3DA3 GPIO19 
+PCMSYNC 65 PCMSYNC DISP_CEB MC3CK GPIO20 
+PCMIN 66 PCMIN DISP_DA MC3DA2 GPIO21 
+GPIO2 27 GPIO2 DISP_A0DA MC3DA0 - 
+GPIO3 28 GPIO3 DISP_CLK MC3DA1 - 
+ 
+Note: Multiplexing function need different software supply. 
+ 
+4.9.2. PCM Interface 
+Refer to the following figure for PCM design: 
+SIM800L_Hardware_Design_V1.00                      4 3                                       2013-08-20  
+===== PAGE 44 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+Figure 36: PCM reference circuit 
+ 
+4.9.3. LCD Display/SPI Interface 
+ 
+SIM800L provides a serial interface. It could be used as SPI interface in the embedded AT application. 
+ 
+Figure 37: LCD reference circuit 
+ 
+ 
+ 
+4.9.4. SD Card Interface 
+ 
+ 
+Figure 38: SD reference circuit 
+SIM800L_Hardware_Design_V1.00                      4 4                                       2013-08-20  
+===== PAGE 45 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+If power supply is 2.8V for SD card, user can use VDD_EXT; if power supply is 3.3V , please use external design 
+LDO.  
+ 
+4.10. Keypad Interface 
+ 
+The keypad interface consists of 5 keypad column outputs and 5 keypad row inputs, with total 5*5*2, which is 50 
+keys. Module keys have two connections: connections 1, which can support 25 keys; connections 2, which can 
+support 50 keys. 
+ 
+Connections 1:  
+ 
+Figure 39: 25 keys reference circuit 
+Note：According to the traditional 5 * 5 to design buttons, when there is spare COL or ROW, user can execute 
+AT command to define as GPIO for details please see the relevant manuals. 
+ 
+Connections 2:  
+Module supports a new key connection, can support 50 keys, which meets full keyboard demand, the connection 
+diagram is as following: 
+SIM800L_Hardware_Design_V1.00                      4 5                                       2013-08-20  
+===== PAGE 46 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+Figure 40: 50 keys reference circuit 
+Note：Do not change the 20KOhm resistor in the diagram. 
+ 
+Customer could cascade a less than 1K resistor to enhance the ESD performance, the connection diagram is as 
+following: 
+ 
+Figure 41: Keypad reference circuit 
+Whether using a 5*5 keys or 5*5*2 keys, the module can also detecte the two buttons pressed. But when using a 
+5*5*2 button, the same row, column two buttons at the same time can not be detected when pressed, as shown 
+below: 
+ 
+Figure 42: Keypad detected 
+SIM800L_Hardware_Design_V1.00                      4 6                                       2013-08-20  
+===== PAGE 47 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+Table 23: Pin definition of the keypad interface 
+Pin name Pin number Function Default state 
+COL0 20 Pull up 
+COL1 25 Pull down 
+COL2 22 Pull down 
+COL3 21 Pull down 
+COL4 24 
+Keypad matrix column 
+Pull down 
+ROW0 62 Pull down 
+ROW1 60 Pull down 
+ROW2 61 Pull down 
+ROW3 23 Pull down 
+ROW4 63 
+Keypad matrix row 
+Pull down 
+ 
+4.10.1. Keypad Multiplexing Function 
+Table 24: Keypad multiplexing function 
+Pin name  Pin number  Mode 0(default) Mode 1 
+COL0 20 COL0 GPIO6 
+COL1 25 COL1 GPIO7 
+COL2 22 COL2 GPIO8 
+COL3 21 COL3 GPIO9 
+COL4 24 COL4 GPIO10 
+ROW0 62 ROW0 GPIO11 
+ROW1 60 ROW1 GPIO12 
+ROW2 61 ROW2 GPIO13 
+ROW3 23 ROW3 GPIO14 
+ROW4 63 ROW4 GPIO15 
+Note: Multiplexing function need different software supply. 
+ 
+ 
+4.11. I2C Bus 
+ 
+The SIM800L provides an I2C interface which is only used in the embedded AT application. 
+Table 25: Pin definition of the I2C 
+Pin name Pin number Description 
+SCL 74 I2C serial bus clock 
+SDA 75 I2C serial bus data 
+Notes:  
+1.This function is not supported in the standard firmware . If user wants this functio n, the firmware must be 
+customized. Please contact SIMCom for more details. 
+2.If user design I2C please pull up to VDD_EXT. 
+SIM800L_Hardware_Design_V1.00                      4 7                                       2013-08-20  
+===== PAGE 48 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+4.11.1. I2C Multiplexing Function 
+Table 26: I2C multiplexing function 
+Pin name Pin number Mode 0(default) Mode 1 
+SCL 74 SCL GPIO25 
+SDA 75 SDA GPIO26 
+Note: Multiplexing function need different software supply. 
+ 
+4.12. General Purpose Input/Output (GPIO) 
+ 
+SIM800L provides 3 GPIO pins. The output voltage level of the GPIO can be set by AT command “AT+ SGPIO”. 
+The input voltage level of the GPIO can also be read by AT command “AT+ SGPIO”. For more details, please 
+refer to document [1]. 
+Table 27: Pin definition of the GPIO 
+Pin name Pin number Reret state 
+GPIO1 3 - 
+GPIO2 27 Pull down 
+GPIO3 28 Pull down 
+ 
+4.13. ADC 
+Table 28: Pin definition of the ADC 
+Pin name Pin number Description 
+ADC 50 Analog voltage input 
+ 
+SIM800L provides an auxiliary ADC, which can be used  to measure the voltage. User can use AT command 
+“AT+CADC” to read the voltage value. For details of this AT command, please refer to document [1]. 
+ 
+Table 29: ADC specification 
+Parameter Min Typ Max Unit 
+Voltage range 0 - 2.8 V 
+ADC Resolution - 10 - bits 
+Sampling rate - - 1.0833 MHz 
+ADC precision  10 20 mV 
+ 
+4.14. PWM 
+Table 30: Pin definition of the PWM 
+Pin name Pin number Description 
+SIM800L_Hardware_Design_V1.00                      4 8                                       2013-08-20  
+===== PAGE 49 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+PWM 26 PWM signal 
+ 
+SIM800L provides a PWM which can be used to drive a vibrator, and a backlight LED for display or keyboard. 
+PWM output frequency varies from 0 to 2KHz. Two 7-bit unsigned binary parameters are used for the output 
+period and for the duty cycle. AT command “AT + SPWM” is  used to set the output period and duty cycle of the 
+PWM. For details, please refer to document [1]. 
+ 
+A typical recommended circuit of the PWM driver buzzer is shown in the following figure.  
+ 
+Figure 43: Reference circuit of PWM driver buzzer 
+Table 31: Buzzer output characteristics 
+Parameter Min Typ Max Unit 
+Working voltage 2.5 2.8 2.9 V 
+Working current   16 mA 
+Note: PWM pin must be kept at low power level when module is in the power on procedure. 
+ 
+ 
+4.14.1. PWM Multiplexing Function 
+ 
+Table 32: PWM multiplexing function 
+Pin name Pin number Mode 0(default) Mode 1 
+PWM 26 PWM GPIO16 
+Note: Multiplexing function need different software supply. 
+ 
+4.15. Network Status Indication 
+Table 33: Pin definition of the NETLIGHT 
+Pin name Pin number Description 
+NETLIGHT 64 Network Status Indication 
+ 
+SIM800L_Hardware_Design_V1.00                      4 9                                       2013-08-20  
+===== PAGE 50 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+The NETLIGHT pin can be used to drive a network status indication LED. The status of this pin is listed in 
+following table: 
+Table 34: Status of the NETLIGHT pin 
+Status SIM800L behavior 
+Off SIM800L is not running 
+64ms On/ 800ms Off SIM800L not registered the network 
+64ms On/ 3000ms Off SIM800L registered to the network 
+64ms On/ 300ms Off GPRS communication is established 
+  
+Reference circuit is recommended in the following figure: 
+ 
+Figure 44: Reference circuit of NETLIGHT 
+ 
+4.15.1. NETLIGHT Multiplexing Function 
+Table 35: NETLIGHT multiplexing function 
+Pin name Pin number Mode 0(default) Mode 1 
+NETLIGHT 64 NETLIGHT GPIO17 
+Note: Multiplexing function need different software supply. 
+ 
+4.16. Operating Status Indication 
+ 
+The pin4 is for operating status indication of the module. The pin output is high when module is powered on, 
+and output is low when module is powered off.  
+Table 36: Pin definition of the STATUS 
+Pin name Pin number Description 
+STATUS 4 operating Status Indication 
+ 
+Note: For timing about STATUS, please reference to the chapter “4.2 power on/off scenarios” 
+ 
+SIM800L_Hardware_Design_V1.00                      5 0                                       2013-08-20  
+===== PAGE 51 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+4.16.1. STATUS Multiplexing Function 
+Table 37: STATUS multiplexing function 
+Pin name Pin number Mode 0(default) Mode 1 
+STATUS 4 STATUS GPIO4 
+Note: Multiplexing function need different software supply. 
+ 
+4.17. LED Interface 
+ 
+SIM800L provides two LED driver pin. The two pin are open-drain output.  
+ 
+Table 38: Pin definition of the LED 
+Pin name Pin number Description 
+ISINK0 47 Sink current for LCM module 
+ISINK1 46 Sink current for keypad LED 
+ 
+Reference circuit is recommended in the following figure: 
+ 
+Figure 45: LED driver reference circuit 
+ 
+Table 39: LED specification 
+Pin name Min  Typ Max Unit 
+ISINK0 -  24 mA 
+ISINK1 60 - 100 mA 
+Note: Isink0 provide 6-current-level steps of up to 24mA. 
+ 
+4.18. RF Synchronization Signal 
+ 
+The synchronization signal serves to indicate growing power consumption during the transmit burst. The signal 
+is generated by the BPI_BUS1 pin. 
+SIM800L_Hardware_Design_V1.00                      5 1                                       2013-08-20  
+===== PAGE 52 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+Table 40: Definition of the BPI_BUS1 pin 
+Pin name Pin number Description 
+BPI_BUS1 5 Transmit synchronization signal 
+ 
+The timing of the synchronization signal is shown below. High level of the BPI_BUS1 pin indicates increased 
+power consumption during transmission. 
+ 
+ 
+Figure 46: BPI_BUS1 signal during transmit burst 
+ 
+4.19. Antenna Interface 
+ 
+There are three antenna ports for SIM800L, GSM antenna port named RF_ANT, antenna port named BT_ANT 
+and FM antenna port named FM_ANT_P/ FM_ANT_N, The RF interface of the three antenna ports has an 
+impedance of 50Ω. 
+z The input impendence of the antenna should be 50Ω, and the VSWR should be less than 2. 
+z It is recommended that the GSM antenna and the BT antenna should be placed as far as possible.  
+z The isolations of the three antenna should be bigger than 30db 
+ 
+NOTE：About the RF trace layout please refer to“AN_SMT Module_RF_Reference Design_Guide”. 
+ 
+4.19.1. GSM Antenna Interface 
+ 
+There is a GSM antenna pad named RF_ANT for SIM800L, the connection of the antenna must be decoupled 
+from DC voltage. This is necessary because the antenna co nnector is DC coupled to ground via an inductor for 
+ESD protection. 
+ 
+The external antenna must be matched properly to achieve best performance, so the matching circuit is necessary, 
+the connection is recommended as following: 
+ 
+SIM800L_Hardware_Design_V1.00                      5 2                                       2013-08-20  
+===== PAGE 53 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+Figure 47: GSM antenna matching circuit 
+R101，C101，C102 are the matching circuit, the value should be defined by the antenna design. Normally R101 is 
+0Ω, C101 and C102 are not mounted. The RF connector is used for conduction test. If the space between RF pin 
+and antenna is not enough, the matching circuit should be designed as in the following figure: 
+ 
+Figure 48: GSM simple antenna matching circuit 
+Normally R101 is 0Ω, C101 and C102 are not mounted. 
+  
+4.19.2. FM Antenna Interface 
+ 
+The module provides 2 FM antenna pad named FM_ANT_P and FM_ANT_N, these are difference signal. The 
+FM antenna interface circuit is recommended as following:  
+ 
+SIM800L_Hardware_Design_V1.00                      5 3                                       2013-08-20  
+===== PAGE 54 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+Figure 49: FM antenna matching circuit 
+Normally, R301\R302\R303\R304 are 0Ω, C301\C302\C303\C304 are not mounted. 
+The earphone is often used for FM antenna, as an example, the pin GND of the 3.5mm earphone is connected to 
+the FM interface. The circuit is recommended as following:  
+ 
+Figure 50: GND pin of the earphone use to be the FM antenna interface 
+Normally, R301\R303 are 0Ω, C301\C302\C303\C304\L301 are not mounted. 
+ 
+ 
+SIM800L_Hardware_Design_V1.00                      5 4                                       2013-08-20  
+===== PAGE 55 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+5. PCB Layout 
+Usually, most electronic products with good performance are based on good PCB layout. A bad PCB layout will 
+lead to lots of issues, like TDD noise, SIM card not be detected, etc. the final solution for these problems is to 
+redo PCB layout. Making good PCB layout at beginning will save develop schedule and cost as well. 
+ 
+This section will give some guidelines on PCB layout, in order to eliminate interfere or noise by greatest degree, 
+and save product development period. 
+ 
+5.1 Pin Assignment 
+ 
+Before PCB layout, we should learn well about pin assignment in order to get reasonable layout with so many 
+external components. Following figure is the overview of pin assignment of the module. 
+ 
+Figure 51: Pin assignment 
+ 
+ 
+ 
+SIM800L_Hardware_Design_V1.00                      5 5                                       2013-08-20  
+===== PAGE 56 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      5 6                                       2013-08-20  
+5.2 Principle of PCB layout 
+ 
+During layout, attention should be paid to the follow ing interfaces, like Antenna, power supply, SIM card 
+interface, audio interface, and so on. 
+ 
+5.2.1 Antenna Interface 
+ 
+The basis principle is that, the length of trace between pin output and connector should be as short as possible, in 
+order to avoid coupling issue. Do not trace RF signal over across the board. Even the RF cable must be put over 
+the board, it should be far away from SIM card, power ICs. 
+ 
+There are FM antenna interface and GSM antenna interface. If product equips  these antennas as well, do pay 
+attention to the distance between each single antenna. 
+ 
+5.2.2. Power Supply 
+ 
+Not only VBAT but also return GND are very important in layout. The positive line of VBAT should be as short 
+and wide as possible. The correct flow from source to VBAT pin should go though Zener diode then huge 
+capacitor. Pin 2, Pin 43, Pin 44 and Pin45 are GND signals , and shortest layout to GND of power source should 
+be designed. 
+ 
+There are 12 GND pads in middle of module, these pa ds could enhance the GND performances. On the upper 
+layer of these pads, do not trace any signal if possible. 
+ 
+5.2.3 SIM Card Interface 
+ 
+SIM card holder will take large space on board, and there is no anti-EMI component inside.Thus SIM card 
+interface maybe interfered, please pay more attention on this interface during layout. Ensure SIM card holder is 
+far way from antenna or RF cable inside. And it is better to put SIM card holder near the module, as nearer as 
+possible. It is better to add ESD component to protect clock, data, reset and VSIM signals which should be far 
+away from power and high-speed-frequency signal. 
+ 
+5.2.4 Audio Interface 
+ 
+In order to avoid TDD noise, or current noise, or some other noise, the signal trace of audio should far away from 
+antenna and power. And do not let audio trace and VBAT trace parallel. 
+ 
+5.2.5 Others 
+ 
+It is better to trace signal lines of UART bunched, as well as signals of USB and LCM. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+===== PAGE 57 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+5.3 Recommended PCB Layout 
+ 
+Based on above principles, recommended layout is shown in the following illustration. 
+ 
+Figure 52: Recommended PCB layout 
+ 
+SIM800L_Hardware_Design_V1.00                      5 7                                       2013-08-20  
+===== PAGE 58 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      5 8                                       2013-08-20  
+ 
+6. Electrical, Reliability and Radio Characteristics 
+ 
+6.1 Absolute Maximum Ratings 
+ 
+The absolute maximum ratings stated in following table are stress ratings under non-operating conditions. 
+Stresses beyond any of these limits will cause permanent damage to SIM800L.  
+Table 41: Absolute maximum ratings 
+Symbol Min Typ Max Unit 
+VBAT - - 4.5 V 
+Current  0 - 2.0 A 
+VBUS - - 30 V 
+II* - - 8 mA 
+IO* - - 8 mA 
+*These parameters are for digital interface pins, such as keypad, GPIO, I2C, UART, LCD and PCM. 
+ 
+6.2 Recommended Operating Conditions 
+ 
+Table 42: Recommended operating conditions 
+Symbol Parameter Min Typ Max Unit 
+VBAT Power supply voltage 3.4 4.0 4.4 V 
+TOPER Operating temperature -40 +25 +85 ℃ 
+TSTG Storage temperature -45  +90 ℃ 
+ 
+6.3 Digital Interface Characteristics 
+ 
+Table 43: Digital interface characteristics 
+Symbol Parameter Min Typ Max Unit 
+VIH High-level input current 2.1 - 3.1 V 
+VIL Low-level input current -0.3 - 0.7 V 
+VOH High-level output voltage 2.4 - - V 
+VOL Low-level output voltage - - 0.4 V 
+* These parameters are for digital interface pins, such as keypad,GPIO, I2C, UART, LCD and PCM. 
+ 
+ 
+ 
+ 
+===== PAGE 59 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      5 9                                       2013-08-20  
+6.4 SIM Card Interface Characteristics 
+Table 44: SIM card interface characteristics 
+Symbol Parameter Min Typ Max Unit 
+IIH High-level input current -1 - 1 uA 
+IIL Low-level input current -1 - 1 uA 
+1.4 - - V VIH High-level input voltage 
+2.4 - - V 
+- - 0.27 V VIL Low-level input voltage 
+  0.4 V 
+1.62 - - V VOH High-level output voltage 
+2.7 - - V 
+- - 0.36 V VOL Low-level output voltage 
+- - 0.4 V 
+ 
+6.5 SIM_VDD Characteristics 
+Table 45: SIM_VDD characteristics 
+Symbol Parameter Min Typ Max Unit 
+- 3 - VO Output voltage 
+- 1.80 - 
+V 
+IO Output voltage - - 10 mA 
+ 
+6.6 VDD_EXT Characteristics 
+Table 46: VDD_EXT characteristics 
+Symbol Parameter Min Typ Max Unit 
+VO Output voltage 2.70 2.80 2.90 V 
+IO Output current - - 50 mA 
+ 
+6.7 VRTC Characteristics 
+Table 47: VRTC characteristics 
+Symbol Description Min Typ Max Unit 
+VRTC-IN VRTC input voltage  2.8  V 
+IRTC-IN VRTC input current - 3 - uA 
+VRTC-OUT VRTC output voltage - 2.8 - V 
+IRTC-OUT VRTC output current -  2 mA 
+ 
+ 
+===== PAGE 60 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      6 0                                       2013-08-20  
+6.8 Current Consumption (VBAT=3.8V) 
+Table 48: Current consumption 
+Symbol Parameter Conditions Min  Typ Max Unit 
+Voltage  3.4 4.0 4.4 V 
+Power drop PCL=5   350 mV 
+VBAT 
+Voltage ripple PCL=5 
+@ f<200kHz 
+@ f>200kHz 
+          
+5 0       
+2 
+ 
+mV 
+mV 
+Power down mode  50 60 uA   
+Sleep mode (at+cfun=1)： 
+( BS-PA-MFRMS=9 ) 
+( BS-PA-MFRMS=5) 
+( BS-PA-MFRMS=2) 
+  
+1.02 
+1.11 
+1.88 
+ 
+ 
+ 
+mA 
+mA 
+mA 
+Idle mode (at+cfun=1)： 
+GSM850 
+EGSM900 
+DCS1800 
+PCS1900 
+  
+18.7 
+18.7 
+18.7 
+18.7 
+  
+mA 
+V oice call (PCL=5)： 
+GSM850 
+EGSM900 
+DCS1800 
+PCS1900 
+  
+199.48 
+216.12 
+146.48 
+131.77 
+ 
+ 
+ 
+mA 
+mA 
+Data mode GPRS (1Rx,4Tx)： 
+GSM850 
+EGSM900 
+DCS1800 
+PCS1900 
+  
+453.57 
+344.74 
+216.20 
+274.04 
+  
+mA 
+mA 
+Data mode GPRS (3Rx,2Tx)： 
+GSM850 
+EGSM900 
+DCS1800 
+PCS1900 
+  
+386.09 
+345.02 
+216.79 
+239.12 
+  
+mA 
+mA 
+IVBAT Average currnet 
+Data mode GPRS (4Rx,1Tx)： 
+GSM850 
+EGSM900 
+DCS1800 
+PCS1900 
+  
+212.69 
+227.95 
+158.19 
+148.49 
+  
+mA 
+mA 
+IMAX Peak current During Tx burst  2.0  A 
+ 
+* In above table the current consumption value is the typical one of the m odule tested in laboratory. In the 
+mass production stage, there may be differences among each individual. 
+ 
+ 
+===== PAGE 61 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      6 1                                       2013-08-20  
+ 
+6.9 Electro-Static Discharge 
+ 
+SIM800L is an ESD sensitive component, so attention should be paid to the procedure of handling and packaging. 
+The ESD test results are shown in the following table.  
+Table 49: The ESD characteristics (Temperature: 25℃, Humidity: 45 %) 
+Pin name Contact discharge Air discharge 
+VBAT ±6KV ±12KV 
+GND ±6KV ±12KV 
+RXD, TXD ±2KV ±8KV 
+Antenna port ±5KV ±10KV 
+SPK_P/SPK_N/MIC_P/MIC_N ±2KV ±5KV 
+PWRKEY ±2KV ±8KV 
+ 
+6.10 Radio Characteristics 
+6.10.1. Module RF Output Power 
+The following table shows the module conducted output power, it is followed by the 3GPP TS 05.05 technical 
+specification requirement. 
+Table 50: GSM850 and EGSM900 conducted RF output power 
+GSM850,EGSM900 
+Tolerance (dB) for conditions PCL Nominal output power (dBm) 
+Normal Extreme 
+5 33 ±2 ±2.5 
+6 31 ±3 ±4 
+7 29 ±3 ±4 
+8 27 ±3 ±4 
+9 25 ±3 ±4 
+10 23 ±3 ±4 
+11 21 ±3 ±4 
+12 19 ±3 ±4 
+13 17 ±3 ±4 
+14 15 ±3 ±4 
+15 13 ±3 ±4 
+16 11 ±5 ±6 
+17 9 ±5 ±6 
+18 7 ±5 ±6 
+19-31 5 ±5 ±6 
+ 
+===== PAGE 62 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      6 2                                       2013-08-20  
+Table 51: DCS1800 and PCS1900 conducted RF output power 
+DCS1800,PCS1900 
+Tolerance (dB) for conditions PCL Nominal output power (dBm) 
+Normal Extreme 
+0 30 ±2 ±2.5 
+1 28 ±3 ±4 
+2 26 ±3 ±4 
+3 24 ±3 ±4 
+4 22 ±3 ±4 
+5 20 ±3 ±4 
+6 18 ±3 ±4 
+7 16 ±3 ±4 
+8 14 ±3 ±4 
+9 12 ±4 ±5 
+10 10 ±4 ±5 
+11 8 ±4 ±5 
+12 6 ±4 ±5 
+13 4 ±4 ±5 
+14 2 ±5 ±6 
+15 0 ±5 ±6 
+ 
+6.11 Module RF Receive Sensitivity 
+ 
+The following table shows the module’s conducted receiving sensitivity, it is tested under static condition. 
+Table 52: Conducted RF receive sensitivity 
+Frequency  Receive sensitivity（Typical） Receive sensitivity(Max) 
+GSM850,EGSM900 < -108dBm < -106dBm 
+DCS1800,PCS1900 < -108dBm < -106dBm 
+ 
+6.12 Module Operating Frequencies 
+ 
+The following table shows the module’s operating frequency range; it is followed by the 3GPP TS 05.05 
+technical specification requirement. 
+Table 53: Operating frequencies 
+Frequency  Receive  Transmit  
+GSM850 869  ～ 894MHz 824  ～ 849MHz 
+EGSM900 925  ～ 960MHz 880  ～ 915MHz 
+DCS1800 1805 ～ 1880MHz 1710 ～ 1785MHz 
+PCS1900 1930 ～ 1990MHz 1850 ～ 1910MHz 
+===== PAGE 63 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+7. Manufacturing 
+7.1. Top and Bottom View of SIM800L  
+ 
+ 
+Figure 53: Top and bottom view of SIM800L 
+7.2. Typical Solder Reflow Profile 
+ 
+ 
+Figure 54: Typical solder reflow profile 
+ 
+7.3. The Moisture Sensitivity Level 
+ 
+The moisture sensitivity level of SIM800L module is 3. The modules should be mounted within 168 hours after 
+unpacking in the environmental conditions of temperature <30 ℃ and relative humidity of <60% (RH). It is 
+SIM800L_Hardware_Design_V1.00                      6 3                                       2013-08-20  
+===== PAGE 64 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      6 4                                       2013-08-20  
+necessary to bake the module if the above conditions are not met: 
+Table 54: Moisture sensitivity level and floor life 
+Moisture Sensitivity Level 
+(MSL) 
+Floor Life (out of bag) at factory ambient≤30°C/60% RH or as stated 
+1 Unlimited at ≦30℃/85% RH 
+2 1 year 
+2a 4 weeks 
+3 168 hours 
+4 72 hours 
+5 48 hours 
+5a 24 hours 
+6 Mandatory bake before use. After bake, it must be reflowed within the time limit 
+specified on the label. 
+NOTES: 
+ For product handling, storage, processing, IPC / JEDEC J-STD-033 must be followed. 
+ 
+7.4. Baking Requirements 
+ 
+SIM800L modules are vacuum packaged, and guaranteed for 6 months storage without opening or leakage under 
+the following conditions: the environment temperature is lower than 40℃, and the air humidity is less than 90%. 
+ 
+If the condition meets one of the following ones shown below, the modules should be baked sufficiently before 
+re-flow soldering, and the baking condition is shown in below table; otherwise the module will be at the risk of 
+permanent damage during re-flow soldering. 
+ 
+z If the vacuum package is broken or leakage; 
+z If the vacuum package is opened after 6 months since it’s been packed; 
+z If the vacuum package is opened within 6 months but out of its Floor Life at factory ambient≦30℃
+/60%RH or as stated. 
+ 
+Table 55: Baking requirements 
+Baking temperature Moisture Time  
+40 ±5℃℃  <5% 192 hours 
+120 ±5℃℃  <5% 6 hours 
+ 
+NOTES： 
+Care should be taken if that plastic tray is not heat-r esistant, the modules should be taken out for preheating, 
+otherwise the tray may be damaged by high-temperature heating. 
+===== PAGE 65 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      6 5                                       2013-08-20  
+ 
+8. Appendix 
+I. Related Documents 
+Table 56: Related documents 
+SN Document name Remark 
+[1] SIM800 Series_AT Command Manual  
+[2] ITU-T Draft new recommendation V .25ter： Serial asynchronous automatic dialing and control 
+[3] GSM 07.07： Digital cellular telecommunications (Phase 2+); AT command set for GSM Mobile Equipment (ME) 
+[4] GSM 07.10： Support GSM 07.10 multiplexing protocol  
+[5] GSM 07.05： 
+Digital cellular telecommunications (Phase 2+); Use of Data 
+Terminal Equipment – Data Circuit terminating Equipment (DTE – 
+DCE) interface for Short Message Service (SMS) and Cell 
+Broadcast Service (CBS) 
+[6] GSM 11.14： 
+Digital cellular telecommunications system (Phase 2+); 
+Specification of the SIM Application Toolkit for the Subscriber 
+Identity Module – Mobile Equipment (SIM – ME) interface 
+[7] GSM 11.11： 
+Digital cellular telecommunications system (Phase 2+); 
+Specification of the Subscriber Identity Module – Mobile 
+Equipment (SIM – ME) interface 
+[8] GSM 03.38： Digital cellular telecommunications system (Phase 2+); Alphabets and language-specific information 
+[9] GSM 11.10 
+Digital cellular telecommunications system (Phase 2) ；  Mobile 
+Station (MS) conformance specification ； Part 1 ： Conformance 
+specification 
+[10] AN_Serial Port AN_Serial Port 
+ 
+===== PAGE 66 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      6 6                                       2013-08-20  
+ 
+II. Multiplexing Function 
+Table 57: Multiplexing function 
+Pin name Pin number Mode 0(default) Mode 1 Mode 2 Mode 3 
+STATUS 4 STATUS GPIO4   
+SIMPRE 54 SIMPRE GPIO5 EINT7  
+COL0 20 COL0 GPIO6 - - 
+COL1 25 COL1 GPIO7 - - 
+COL2 22 COL2 GPIO8 - - 
+COL3 21 COL3 GPIO9 - - 
+COL4 24 COL4 GPIO10 EINT1 - 
+ROW0 62 ROW0 GPIO11 - - 
+ROW1 60 ROW1 GPIO12 - - 
+ROW2 61 ROW2 GPIO13 - - 
+ROW3 23 ROW3 GPIO14 - - 
+ROW4 63 ROW4 GPIO15 EINT3 - 
+PWM 26 PWM GPIO16 EINT0 - 
+NETLIGHT 64 NETLIGHT GPIO17 - - 
+PCMCLK 29 PCMCLK DISP_RSTB MC3CM0 GPIO18 
+PCMOUT 30 PCMOUT DISP_DI MC3DA3 GPIO19 
+PCMSYNC 65 PCMSYNC DISP_CEB MC3CK GPIO20 
+PCMIN 66 PCMIN DISP_DA MC3DA2 GPIO21 
+GPIO2 27 GPIO2 DISP_A0DA MC3DA0 - 
+GPIO3 28 GPIO3 DISP_CLK MC3DA1 - 
+UART_DTR 69 UART_DTR GPIO22 EINT8 - 
+UART_RI 68 UART_RI GPIO23 - - 
+UART_DCD 70 UART_DCD GPIO24 - - 
+CTS 34 CTS URXD2(IN) - - 
+RTS 33 RTS UTXD2(OUT) - - 
+TXD 32 TXD UTXD1(OUT) - - 
+RXD 31 RXD URXD1(IN) EINT4 - 
+SCL 74 SCL GPIO25 - - 
+SDA 75 SDA GPIO26 - - 
+Note: Multiplexing function need different software supply. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+===== PAGE 67 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      6 7                                       2013-08-20  
+III. Terms and Abbreviations 
+Table 58: Terms and abbreviations 
+Abbreviation  Description 
+ADC  Analog-to-Digital Converter 
+AMR Adaptive Multi-Rate 
+CS  Coding Scheme 
+CSD  Circuit Switched Data 
+CTS  Clear to Send 
+DTE  Data Terminal Equipment (typically computer, terminal, printer) 
+DTR  Data Terminal Ready 
+DTX  Discontinuous Transmission 
+EFR  Enhanced Full Rate 
+EGSM  Enhanced GSM 
+ESD  Electrostatic Discharge 
+ETS  European Telecommunication Standard 
+FR  Full Rate 
+GPRS  General Packet Radio Service 
+GSM  Global Standard for Mobile Communications 
+HR  Half Rate 
+IMEI  International Mobile Equipment Identity 
+Li-ion Lithium-Ion 
+MO  Mobile Originated 
+MS  Mobile Station (GSM engine), also referred to as TE 
+MT  Mobile Terminated 
+PAP  Password Authentication Protocol 
+PBCCH  Packet Broadcast Control Channel 
+PCB  Printed Circuit Board 
+PCL Power Control Level 
+PCS  Personal Communication System, also referred to as GSM 1900 
+PDU  Protocol Data Unit 
+PPP  Point-to-point protocol 
+RF  Radio Frequency 
+RMS  Root Mean Square (value) 
+RTC  Real Time Clock 
+RX  Receive Direction 
+SIM  Subscriber Identification Module 
+SMS  Short Message Service 
+TE  Terminal Equipment, also referred to as DTE 
+TX  Transmit Direction 
+UART Universal Asynchronous Receiver & Transmitter 
+URC  Unsolicited Result Code 
+===== PAGE 68 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      6 8                                       2013-08-20  
+USSD  Unstructured Supplementary Service Data 
+Phonebook abbreviations 
+FD SIM fix dialing phonebook 
+LD  SIM last dialing phonebook (list of numbers most recently dialed) 
+MC  Mobile Equipment list of unanswered MT calls (missed calls) 
+ON SIM (or ME) own numbers (MSISDNs) list 
+RC  Mobile Equipment list of received calls 
+SM  SIM phonebook 
+NC Not connect 
+ 
+===== PAGE 69 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+ 
+IV. Safety Caution 
+ 
+Table 59: Safety caution 
+Marks Requirements 
+ 
+When in a hospital or other health care facility, observe the restrictions about the use of mobiles. 
+Switch the cellular terminal or mobile off, medical equipment may be sensitive to not operate 
+normally for RF energy interference. 
+ 
+Switch off the cellular terminal or mobile before boarding an aircraft. Make sure it is switched off. 
+The operation of wireless appliances in an airc raft is forbidden to pr event interference with 
+communication systems. Forget to think much of thes e instructions may lead to the flight safety or 
+offend against local legal action, or both. 
+ 
+Do not operate the cellular terminal or mobile in the presence of flammable gases or fumes. Switch 
+off the cellular terminal when you are near petrol  stations, fuel depots, ch emical plants or where 
+blasting operations are in progress. Operation of any electrical equipment in potentially explosive 
+atmospheres can constitute a safety hazard. 
+ 
+Your cellular terminal or mobile receives and tr ansmits radio frequency energy while switched on. 
+RF interference can occur if it is used close to TV sets, radios, computers or other electric 
+equipment. 
+ 
+Road safety comes first! Do not use a hand-held cellular terminal or mobile when driving a 
+vehicle, unless it is securely mounted in a holder for hands free operation. Before making a call 
+with a hand-held terminal or mobile, park the vehicle. 
+ 
+GSM cellular terminals or mobiles operate over radio frequency signals and cellular networks and 
+cannot be guaranteed to connect in all conditions, for example no mobile fee or a invalid SIM card. 
+While you are in this condition and need emergent  help, please remember using emergency calls. 
+In order to make or receive calls, the cellular terminal or mobile must be switched on and in a 
+service area with adequate cellular signal strength. 
+Some networks do not allow for emergency call if certain network services or phone features are in 
+use (e.g. lock functions, fixed dialing etc.). You may have to deactivate those features before you 
+can make an emergency call. 
+Also, some networks require that a valid SIM card be  properly inserted in the cellular terminal or 
+mobile. 
+ 
+ 
+SIM800L_Hardware_Design_V1.00                      6 9                                       2013-08-20  
+===== PAGE 70 =====
+                                                                      S m a r t  M a c h i n e  S m a r t  D e c i s i o n  
+SIM800L_Hardware_Design_V1.00                      7 0                                       2013-08-20  
+ 
+Contact us: 
+Shanghai SIMCom Wireless Solutions Co.,Ltd. 
+Address: Building A, SIM Technology Building,  No. 633, Jinzhong Road, Shanghai, P. R. China 
+200335 
+Tel: +86 21 3252 3300 
+Fax: +86 21 3252 3020 
+URL: www.sim.com/wm 
+ 
+ 
